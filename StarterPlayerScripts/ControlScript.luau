@@ -1,0 +1,1261 @@
+--!strict
+--!optimize 2
+
+--[[
+Copyright 2025 Yarik_superpro
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+	http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+]]
+
+--#include <stdraw.luau>
+local SetProperty:(ins:Instance,prop:string,val:any)->()
+local GetProperty:(ins:Instance,prop:string)->any
+
+local GetService:(DataModel:DataModel,service:string)->Instance
+xpcall(function():()
+	(game::any)[nil]=nil
+end,function():()
+	SetProperty = debug.info(2,"f")::typeof(SetProperty)
+end)
+xpcall(function():()
+	return (game::any)[nil]
+end,function():()
+	GetProperty = debug.info(2,"f")::typeof(GetProperty)
+end)
+GetService = GetProperty(game,"GetService")::typeof(GetService)
+--\include
+local GetVector2:(vec:Vector2,val:"X"|"Y")->number
+xpcall(function():()
+	return (Vector2.zero::any)[nil]
+end,function():()
+	GetVector2 = debug.info(2,"f")::typeof(GetVector2)
+end)
+local GetCFrame:(vec:CFrame,val:string)->any
+xpcall(function():()
+	return (CFrame.identity::any)[nil]
+end,function():()
+	GetCFrame = debug.info(2,"f")::typeof(GetCFrame)
+end)
+local CFrame_MUL:(vec:CFrame,val:CFrame)->CFrame
+xpcall(function():()
+	return (CFrame.identity::any)*nil
+end,function():()
+	CFrame_MUL = debug.info(2,"f")
+end)
+local GetRect:(Rect,index:string)->Vector2|number
+xpcall(function():()
+	return (Rect.new()::any)[nil]
+end,function():()
+	GetRect = debug.info(2,"f")::typeof(GetRect)
+end)
+
+local Destroy = GetProperty(game,"Destroy")::(Instance)->()
+local Camera = GetProperty(workspace,"CurrentCamera")::Camera
+local PivotTo=GetProperty(Camera,"PivotTo")::(ins:PVInstance,targetCFrame: CFrame)->()
+SetProperty(Camera,"CameraType",Enum.CameraType.Scriptable)
+
+local PreRender = GetProperty(GetService(game,"RunService")::RunService,"PreRender")::RBXScriptSignal
+local LocalPlayer = GetProperty(GetService(game,"Players")::Players,"LocalPlayer")::Player
+local ReplicatedStorage = GetService(game,"ReplicatedStorage")::ReplicatedStorage
+local UserInputService = GetService(game,"UserInputService")::UserInputService
+
+local GetMouseDelta = GetProperty(UserInputService,"GetMouseDelta")::(service:UserInputService)->Vector2
+local GetPropertyChangedSignal = GetProperty(game,"GetPropertyChangedSignal")::(ins:Instance,property: string)->RBXScriptSignal
+local PlayerGui = GetProperty(LocalPlayer,"PlayerGui")::PlayerGui
+local GetGuiObjectsAtPosition = GetProperty(PlayerGui,"GetGuiObjectsAtPosition")::(BasePlayerGui,x:number,y:number)->{GuiObject}
+local FindFirstChild = GetProperty(game,"FindFirstChild")::(Instance,name: string, recursive: boolean?)-> Instance
+local GetDescendants = GetProperty(game,"GetDescendants")::(Instance)->{Instance}
+
+local GuiService = game:GetService("GuiService")::GuiService
+local VRService = game:GetService("VRService")::VRService
+local GetUserCFrame = GetProperty(VRService,"GetUserCFrame")::(VRService,type:Enum.UserCFrame)->CFrame
+local ToOrientation = GetCFrame(CFrame.identity,"ToOrientation")::(CFrame)->(number,number,number)
+local Vr_Head_CFrame = CFrame.identity
+local FuzzyEq = GetCFrame(CFrame.identity,"FuzzyEq")::(CFrame,other: CFrame, epsilon: number?)-> boolean
+local IsA = GetProperty(game,"IsA")::(Instance,string)->boolean
+local CameraDisabled:boolean = false
+
+local CameraRotation = GetProperty(ReplicatedStorage,"CameraRotation")::UnreliableRemoteEvent
+local MoveInputEvent = GetProperty(ReplicatedStorage,"MoveInputEvent")::UnreliableRemoteEvent
+local MoveAndCameraRotation = GetProperty(ReplicatedStorage,"MoveAndCameraRotation")::UnreliableRemoteEvent
+local RequestJump = GetProperty(ReplicatedStorage,"RequestJump")::UnreliableRemoteEvent
+
+local Unreliable_FireServer = GetProperty(CameraRotation,"FireServer")::(UnreliableRemoteEvent,...any)->()
+
+local Jump = Instance.new("InputAction")::InputAction
+local Jump_Pressed = GetProperty(Jump,"Pressed")::RBXScriptSignal
+local Connect = Jump_Pressed.Connect
+local Once = Jump_Pressed.Once
+local Move = Instance.new("InputAction")::InputAction
+SetProperty(Move,"Type",Enum.InputActionType.Direction2D)
+
+local Humanoid:Humanoid
+
+--Make player jump
+local Jump_Func = function():()
+	Unreliable_FireServer(RequestJump)
+	SetProperty(Humanoid::Humanoid,"Jump",true)
+end
+local Jump_Func_Connect:RBXScriptConnection = Connect(Jump_Pressed,Jump_Func)
+local Disconnect = Jump_Func_Connect.Disconnect::(self: RBXScriptConnection)->()
+Disconnect(Jump_Func_Connect)
+
+local Move_Func_Connect:RBXScriptConnection = Jump_Func_Connect
+local char_connection:RBXScriptConnection = Jump_Func_Connect
+
+local CharHideDescedantConnection:RBXScriptConnection = Jump_Func_Connect
+local Char_UN_HideDescedantConnection:RBXScriptConnection = Jump_Func_Connect
+local face:Decal = Instance.new("Decal")
+--Destroy(face)
+Destroy(face)
+local HiddenParts = table.create(25)::{BasePart}
+
+local char_connection:RBXScriptConnection = Jump_Func_Connect
+local char_self_disconnect:RBXScriptConnection = Jump_Func_Connect
+
+local temp = Instance.new("Humanoid")
+task.defer(Destroy,temp)
+local Humanoid_Move = GetProperty(temp,"Move")::(Humanoid,moveDirection: Vector3, relativeToCamera: boolean?)->()
+local MoveVector_X:number = 0
+local MoveVector_Z:number = 0
+
+local camAngleX = 0
+local camAngleY = 0
+
+--Movement (WASD or gamepad/vr)
+local Move_Func = function(var:Vector2):()
+	local X,Y = GetVector2(var,"X"),GetVector2(var,"Y")
+	MoveVector_X = X
+	local negative_Y = -Y
+	MoveVector_Z = negative_Y
+
+
+	local ax = camAngleX * 0.017453292519943 -- deg → rad
+	local cosA = math.cos(ax)
+	local sinA = math.sin(ax)
+
+	local _MoveVector_X = math.clamp((
+		((X * cosA) + (negative_Y * sinA))
+			* 32767)//1, -32768, 32767)
+	local _MoveVector_Z = math.clamp((
+		((-X * sinA) + (negative_Y * cosA))
+			* 32767)//1, -32768, 32767)
+
+	Unreliable_FireServer(MoveInputEvent,Vector2int16.new(_MoveVector_X,_MoveVector_Z))
+	--snapping movement to i16 interpolation
+	Humanoid_Move(Humanoid::Humanoid,(vector.create(
+		_MoveVector_X/32767,
+		0,
+		_MoveVector_Z/32767
+		)::any)::Vector3)
+end
+
+local Move_StateChanged = GetProperty(Move,"StateChanged")::RBXScriptSignal
+
+local Character = GetProperty(LocalPlayer,"Character")::Model
+
+--HumanoidRootPart
+local AttachPart:BasePart
+
+--functions that hide items/character
+local HideDiscedant = function(ins:BasePart):()
+	if not IsA(ins,"BasePart") then return end
+	table.insert(HiddenParts,ins)
+	SetProperty(ins,"Transparency",1)
+end
+local UnHideDiscedant = function(ins:BasePart):()
+	if not IsA(ins,"BasePart") then return end
+	SetProperty(ins,"Transparency",0)
+	table.remove(HiddenParts,table.find(HiddenParts,ins))
+end
+
+--Offset from HumanoidRootPart + Head
+local Y_Offset = CFrame.identity
+
+
+local LocalPlayer_Character_ChildAdded_Func = function(child:Instance):()
+	if IsA(child,"Humanoid") then
+		Humanoid = child::Humanoid
+		Disconnect(char_self_disconnect)
+		Disconnect(Jump_Func_Connect)
+		Disconnect(Move_Func_Connect)
+		local connection_local = Connect(Jump_Pressed,Jump_Func)
+		Jump_Func_Connect = connection_local
+		local connection_move_local = Connect(Move_StateChanged,Move_Func)
+		Move_Func_Connect = connection_move_local
+
+		char_self_disconnect = Once(GetPropertyChangedSignal(Humanoid,"Parent"),function():()
+			Disconnect(connection_local)
+			Disconnect(connection_move_local)
+		end)
+		return
+	end
+	if not IsA(child,"BasePart") then return end
+
+	local root = FindFirstChild(Character,"HumanoidRootPart")::BasePart
+	if root then
+		AttachPart=root
+		local Head = FindFirstChild(Character,"Head")::BasePart
+		if Head then
+			local _face = FindFirstChild(Head,"face")::Decal?
+			if _face then
+				face = _face
+				SetProperty(_face,"Transparency",1)
+			end
+			Y_Offset = CFrame.new(0,(GetProperty(AttachPart,"Size").y+GetProperty(Head,"Size").y)*0.5,0)
+		else
+			Y_Offset = CFrame.new(0,GetProperty(AttachPart,"Size").y*0.5,0)
+		end
+		return
+	end
+	local head = FindFirstChild(Character,"Head")::BasePart
+	if head then
+		local _face = FindFirstChild(head,"face")::Decal?
+		if _face then
+			face = _face
+			SetProperty(_face,"Transparency",1)
+		end
+		local root = FindFirstChild(Character,"HumanoidRootPart")::BasePart
+		if not root then return end
+		Y_Offset = CFrame.new(0,(GetProperty(root,"Size").y+GetProperty(head,"Size").y)*0.5,0)
+	end
+end
+
+
+local PreRender_connection:RBXScriptConnection?
+local CameraDisabled:boolean = false
+
+
+
+local Sensativity:number = 0.3
+local Internal_Sensativity:number = Sensativity
+
+local Delta_X,Delta_Y:number=0,0
+
+local PC_CameraDelta_Transform = function():()
+	local delta = GetMouseDelta(UserInputService)
+	local dx,dy = GetVector2(delta,"X"),GetVector2(delta,"Y")
+	local Sensativity = Internal_Sensativity
+	local capture_X = camAngleX - (dx * Sensativity)
+	local capture_Y = math.clamp(camAngleY - dy * Sensativity, -90, 90)
+	camAngleX = capture_X
+	camAngleY = capture_Y
+	-- precompute radians once
+	local ax = capture_X * 0.017453292519943 -- deg → rad
+	local ay = capture_Y * 0.017453292519943
+
+	-- camera rotation: yaw then pitch
+	local yaw,pitch = CFrame.Angles(0, ax, 0),CFrame.Angles(ay, 0, 0)
+	local rot = CFrame_MUL(yaw,pitch)
+	if dx~=0 then
+		if MoveVector_X==0 and MoveVector_Z==0 then
+			local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
+			local pitch = math.floor(
+				math.clamp(normalized / math.pi * 32767, -32768, 32767)
+			)
+			local yaw = math.clamp(
+				math.floor((ay / (math.pi * 0.5)) * 32767),
+				-32768,
+				32767
+			)
+			Unreliable_FireServer(CameraRotation,Vector2int16.new(pitch,yaw))
+		else
+			local cosA = math.cos(ax)
+			local sinA = math.sin(ax)
+			local _MoveVector_X = math.clamp((
+				((MoveVector_X * cosA) + (MoveVector_Z * sinA))
+					* 32767)//1, -32768, 32767)
+			local _MoveVector_Z = math.clamp((
+				((-MoveVector_X * sinA) + (MoveVector_Z * cosA))
+					* 32767)//1, -32768, 32767)
+			local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
+			local pitch = math.floor(
+				math.clamp(normalized / math.pi * 32767, -32768, 32767)
+			)
+			local yaw = math.clamp(
+				math.floor((ay / (math.pi * 0.5)) * 32767),
+				-32768,
+				32767
+			)
+
+			Unreliable_FireServer(MoveAndCameraRotation,Vector2int16.new(_MoveVector_X,_MoveVector_Z),Vector2int16.new(pitch,yaw))
+
+			Humanoid_Move(Humanoid::Humanoid,(vector.create(
+				_MoveVector_X/32767,
+				0,
+				_MoveVector_Z/32767
+				)::any)::Vector3)
+		end
+	elseif dy~=0 then
+		local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
+		local pitch = math.floor(
+			math.clamp(normalized / math.pi * 32767, -32768, 32767)
+		)
+		local yaw = math.clamp(
+			math.floor((ay / (math.pi * 0.5)) * 32767),
+			-32768,
+			32767
+		)
+		Unreliable_FireServer(CameraRotation,Vector2int16.new(pitch,yaw))
+	end
+
+	local pos = CFrame.new(GetProperty(AttachPart,"Position")::Vector3)
+	-- position at head
+	SetProperty(Camera,"CFrame",CFrame_MUL(CFrame_MUL(pos,Y_Offset),rot))
+
+	PivotTo(AttachPart,CFrame_MUL(pos,yaw))
+end
+
+local Touchpad_Transform = function():()
+	local dx,dy = Delta_X,Delta_Y
+	Delta_X=0
+	Delta_Y=0
+	local Sensativity = Internal_Sensativity
+
+	local capture_X = camAngleX - (dx * Sensativity)
+	local capture_Y = math.clamp(camAngleY - dy * Sensativity, -90, 90)
+	camAngleX = capture_X
+	camAngleY = capture_Y
+	-- precompute radians once
+	local ax = capture_X * 0.017453292519943 -- deg → rad
+	local ay = capture_Y * 0.017453292519943
+
+	-- camera rotation: yaw then pitch
+	local yaw,pitch = CFrame.Angles(0, ax, 0),CFrame.Angles(ay, 0, 0)
+	local rot = CFrame_MUL(yaw,pitch)
+	if dx~=0 then
+		if MoveVector_X==0 and MoveVector_Z==0 then
+			local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
+			local pitch = math.floor(
+				math.clamp(normalized / math.pi * 32767, -32768, 32767)
+			)
+			local yaw = math.clamp(
+				math.floor((ay / (math.pi * 0.5)) * 32767),
+				-32768,
+				32767
+			)
+			Unreliable_FireServer(CameraRotation,Vector2int16.new(pitch,yaw))
+		else
+			local cosA = math.cos(ax)
+			local sinA = math.sin(ax)
+			local _MoveVector_X = math.clamp((
+				((MoveVector_X * cosA) + (MoveVector_Z * sinA))
+					* 32767)//1, -32768, 32767)
+			local _MoveVector_Z = math.clamp((
+				((-MoveVector_X * sinA) + (MoveVector_Z * cosA))
+					* 32767)//1, -32768, 32767)
+			local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
+			local pitch = math.floor(
+				math.clamp(normalized / math.pi * 32767, -32768, 32767)
+			)
+			local yaw = math.clamp(
+				math.floor((ay / (math.pi * 0.5)) * 32767),
+				-32768,
+				32767
+			)
+
+			Unreliable_FireServer(MoveAndCameraRotation,Vector2int16.new(_MoveVector_X,_MoveVector_Z),Vector2int16.new(pitch,yaw))
+
+			Humanoid_Move(Humanoid::Humanoid,(vector.create(
+				_MoveVector_X/32767,
+				0,
+				_MoveVector_Z/32767
+				)::any)::Vector3)
+		end
+	elseif dy~=0 then
+		local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
+		local pitch = math.floor(
+			math.clamp(normalized / math.pi * 32767, -32768, 32767)
+		)
+		local yaw = math.clamp(
+			math.floor((ay / (math.pi * 0.5)) * 32767),
+			-32768,
+			32767
+		)
+		Unreliable_FireServer(CameraRotation,Vector2int16.new(pitch,yaw))
+	end
+
+	local pos = CFrame.new(GetProperty(AttachPart,"Position")::Vector3)
+	-- position at head
+	SetProperty(Camera,"CFrame",CFrame_MUL(CFrame_MUL(pos,Y_Offset),rot))
+
+	PivotTo(AttachPart,CFrame_MUL(pos,yaw))
+end
+
+local VR_Camera_Transform = function():()
+	local head_cf = GetUserCFrame(VRService,Enum.UserCFrame.Head)
+
+
+	local capture_X = camAngleX
+	local _camAngleX = capture_X - Delta_X * Internal_Sensativity
+	camAngleX=_camAngleX
+	--camAngleY = math.clamp(camAngleY - dy * Sensativity, -90, 90)
+	-- precompute radians once
+	local ax = _camAngleX * 0.017453292519943 -- deg → rad
+
+	-- camera rotation: yaw then pitch
+	local yaw = CFrame.Angles(0, ax, 0)
+
+	local pos = CFrame.new(GetProperty(AttachPart,"Position")::Vector3)
+	-- position at head
+	local char_cf = CFrame_MUL(pos,yaw)
+	local charcf_Plus_Y_Offset = CFrame_MUL(char_cf,Y_Offset)
+
+	if capture_X~=_camAngleX then
+		local MoveVector_X = MoveVector_X
+		local MoveVector_Z = MoveVector_Z
+		if MoveVector_X==0 and MoveVector_Z==0 then
+			--only camera
+			local hx,hy,hz = ToOrientation(head_cf)
+
+			local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
+			local pitch = math.floor(
+				math.clamp(normalized / math.pi * 32767, -32768, 32767)
+			)
+			local y = math.clamp(hx / math.pi * 32767, -32768, 32767)//1
+			local x = math.clamp((hy / math.pi * 0.5 + 0.5) * 255, 0, 255)//1
+			local z = math.clamp((hz / math.pi * 0.5 + 0.5) * 255, 0, 255)//1
+			local pack = bit32.bor(bit32.lshift(x,8),z)
+
+			Unreliable_FireServer(CameraRotation,Vector3int16.new(pitch,y,pack))
+		else
+			local cosA = math.cos(ax)
+			local sinA = math.sin(ax)
+			local _MoveVector_X = math.clamp((
+				((MoveVector_X * cosA) + (MoveVector_Z * sinA))
+					* 32767)//1, -32768, 32767)
+			local _MoveVector_Z = math.clamp((
+				((-MoveVector_X * sinA) + (MoveVector_Z * cosA))
+					* 32767)//1, -32768, 32767)
+
+			local hx,hy,hz = ToOrientation(head_cf)
+
+			local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
+			local pitch = math.floor(
+				math.clamp(normalized / math.pi * 32767, -32768, 32767)
+			)
+			local y = math.clamp(hx / math.pi * 32767, -32768, 32767)//1
+			local x = math.clamp((hy / math.pi * 0.5 + 0.5) * 255, 0, 255)//1
+			local z = math.clamp((hz / math.pi * 0.5 + 0.5) * 255, 0, 255)//1
+			local pack = bit32.bor(bit32.lshift(x,8),z)
+			Unreliable_FireServer(MoveAndCameraRotation,Vector2int16.new(_MoveVector_X,_MoveVector_Z),Vector3int16.new(pitch,y,pack))
+
+			Humanoid_Move(Humanoid::Humanoid,(vector.create(
+				_MoveVector_X/32767,
+				0,
+				_MoveVector_Z/32767
+				)::any)::Vector3)
+		end
+	elseif not FuzzyEq(head_cf,Vr_Head_CFrame) then
+		--local camera_pos = CFrame_MUL(charcf_Plus_Y_Offset,head_cf)
+		local hx,hy,hz = ToOrientation(head_cf)
+
+		local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
+		local pitch = math.floor(
+			math.clamp(normalized / math.pi * 32767, -32768, 32767)
+		)
+		local y = math.clamp(hx / math.pi * 32767, -32768, 32767)//1
+		local x = math.clamp((hy / math.pi * 0.5 + 0.5) * 255, 0, 255)//1
+		local z = math.clamp((hz / math.pi * 0.5 + 0.5) * 255, 0, 255)//1
+		local pack = bit32.bor(bit32.lshift(x,8),z)
+
+		Unreliable_FireServer(CameraRotation,Vector3int16.new(pitch,y,pack))
+	end
+	Vr_Head_CFrame=head_cf
+
+	PivotTo(AttachPart,char_cf)
+	SetProperty(Camera,"CFrame",charcf_Plus_Y_Offset)
+end
+
+local GAMEPAD_Transform = function():()
+	local dx,dy = Delta_X,Delta_Y
+	local Sensativity = Internal_Sensativity
+	local capture_X = camAngleX - (dx * Sensativity)
+	local capture_Y = math.clamp(camAngleY - dy * Sensativity, -90, 90)
+	camAngleX = capture_X
+	camAngleY = capture_Y
+	-- precompute radians once
+	local ax = capture_X * 0.017453292519943 -- deg → rad
+	local ay = capture_Y * 0.017453292519943
+
+	-- camera rotation: yaw then pitch
+	local yaw,pitch = CFrame.Angles(0, ax, 0),CFrame.Angles(ay, 0, 0)
+	local rot = CFrame_MUL(yaw,pitch)
+	if dx~=0 then
+		if MoveVector_X==0 and MoveVector_Z==0 then
+			local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
+			local pitch = math.floor(
+				math.clamp(normalized / math.pi * 32767, -32768, 32767)
+			)
+			local yaw = math.clamp(
+				math.floor((ay / (math.pi * 0.5)) * 32767),
+				-32768,
+				32767
+			)
+			Unreliable_FireServer(CameraRotation,Vector2int16.new(pitch,yaw))
+		else
+			local cosA = math.cos(ax)
+			local sinA = math.sin(ax)
+			local _MoveVector_X = math.clamp((
+				((MoveVector_X * cosA) + (MoveVector_Z * sinA))
+					* 32767)//1, -32768, 32767)
+			local _MoveVector_Z = math.clamp((
+				((-MoveVector_X * sinA) + (MoveVector_Z * cosA))
+					* 32767)//1, -32768, 32767)
+			local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
+			local pitch = math.floor(
+				math.clamp(normalized / math.pi * 32767, -32768, 32767)
+			)
+			local yaw = math.clamp(
+				math.floor((ay / (math.pi * 0.5)) * 32767),
+				-32768,
+				32767
+			)
+
+			Unreliable_FireServer(MoveAndCameraRotation,Vector2int16.new(_MoveVector_X,_MoveVector_Z),Vector2int16.new(pitch,yaw))
+
+			Humanoid_Move(Humanoid::Humanoid,(vector.create(
+				_MoveVector_X/32767,
+				0,
+				_MoveVector_Z/32767
+				)::any)::Vector3)
+		end
+	elseif dy~=0 then
+		local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
+		local pitch = math.floor(
+			math.clamp(normalized / math.pi * 32767, -32768, 32767)
+		)
+		local yaw = math.clamp(
+			math.floor((ay / (math.pi * 0.5)) * 32767),
+			-32768,
+			32767
+		)
+		Unreliable_FireServer(CameraRotation,Vector2int16.new(pitch,yaw))
+	end
+
+	local pos = CFrame.new(GetProperty(AttachPart,"Position")::Vector3)
+	-- position at head
+	SetProperty(Camera,"CFrame",CFrame_MUL(CFrame_MUL(pos,Y_Offset),rot))
+
+	PivotTo(AttachPart,CFrame_MUL(pos,yaw))
+end
+
+
+local CameraRotation_ACTION = Instance.new("InputAction") do
+	--SetProperty(CameraRotation,"Name","CameraRotation")
+	SetProperty(CameraRotation_ACTION,"Type",Enum.InputActionType.Direction2D)
+end
+Connect(GetProperty(CameraRotation_ACTION,"StateChanged"),function(var:Vector2)
+	Delta_X = GetVector2(var,"X")
+	Delta_Y = GetVector2(var,"Y")
+end)
+
+temp = UDim2.fromScale(1,1)
+
+local CameraMovementGUI = Instance.new("ScreenGui") do
+	SetProperty(CameraMovementGUI,"IgnoreGuiInset",true)
+	SetProperty(CameraMovementGUI,"ScreenInsets",Enum.ScreenInsets.None)
+	SetProperty(CameraMovementGUI,"ResetOnSpawn",false)
+	--SetProperty(CameraMovementGUI,"Name","CameraMovementGUI")
+	SetProperty(CameraMovementGUI,"DisplayOrder",-10)
+end
+
+
+local TouchScreenCameraFrame = Instance.new("Frame",CameraMovementGUI) do
+	SetProperty(TouchScreenCameraFrame,"Active",true)
+	SetProperty(TouchScreenCameraFrame,"BackgroundTransparency",1)
+	SetProperty(TouchScreenCameraFrame,"Size",temp)
+end
+
+local JoystickArea = Instance.new("Frame",TouchScreenCameraFrame) do
+	SetProperty(JoystickArea,"Active",true)
+	SetProperty(JoystickArea,"AnchorPoint",Vector2.yAxis)
+	SetProperty(JoystickArea,"BackgroundColor3",Color3.new(0,0,0))
+	SetProperty(JoystickArea,"BackgroundTransparency",0.9)
+	SetProperty(JoystickArea,"BorderSizePixel",0)
+	--SetProperty(JoystickArea,"Name","JoystickArea")
+	SetProperty(JoystickArea,"Position",UDim2.new(0,0,1,0))
+	SetProperty(JoystickArea,"Size",UDim2.new(0.5,0,0.7,0))
+	--SetProperty(JoystickArea,"ZIndex",)
+end
+local Joystick = Instance.new("ImageLabel",TouchScreenCameraFrame) do
+	SetProperty(Joystick,"Visible",false)
+	SetProperty(Joystick,"AnchorPoint",Vector2.new(0.5,0.5))
+	SetProperty(Joystick,"BackgroundTransparency",1)
+	SetProperty(Joystick,"Image","rbxasset://textures/ui/TouchControlsSheet.png")
+	SetProperty(Joystick,"ImageRectSize",Vector2.new(220, 220))
+	SetProperty(Joystick,"ZIndex",-1)
+	--SetProperty(Joystick,"Name","Joystick")
+end
+--[Children] {
+local Inner = Instance.new("ImageLabel",Joystick) do
+	SetProperty(Inner,"BackgroundTransparency",1)
+	SetProperty(Inner,"Image","rbxasset://textures/ui/TouchControlsSheet.png")
+	SetProperty(Inner,"ImageRectOffset",Vector2.new(220, 0))
+	SetProperty(Inner,"ImageRectSize",Vector2.new(111, 111))
+	--SetProperty(Inner,"Name","Inner")
+	SetProperty(Inner,"Size",temp)
+end
+--}
+
+--}
+
+local MobileButtons = Instance.new("ScreenGui") do
+	SetProperty(MobileButtons,"ResetOnSpawn",false)
+	--SetProperty(MobileButtons,"Name","MobileButtons")
+	SetProperty(MobileButtons,"ZIndexBehavior",Enum.ZIndexBehavior.Sibling)
+end
+local MobileButtonsFrame  = Instance.new("Frame",MobileButtons) do
+	SetProperty(MobileButtonsFrame,"BackgroundTransparency",1)
+	SetProperty(MobileButtonsFrame,"Size",temp)
+end
+
+temp = GetProperty(Camera,"ViewportSize")
+local X_Offset_Topbar = (GetVector2(GetProperty(TouchScreenCameraFrame,"AbsoluteSize"),"X")-GetVector2(temp,"X"))*0.5
+local Y_Offset_Topbar = GetRect(GetProperty(GuiService,"TopbarInset")::Rect,"Height")::number
+
+temp = function():()
+	X_Offset_Topbar = (GetVector2(GetProperty(TouchScreenCameraFrame,"AbsoluteSize"),"X")-GetVector2(GetProperty(Camera,"ViewportSize"),"X"))*0.5
+	Y_Offset_Topbar = GetRect(GetProperty(GuiService,"TopbarInset")::Rect,"Height")::number
+end
+Connect(GetPropertyChangedSignal(Camera,"ViewportSize"),temp)
+Connect(GetPropertyChangedSignal(TouchScreenCameraFrame,"AbsoluteSize"),temp)
+Connect(GetPropertyChangedSignal(GuiService,"TopbarInset"),function():()
+	Y_Offset_Topbar = GetRect(GetProperty(GuiService,"TopbarInset")::Rect,"Height")::number
+end)
+
+local InputObject_Get: InputObject_KeyCode&InputObject_UserInputType&InputObject_any
+type InputObject_KeyCode = (obj:InputObject,"KeyCode")->Enum.KeyCode
+type InputObject_UserInputType = (obj:InputObject,"UserInputType")->Enum.UserInputType
+type InputObject_any = (obj:InputObject,property:string)->any
+
+local connection_MoveFinger:RBXScriptConnection?
+local connection_TouchEnded:RBXScriptConnection
+local moveTouchObject:InputObject?
+local CAMERA_TouchObject:InputObject?
+local CAMERA_beginMove_tap_pos_x,CAMERA_beginMove_tap_pos_y = 0,0
+local beginMove_tap_pos_x,beginMove_tap_pos_y = 0,0
+local TouchMoved = GetProperty(UserInputService,"TouchMoved")::RBXScriptSignal
+local TouchEnded = GetProperty(UserInputService,"TouchEnded")::RBXScriptSignal
+
+
+local JumpButton = Instance.new("ImageButton",MobileButtonsFrame) do
+	SetProperty(JumpButton,"BackgroundTransparency",1)
+	SetProperty(JumpButton,"Image","rbxasset://textures/ui/Input/TouchControlsSheetV2.png")
+	SetProperty(JumpButton,"ImageRectSize",Vector2.new(144, 144))
+	local hold_offset = Vector2.new(1,146)
+	local release_offset = Vector2.new(146,146)
+	SetProperty(JumpButton,"ImageRectOffset",hold_offset)
+	local click:InputObject
+	local began_func = function(input:InputObject):()
+		if InputObject_Get(input,"UserInputState")~=Enum.UserInputState.Begin then return end
+		SetProperty(JumpButton,"ImageRectOffset",release_offset)
+		Unreliable_FireServer(RequestJump)
+		SetProperty(Humanoid::Humanoid,"Jump",true)
+		click=input
+	end
+	local JumpButton_InputBegan = GetProperty(JumpButton,"InputBegan")::RBXScriptSignal
+	Once(JumpButton_InputBegan,function(input:InputObject):()
+		xpcall(function():()
+			return (input::any)[nil]
+		end,function():()
+			InputObject_Get = debug.info(2,"f")::typeof(InputObject_Get)
+		end)
+		Connect(JumpButton_InputBegan,began_func)
+		began_func(input)
+	end)
+
+	Connect(GetProperty(JumpButton,"InputEnded"),function(input:InputObject):()
+		if input~=click then return end
+		SetProperty(JumpButton,"ImageRectOffset",hold_offset)
+	end)
+end
+
+local zero = UDim2.fromScale(0,0)
+local TouchScreenCameraFrame_InputBegan = GetProperty(TouchScreenCameraFrame,"InputBegan")::RBXScriptSignal
+local TouchScreenCameraFrame_Func = function(inputObject: InputObject):()
+	local pos = InputObject_Get(inputObject,"Position")::vector
+	CAMERA_TouchObject=inputObject
+	CAMERA_beginMove_tap_pos_x=pos.x
+	CAMERA_beginMove_tap_pos_y=pos.y
+end
+local JoystickArea_InputBegan = GetProperty(JoystickArea,"InputBegan")::RBXScriptSignal
+
+local JoystickArea_InputBegan_Func = function(inputObject: InputObject):()
+	if InputObject_Get(inputObject,"UserInputState")~=Enum.UserInputState.Begin then return end
+	local pos = InputObject_Get(inputObject,"Position")::vector
+	local x,y = pos.x,pos.y
+	beginMove_tap_pos_x = x;
+	beginMove_tap_pos_y = y;
+	moveTouchObject=inputObject;
+	SetProperty(Inner,"Position",zero)
+	SetProperty(Joystick,"Position",UDim2.fromOffset(x+X_Offset_Topbar,y+Y_Offset_Topbar))
+	SetProperty(Joystick,"Visible",true)
+end
+local JoystickArea_InputEnded_Func = function(inputObject: InputObject):()
+	--print(inputObject==CAMERA_TouchObject and inputObject==moveTouchObject)
+	if inputObject==CAMERA_TouchObject then
+		Delta_X=0
+		Delta_Y=0
+		return
+	end
+	if inputObject~=moveTouchObject then return end
+	Humanoid_Move(Humanoid::Humanoid,(vector.create(0,0,0)::any)::Vector3)
+	--InputAction_Fire(Move,Vector2.zero)
+	MoveVector_X=0
+	MoveVector_Z=0
+	Unreliable_FireServer(MoveInputEvent,Vector2int16.new(0,0))
+	SetProperty(Joystick,"Visible",false)
+end
+local Radious_Joystick = 35
+local MovedFinger = function(inputObject: InputObject):()
+	if inputObject==CAMERA_TouchObject then
+		local _pos = InputObject_Get(inputObject,"Position")::vector
+		local _x,_y = _pos.x,_pos.y
+		local x,y = _x-CAMERA_beginMove_tap_pos_x,_y-CAMERA_beginMove_tap_pos_y
+		Delta_X=x
+		Delta_Y=y
+		CAMERA_beginMove_tap_pos_x=_x
+		CAMERA_beginMove_tap_pos_y=_y
+		return
+	end
+	if inputObject~=moveTouchObject then return end
+	local _pos = InputObject_Get(inputObject,"Position")::vector
+	local x,y = _pos.x-beginMove_tap_pos_x,_pos.y-beginMove_tap_pos_y
+	local dx,dy=x,y
+	local mag = math.sqrt(x*x + y*y)
+	local Radious_Joystick = Radious_Joystick
+	local power = (mag/Radious_Joystick)^2.2
+	if mag>Radious_Joystick then
+		local inv = Radious_Joystick / mag
+		dx *= inv
+		dy *= inv
+		power=1
+	end
+	SetProperty(Inner,"Position",UDim2.fromOffset(dx,dy))
+	x = math.clamp((x * power)/ Radious_Joystick,-1,1);
+	y = math.clamp((y * power)/ Radious_Joystick,-1,1);
+
+	MoveVector_X=x
+	MoveVector_Z=y
+	local ax = camAngleX * 0.017453292519943
+	local cosA = math.cos(ax)
+	local sinA = math.sin(ax)
+	local _MoveVector_X = math.clamp((
+		((x * cosA) + (y * sinA))
+			* 32767)//1, -32768, 32767)
+	local _MoveVector_Z = math.clamp((
+		((-x * sinA) + (y * cosA))
+			* 32767)//1, -32768, 32767)
+
+	Unreliable_FireServer(MoveInputEvent,Vector2int16.new(_MoveVector_X,_MoveVector_Z))
+	--print(x,y,Radious_Joystick)
+	Humanoid_Move(Humanoid::Humanoid,(vector.create(
+		_MoveVector_X/32767,
+		0,
+		_MoveVector_Z/32767
+		)::any)::Vector3)
+	--InputAction_Fire(Move,Vector2.new(x,-y))
+end
+
+do
+	Once(JoystickArea_InputBegan,function(inputObject: InputObject):()
+		if InputObject_Get then
+			Connect(JoystickArea_InputBegan,JoystickArea_InputBegan_Func)
+			JoystickArea_InputBegan_Func(inputObject)
+			return
+		end
+		xpcall(function():()
+			return (inputObject::any)[nil]
+		end,function():()
+			InputObject_Get = debug.info(2,"f")::typeof(InputObject_Get)
+		end)
+		Connect(JoystickArea_InputBegan,JoystickArea_InputBegan_Func)
+		JoystickArea_InputBegan_Func(inputObject)
+	end)
+	Once(TouchScreenCameraFrame_InputBegan,function(inputObject: InputObject):()
+		xpcall(function():()
+			return (inputObject::any)[nil]
+		end,function():()
+			InputObject_Get = debug.info(2,"f")::typeof(InputObject_Get)
+		end)
+		Connect(TouchScreenCameraFrame_InputBegan,TouchScreenCameraFrame_Func)
+		TouchScreenCameraFrame_Func(inputObject)
+	end)
+end
+
+local PreferredInput = GetProperty(UserInputService,"PreferredInput")::Enum.PreferredInput
+local UnlockCounter = 1
+
+if Character then
+
+	CharHideDescedantConnection = Connect(GetProperty(Character,"DescendantAdded"),HideDiscedant)
+	Char_UN_HideDescedantConnection = Connect(GetProperty(Character,"DescendantRemoving"),UnHideDiscedant)
+	for i,ins in GetDescendants(Character)::{BasePart} do
+		if not IsA(ins,"BasePart") then continue end
+		table.insert(HiddenParts,ins)
+		SetProperty(ins,"Transparency",1)
+	end
+	Humanoid = FindFirstChild(Character,"Humanoid")::Humanoid
+	if not Humanoid then
+		Humanoid=Instance.new("Humanoid")
+		task.defer(Destroy,Humanoid)
+	end
+
+	AttachPart = FindFirstChild(Character,"HumanoidRootPart")::BasePart
+	if not AttachPart then
+		AttachPart=Instance.new("Part")
+		Destroy(AttachPart)
+	else
+		local Head = FindFirstChild(Character,"Head")::BasePart
+		if Head then
+			local _face = FindFirstChild(Head,"face")::Decal?
+			if _face then
+				face = _face
+				SetProperty(_face,"Transparency",1)
+			end
+			Y_Offset = CFrame.new(0,(GetProperty(AttachPart,"Size").y+GetProperty(Head,"Size").y)*0.5,0)
+		else
+			Y_Offset = CFrame.new(0,GetProperty(AttachPart,"Size").y*0.5,0)
+		end
+	end
+	local connection_local = Connect(Jump_Pressed,Jump_Func)
+	Jump_Func_Connect = connection_local
+	local connection_move_local = Connect(Move_StateChanged,Move_Func)
+	Move_Func_Connect = connection_move_local
+	char_self_disconnect = Once(GetPropertyChangedSignal(Humanoid,"Parent"),function():()
+		Disconnect(connection_local)
+		Disconnect(connection_move_local)
+	end)
+	char_connection = Connect(GetProperty(Character,"ChildAdded"),function(child:Instance):()
+		if IsA(child,"Humanoid") then
+			Humanoid = child::Humanoid
+			Disconnect(char_self_disconnect)
+			Disconnect(connection_local)
+			Disconnect(connection_move_local)
+			local connection_local = Connect(Jump_Pressed,Jump_Func)
+			Jump_Func_Connect = connection_local
+			local connection_move_local = Connect(Move_StateChanged,Move_Func)
+			Move_Func_Connect = connection_move_local
+
+			char_self_disconnect = Once(GetPropertyChangedSignal(Humanoid,"Parent"),function():()
+				Disconnect(connection_local)
+				Disconnect(connection_move_local)
+			end)
+			return
+		end
+		if not IsA(child,"BasePart") then return end
+
+		local root = FindFirstChild(Character,"HumanoidRootPart")::BasePart
+		if root then
+			AttachPart=root
+			local Head = FindFirstChild(Character,"Head")::BasePart
+			if Head then
+				local _face = FindFirstChild(Head,"face")::Decal?
+				if _face then
+					face = _face
+					SetProperty(_face,"Transparency",1)
+				end
+				Y_Offset = CFrame.new(0,(GetProperty(AttachPart,"Size").y+GetProperty(Head,"Size").y)*0.5,0)
+			else
+				Y_Offset = CFrame.new(0,GetProperty(AttachPart,"Size").y*0.5,0)
+			end
+			return
+		end
+		local head = FindFirstChild(Character,"Head")::BasePart
+		if head then
+			local _face = FindFirstChild(head,"face")::Decal?
+			if _face then
+				face = _face
+				SetProperty(_face,"Transparency",1)
+			end
+			local root = FindFirstChild(Character,"HumanoidRootPart")::BasePart
+			if not root then return end
+			Y_Offset = CFrame.new(0,(GetProperty(root,"Size").y+GetProperty(head,"Size").y)*0.5,0)
+		end
+	end)
+	if not CameraDisabled then
+		PreRender_connection = Connect(PreRender,if GetProperty(VRService,"VREnabled") then VR_Camera_Transform elseif PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+	end
+else
+	Character = Instance.new("Model")
+	Destroy(Character)
+	CharHideDescedantConnection = Jump_Func_Connect
+	Char_UN_HideDescedantConnection = Jump_Func_Connect
+	Humanoid=Instance.new("Humanoid")
+	Destroy(Humanoid)
+	AttachPart=Instance.new("Part")
+	Destroy(AttachPart)
+end
+
+Connect(GetPropertyChangedSignal(VRService,"VREnabled"),function():()
+	--disable vr
+	if not GetProperty(VRService,"VREnabled") then
+		local _PreferredInput=PreferredInput
+		if not CameraDisabled then
+			--safety
+			do
+				if PreRender_connection then Disconnect(PreRender_connection) end
+			end
+			PreRender_connection = Connect(PreRender,if _PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif _PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+		end
+		if _PreferredInput==Enum.PreferredInput.Touch then
+			SetProperty(MobileButtons,"Enabled",true)
+			SetProperty(CameraMovementGUI,"Enabled",true)
+			if not connection_MoveFinger then
+				connection_MoveFinger=Connect(TouchMoved,MovedFinger)
+				connection_TouchEnded=Connect(TouchEnded,JoystickArea_InputEnded_Func)
+			end
+			return
+		end
+		if UnlockCounter<1 then
+			SetProperty(UserInputService,"MouseIconEnabled",false)
+			SetProperty(UserInputService,"MouseBehavior",Enum.MouseBehavior.LockCenter)
+		end
+		if connection_MoveFinger then
+			Disconnect(connection_MoveFinger)
+			Disconnect(connection_TouchEnded)
+			connection_MoveFinger=nil
+			SetProperty(MobileButtons,"Enabled",false)
+			SetProperty(CameraMovementGUI,"Enabled",false)
+			return
+		end
+		return
+	end
+	if connection_MoveFinger then
+		Disconnect(connection_MoveFinger)
+		Disconnect(connection_TouchEnded)
+		connection_MoveFinger=nil
+		SetProperty(MobileButtons,"Enabled",false)
+		SetProperty(CameraMovementGUI,"Enabled",false)
+	end
+
+	--enable VR
+	if not CameraDisabled then
+		do--safety
+			if PreRender_connection then Disconnect(PreRender_connection) end
+		end
+		PreRender_connection = Connect(PreRender,VR_Camera_Transform)
+	end
+end)
+
+Connect(GetPropertyChangedSignal(UserInputService,"PreferredInput"),function():()
+	if GetProperty(VRService,"VREnabled") then
+		PreferredInput = GetProperty(UserInputService,"PreferredInput")::Enum.PreferredInput
+		return
+	end
+	local _PreferredInput = GetProperty(UserInputService,"PreferredInput")::Enum.PreferredInput
+	PreferredInput=_PreferredInput
+	if not CameraDisabled then
+		--safety
+		do
+			if PreRender_connection then Disconnect(PreRender_connection) end
+		end
+		PreRender_connection = Connect(PreRender,if _PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif _PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+	end
+	if _PreferredInput==Enum.PreferredInput.Touch then
+		SetProperty(MobileButtons,"Enabled",true)
+		SetProperty(CameraMovementGUI,"Enabled",true)
+		if not connection_MoveFinger then
+			connection_MoveFinger=Connect(TouchMoved,MovedFinger)
+			connection_TouchEnded=Connect(TouchEnded,JoystickArea_InputEnded_Func)
+		end
+		return
+	end
+	if UnlockCounter<1 then
+		SetProperty(UserInputService,"MouseIconEnabled",false)
+		SetProperty(UserInputService,"MouseBehavior",Enum.MouseBehavior.LockCenter)
+	end
+	if connection_MoveFinger then
+		Disconnect(connection_MoveFinger)
+		Disconnect(connection_TouchEnded)
+		connection_MoveFinger=nil
+		SetProperty(MobileButtons,"Enabled",false)
+		SetProperty(CameraMovementGUI,"Enabled",false)
+		return
+	end
+end)
+if GetProperty(VRService,"VREnabled") then
+	SetProperty(MobileButtons,"Enabled",false)
+	SetProperty(CameraMovementGUI,"Enabled",false)
+elseif PreferredInput~=Enum.PreferredInput.Touch then
+	SetProperty(MobileButtons,"Enabled",false)
+	SetProperty(CameraMovementGUI,"Enabled",false)
+	if UnlockCounter<1 then
+		SetProperty(UserInputService,"MouseIconEnabled",false)
+		SetProperty(UserInputService,"MouseBehavior",Enum.MouseBehavior.LockCenter)
+	end
+else
+	connection_TouchEnded=Connect(TouchEnded,JoystickArea_InputEnded_Func)
+	connection_MoveFinger=Connect(TouchMoved,MovedFinger)
+end
+
+
+local LocalPlayer_Character = function():()
+	SetProperty(face,"Transparency",0)
+	for i,v in HiddenParts do
+		SetProperty(v,"Transparency",0)
+	end
+	table.clone(HiddenParts)
+	Disconnect(char_connection);Disconnect(Char_UN_HideDescedantConnection::RBXScriptConnection);Disconnect(CharHideDescedantConnection::RBXScriptConnection);
+	Disconnect(Jump_Func_Connect);Disconnect(char_self_disconnect::RBXScriptConnection);Disconnect(Move_Func_Connect::RBXScriptConnection);
+
+	local char = GetProperty(LocalPlayer,"Character")::Model?
+	if char then
+		Character=char
+		CharHideDescedantConnection = Connect(GetProperty(char,"DescendantAdded"),HideDiscedant)
+		Char_UN_HideDescedantConnection = Connect(GetProperty(char,"DescendantRemoving"),UnHideDiscedant)
+		for i,ins in GetDescendants(char)::{BasePart} do
+			if not IsA(ins,"BasePart") then continue end
+			table.insert(HiddenParts,ins)
+			SetProperty(ins,"Transparency",1)
+		end
+		char_connection = Connect(GetProperty(char,"ChildAdded"),LocalPlayer_Character_ChildAdded_Func)
+		local hum =FindFirstChild(Character,"Humanoid")::Humanoid
+
+		if hum then
+			Humanoid=hum
+		else
+			hum=Humanoid
+		end
+
+		local root = FindFirstChild(char,"HumanoidRootPart")::BasePart
+		if root then
+			AttachPart=root
+			local Head = FindFirstChild(char,"Head")::BasePart
+			if Head then
+				local _face = FindFirstChild(Head,"face")::Decal?
+				if _face then
+					face = _face
+					SetProperty(_face,"Transparency",1)
+				end
+				Y_Offset = CFrame.new(0,(GetProperty(root,"Size").y+GetProperty(Head,"Size").y)*0.5,0)
+			else
+				Y_Offset = CFrame.new(0,GetProperty(root,"Size").y*0.5,0)
+			end
+		end
+		local connection_local = Connect(Jump_Pressed,Jump_Func)
+		Jump_Func_Connect = connection_local
+		local connection_move_local = Connect(Move_StateChanged,Move_Func)
+		Move_Func_Connect = connection_move_local
+		char_self_disconnect = Once(GetPropertyChangedSignal(hum,"Parent"),function():()
+			Disconnect(connection_local)
+			Disconnect(connection_move_local)
+		end)
+
+
+		if not CameraDisabled then
+			if PreRender_connection then Disconnect(PreRender_connection) end
+			PreRender_connection = Connect(PreRender,if GetProperty(VRService,"VREnabled") then VR_Camera_Transform elseif PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+		end
+	end
+
+end
+
+Connect(GetPropertyChangedSignal(LocalPlayer,"Character"),LocalPlayer_Character)
+
+local JumpButton_Pos_Small = UDim2.new(1,-95,1,-160);
+local JumpButton_Pos_Big = UDim2.new(1,-170,1,-330);
+local size_Button_Big = UDim2.fromOffset(120,120)
+local size_Button_Small = UDim2.fromOffset(70,70)
+
+local MobileButtons_UpdateScale = function():()
+	local abs = GetProperty(MobileButtonsFrame,"AbsoluteSize")::Vector2
+	local x,y = GetVector2(abs,"X"),GetVector2(abs,"Y")
+	local minAxis = math.min(x,y)
+
+	if minAxis>500 then
+		--big screen
+		SetProperty(JumpButton,"Position",JumpButton_Pos_Big)
+		SetProperty(JumpButton,"Size",size_Button_Big)
+		SetProperty(Joystick,"Size",size_Button_Big)
+		Radious_Joystick=60
+		return
+	else
+		--small screen
+		SetProperty(JumpButton,"Position",JumpButton_Pos_Small)
+		SetProperty(JumpButton,"Size",size_Button_Small)
+		SetProperty(Joystick,"Size",size_Button_Small)
+		Radious_Joystick=35
+		return
+	end
+end
+Connect(GetPropertyChangedSignal(MobileButtonsFrame,"AbsoluteSize"),MobileButtons_UpdateScale)
+task.defer(MobileButtons_UpdateScale)
+
+local input_began = GetProperty(UserInputService,"InputBegan")::RBXScriptSignal
+local input_ended = GetProperty(UserInputService,"InputEnded")::RBXScriptSignal
+
+local input_began_func = function(input:InputObject):()
+	if InputObject_Get(input,"UserInputType")~=Enum.UserInputType.MouseButton2 then return end
+	local pos = InputObject_Get(input,"Position")
+	local x,y = pos.x,pos.y
+	if #GetGuiObjectsAtPosition(PlayerGui,x,y)~=0 then return end
+	--RightMouse = true
+	SetProperty(UserInputService,"MouseBehavior",Enum.MouseBehavior.LockCurrentPosition)
+end
+local input_ended_func = function(input:InputObject):()
+	if InputObject_Get(input,"UserInputType")~=Enum.UserInputType.MouseButton2 then return end
+	--RightMouse = false
+	if UnlockCounter<1 then
+		SetProperty(UserInputService,"MouseBehavior",Enum.MouseBehavior.LockCenter)
+		return
+	end
+	SetProperty(UserInputService,"MouseBehavior",Enum.MouseBehavior.Default)
+end
+Once(input_began,function(input:InputObject, gameProcessedEvent:boolean):()
+	xpcall(function():()
+		return (input::any)[nil]
+	end,function():()
+		InputObject_Get = debug.info(2,"f")::typeof(InputObject_Get)
+	end)
+	Connect(input_began,input_began_func)
+	input_began_func(input,gameProcessedEvent)
+end)
+Once(input_ended,function(input:InputObject, gameProcessedEvent:boolean):()
+	xpcall(function():()
+		return (input::any)[nil]
+	end,function():()
+		InputObject_Get = debug.info(2,"f")::typeof(InputObject_Get)
+	end)
+	Connect(input_ended,input_ended_func)
+	input_ended_func(input,gameProcessedEvent)
+end)
+
+--Go to first person, close ui
+local LockMouse = function():()
+	local c = UnlockCounter-1
+	UnlockCounter=c
+	if c>0 then return end
+	SetProperty(UserInputService,"MouseIconEnabled",false)
+	SetProperty(UserInputService,"MouseBehavior",Enum.MouseBehavior.LockCenter)
+	SetProperty(VRService,"LaserPointer",Enum.VRLaserPointerMode.DualPointer)
+end;
+--Leave ui, go to first person
+local UnlockMouse = function():()
+	local c = UnlockCounter+1
+	UnlockCounter=c
+	if c>1 then return end
+	SetProperty(VRService,"LaserPointer",Enum.VRLaserPointerMode.Pointer)
+	SetProperty(UserInputService,"MouseIconEnabled",true)
+end;
+--idk why but it has to have 1 second delay,it won't cause any issues anyway
+task.delay(1,LockMouse)
+
+
+local GamepadBinding = Instance.new("InputBinding") do
+	SetProperty(GamepadBinding,"KeyCode",Enum.KeyCode.Thumbstick2)
+	--SetProperty(GamepadBinding,"Name","GamepadBinding")
+	SetProperty(GamepadBinding,"Scale",4.189)
+	SetProperty(GamepadBinding,"Vector2Scale",Vector2.new(1,-0.75))
+	SetProperty(GamepadBinding,"Parent",CameraRotation_ACTION)
+end
+local Move_BINDING = Instance.new("InputBinding") do
+	SetProperty(Move_BINDING,"Down",Enum.KeyCode.S)
+	SetProperty(Move_BINDING,"KeyCode",Enum.KeyCode.Thumbstick1)
+	SetProperty(Move_BINDING,"Left",Enum.KeyCode.A)
+	--SetProperty(MoveBinding,"Name","MoveBinding")
+	SetProperty(Move_BINDING,"Right",Enum.KeyCode.D)
+	SetProperty(Move_BINDING,"Up",Enum.KeyCode.W)
+	SetProperty(Move_BINDING,"Parent",Move)
+end
+local KeyboardJumpBinding = Instance.new("InputBinding") do
+	SetProperty(KeyboardJumpBinding,"KeyCode",Enum.KeyCode.Space)
+	--SetProperty(KeyboardJumpBinding,"Name","KeyboardJumpBinding")
+	SetProperty(KeyboardJumpBinding,"Parent",Jump)
+end
+local GamepadJumpBinding = Instance.new("InputBinding") do
+	SetProperty(GamepadJumpBinding,"KeyCode",Enum.KeyCode.ButtonA)
+	--SetProperty(KeyboardJumpBinding,"Name","GamepadJumpBinding")
+	SetProperty(GamepadJumpBinding,"Parent",Jump)
+end
+
+
+local InputContext = Instance.new("InputContext")
+SetProperty(Move,"Parent",InputContext)
+SetProperty(Jump,"Parent",InputContext)
+SetProperty(CameraRotation_ACTION,"Parent",InputContext)
+
+SetProperty(InputContext,"Parent",LocalPlayer)
+
+SetProperty(MobileButtons,"Parent",PlayerGui)
+SetProperty(CameraMovementGUI,"Parent",PlayerGui)
+
+
+--API
+return {
+	[1] = LockMouse;
+	[2] = UnlockMouse;
+	[3]  = function():()
+		CameraDisabled = true
+		if PreRender_connection then Disconnect(PreRender_connection) end
+		PreRender_connection=nil
+		Delta_X=0
+		Delta_Y=0
+	end;
+	--EnableCamera
+	[4]  = function():()
+		CameraDisabled = false
+		--safety
+		do
+			if PreRender_connection then Disconnect(PreRender_connection) end
+		end
+		PreRender_connection = Connect(PreRender,if GetProperty(VRService,"VREnabled") then VR_Camera_Transform elseif PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+	end;
+	--SetCameraRotation
+	[5] = function(x:number,y:number):()
+		camAngleX=x
+		camAngleY=y
+	end;
+	--Disable movement controls (walk+jump)
+	[6] = function():()
+		moveTouchObject=nil
+		Humanoid_Move(Humanoid::Humanoid,(vector.create(0,0,0)::any)::Vector3)
+		MoveVector_X=0
+		MoveVector_Z=0
+		Unreliable_FireServer(MoveInputEvent,Vector2int16.new(0,0))
+		--InputAction_Fire(Move,Vector2.zero)
+		SetProperty(Move,"Enabled",false)
+		SetProperty(Jump,"Enabled",false)
+		SetProperty(JumpButton,"Visible",false)
+		SetProperty(JoystickArea,"Visible",false)
+		SetProperty(Joystick,"Visible",false)
+		SetProperty(Inner,"Position",UDim2.fromScale(0,0))
+	end;
+	--Togle movement controls (walk+jump)
+	[7] = function():()
+		SetProperty(Move,"Enabled",true)
+		SetProperty(Jump,"Enabled",true)
+		SetProperty(JumpButton,"Visible",true)
+		SetProperty(JoystickArea,"Visible",true)
+		SetProperty(Joystick,"Visible",true)
+	end;
+	--Set Sensativity
+	[8] = function(x:number):()
+		Sensativity=x
+		if Internal_Sensativity==0 then return end
+		Internal_Sensativity=x
+	end;
+	--Get camera Pitch & Yaw
+	[9] = function():(number,number)
+		return camAngleX,camAngleY
+	end;
+	--reset sensativity
+	[10] = function():()
+		Internal_Sensativity=Sensativity
+	end;
+	--set internal sensetivity
+	[11] = function(set:number):()
+		Internal_Sensativity=set
+	end;
+}
