@@ -73,4 +73,4 @@ Use freely, optimize ruthlessly, and respect the core design philosophy.
 
 - Roblox: `Yarik_superpro`  
 - Discord: `yarik_pro`
-- DevForum: WIP
+- DevForum: https://devforum.roblox.com/t/fpx-%E2%80%93-lightweight-playermodule-replacement-for-first-person-server-ready/4409000
