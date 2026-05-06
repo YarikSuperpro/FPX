@@ -120,16 +120,10 @@ local PlrAdded_Func = function(plr:Player):()
 			GetVector2(vec,"X"),0,GetVector2(vec,"Y")
 			)::any)::Vector3)
 	end)
-	local connection_Jumping:RBXScriptConnection
+	local connection_Jumping = temp::RBXScriptConnection
 	local func_Jump = function():()
-		local a = InputAction_GetState(JumpInput)
-		if not a then
-			Disconnect(connection_Jumping)
-			return
-		end
-		SetProperty(Humanoid::Humanoid,"Jump",a::true)
+		SetProperty(Humanoid::Humanoid,"Jump",true)
 	end
-	
 
 	Connect(GetProperty(JumpInput,"StateChanged"),function(vec:boolean):()
 		if not Humanoid then return end
@@ -186,6 +180,8 @@ local PlrAdded_Func = function(plr:Player):()
 end
 temp = Connect(Player_Added,PlrAdded_Func)
 Disconnect = temp.Disconnect
+temp = Connect(Player_Added,PlrAdded_Func)--Silencer connection
+Disconnect(temp)
 for i,v in Players:GetPlayers() do
 	PlrAdded_Func(v)
 end
@@ -211,18 +207,6 @@ display.CanCollide=false
 display.CanQuery=false
 display.CanTouch=false
 display.Parent=workspace
-
---Connect(GetProperty(MoveInputEvent,"OnServerEvent"),function(plr:Player,mov:Vector2int16):()
---	local Humanoid = PlayerToHumanoid[plr]
---	if not Humanoid then return end
---	if typeof(mov)~="Vector2int16" then plr:Kick() return end
---	Humanoid_Move(Humanoid::Humanoid,(vector.create(
---		GetVector2int16(mov,"X")/32767,
---		0,
---		GetVector2int16(mov,"Y")/32767
---		)::any)::Vector3)
---end)
-
 
 Connect(GetProperty(CameraRotation,"OnServerEvent"),function(plr:Player,data:Vector2int16|Vector3int16):()
 	local type = typeof(data)
@@ -269,55 +253,6 @@ Connect(GetProperty(CameraRotation,"OnServerEvent"),function(plr:Player,data:Vec
 		Kick(plr) return
 	end
 end)
-
---Connect(GetProperty(MoveAndCameraRotation,"OnServerEvent"),function(plr:Player,mov:Vector2int16,data:Vector2int16|Vector3int16):()
---	local Humanoid = PlayerToHumanoid[plr]
---	if not Humanoid then return end
---	if typeof(mov)~="Vector2int16" then plr:Kick() return end
---	Humanoid_Move(Humanoid::Humanoid,(vector.create(
---		GetVector2int16(mov,"X")/32767,
---		0,
---		GetVector2int16(mov,"Y")/32767
---		)::any)::Vector3)
---	local type = typeof(data)
---	if type=="Vector2int16" then--PC/Mobile/Console
-
---		local ax = GetVector2int16(data::Vector2int16,"X") / 32767 * math.pi
---		local ay = GetVector2int16(data::Vector2int16,"Y") / 32767 * (math.pi / 2)
---		local yaw,pitch = CFrame.Angles(0, ax, 0),CFrame.Angles(ay, 0, 0)
---		local rot = CFrame_MUL(yaw,pitch)
-
---		display.CFrame=CFrame.new(0,5,0)*rot
---		return
---	elseif type=="Vector3int16" then--VR
---		local pitch_i16 = GetVector3int16(data::Vector3int16,"X")
---		local yaw_i16   = GetVector3int16(data::Vector3int16,"Y")
---		local pack      = GetVector3int16(data::Vector3int16,"Z")
---		if pack < 0 then
---			pack += 65536
---		end
---		local x = bit32.rshift(pack, 8)          -- high 8 bits
---		local z = bit32.band(pack,0b11111111)
-
---		local hx = ((x / 255) - 0.5) * 2 * math.pi
---		local hz = ((z / 255) - 0.5) * 2 * math.pi
-
---		local pitch = pitch_i16 / 32767 * math.pi
---		local yaw   = yaw_i16   / 32767 * math.pi
-
---		local body_cf = CFrame.Angles(0,pitch,0) * CFrame.Angles(0,hx, 0) * CFrame.Angles(yaw, 0,0) * CFrame.Angles(0, 0, hz)
---		-- final camera
---		display.CFrame = CFrame.new(0,5,-35) * body_cf
-
---		return
---	else
---		plr:Kick() return
---	end
---end)
-
-
-
-
 
 
 
