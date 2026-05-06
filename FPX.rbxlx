@@ -1,17 +1,18 @@
 <roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
 	<External>null</External>
 	<External>nil</External>
-	<Item class="Workspace" referent="RBXF05304F42BD94A7AB521B38F4F1DAC70">
+	<Item class="Workspace" referent="RBXA5978383D59443B3A9868961351AF511">
 		<Properties>
 			<float name="AirDensity">0.00120000006</float>
 			<float name="AirTurbulenceIntensity">0</float>
 			<bool name="AllowThirdPartySales">false</bool>
-			<token name="AuthorityMode">1</token>
+			<token name="AuthorityMode">0</token>
 			<token name="AvatarUnificationMode">0</token>
 			<token name="ClientAnimatorThrottling">0</token>
 			<BinaryString name="CollisionGroupData">AQEABP////8HRGVmYXVsdA==</BinaryString>
-			<Ref name="CurrentCamera">RBX6C43A9A6A12A45EEB070A488FA8ADEB0</Ref>
+			<Ref name="CurrentCamera">RBX8022BA6B679A448F88E7E512197D1CED</Ref>
 			<double name="DistributedGameTime">0</double>
+			<token name="EnableSLIMAvatars">0</token>
 			<bool name="ExplicitAutoJoints">true</bool>
 			<bool name="FallHeightEnabled">true</bool>
 			<float name="FallenPartsDestroyHeight">-500</float>
@@ -23,25 +24,22 @@
 			</Vector3>
 			<float name="Gravity">196.199997</float>
 			<token name="IKControlConstraintSupport">0</token>
+			<token name="LayeredClothingCacheOptimizations">0</token>
 			<token name="LuauTypeCheckMode">0</token>
 			<token name="MeshPartHeadsAndAccessories">0</token>
+			<token name="MeshStreamingAndImprovedLods">0</token>
 			<token name="ModelStreamingBehavior">0</token>
-			<token name="MoverConstraintRootBehavior">0</token>
-			<token name="NextGenerationReplication">0</token>
+			<token name="NextGenerationReplication">2</token>
 			<token name="PathfindingUseImprovedSearch">0</token>
 			<token name="PhysicsImprovedSleep">0</token>
 			<token name="PhysicsSteppingMethod">0</token>
 			<token name="PlayerCharacterDestroyBehavior">0</token>
-			<token name="PlayerScriptsUseInputActionSystem">0</token>
+			<token name="PlayerScriptsUseInputActionSystem">2</token>
 			<token name="PrimalPhysicsSolver">0</token>
 			<token name="RejectCharacterDeletions">0</token>
 			<token name="RenderingCacheOptimizations">0</token>
 			<token name="ReplicateInstanceDestroySetting">0</token>
 			<token name="Retargeting">0</token>
-			<BinaryString name="RolloutValidationBinaryExpectedValue"></BinaryString>
-			<BinaryString name="RolloutValidationBinaryString"></BinaryString>
-			<SharedString name="RolloutValidationSharedExpectedValue">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
-			<SharedString name="RolloutValidationSharedString">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
 			<token name="SandboxedInstanceMode">0</token>
 			<token name="SignalBehavior2">2</token>
 			<token name="StreamOutBehavior">2</token>
@@ -52,8 +50,9 @@
 			<bool name="TerrainWeldsFixed">true</bool>
 			<token name="TouchEventsUseCollisionGroups">0</token>
 			<bool name="TouchesUseCollisionGroups">false</bool>
-			<token name="UseFixedSimulation">0</token>
+			<token name="UseFixedSimulation">2</token>
 			<token name="UseNewLuauTypeSolver">2</token>
+			<token name="ValidateEnabledProximityPrompt">0</token>
 			<token name="LevelOfDetail">0</token>
 			<CoordinateFrame name="ModelMeshCFrame">
 				<X>0</X>
@@ -103,23 +102,23 @@
 			<string name="Name">Workspace</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000000002</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000002</UniqueId>
 		</Properties>
-		<Item class="Camera" referent="RBX6C43A9A6A12A45EEB070A488FA8ADEB0">
+		<Item class="Camera" referent="RBX8022BA6B679A448F88E7E512197D1CED">
 			<Properties>
 				<CoordinateFrame name="CFrame">
 					<X>-19.6960945</X>
 					<Y>14.0916243</Y>
 					<Z>-19.3038864</Z>
-					<R00>-0.706150889</R00>
-					<R01>0.31296584</R01>
-					<R02>-0.635140479</R02>
-					<R10>-8.39972536e-09</R10>
-					<R11>0.897013366</R11>
-					<R12>0.442003787</R12>
-					<R20>0.708061457</R20>
-					<R21>0.312121361</R21>
-					<R22>-0.633426726</R22>
+					<R00>-0.71669203</R00>
+					<R01>0.479349464</R01>
+					<R02>-0.506533921</R02>
+					<R10>-8.84756446e-09</R10>
+					<R11>0.726328611</R11>
+					<R12>0.687347651</R12>
+					<R20>0.69738996</R20>
+					<R21>0.492616504</R21>
+					<R22>-0.520553648</R22>
 				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
@@ -149,10 +148,10 @@
 				<string name="Name">Camera</string>
 				<int64 name="SourceAssetId">-1</int64>
 				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003a1</UniqueId>
+				<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003b0</UniqueId>
 			</Properties>
 		</Item>
-		<Item class="Part" referent="RBXD3BBE686C8BB470B8CF81C521F80B051">
+		<Item class="Part" referent="RBXC601FA96C5A84F51877D8C479DD6C58D">
 			<Properties>
 				<token name="shape">1</token>
 				<token name="formFactorRaw">0</token>
@@ -250,9 +249,9 @@
 				<string name="Name">Baseplate</string>
 				<int64 name="SourceAssetId">-1</int64>
 				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003a2</UniqueId>
+				<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003b1</UniqueId>
 			</Properties>
-			<Item class="Texture" referent="RBX469A132310454C8DBF1ABA1A766BC9EE">
+			<Item class="Texture" referent="RBXF74FE652973345FAB88B4FB652613040">
 				<Properties>
 					<float name="OffsetStudsU">0</float>
 					<float name="OffsetStudsV">0</float>
@@ -265,6 +264,7 @@
 					</Color3>
 					<Content name="MetalnessMap"><null></null></Content>
 					<Content name="NormalMap"><null></null></Content>
+					<float name="Rotation">0</float>
 					<Content name="RoughnessMap"><null></null></Content>
 					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
 					<Content name="TexturePack"><null></null></Content>
@@ -287,17 +287,18 @@
 					<string name="Name">Texture</string>
 					<int64 name="SourceAssetId">-1</int64>
 					<BinaryString name="Tags"></BinaryString>
-					<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003a3</UniqueId>
+					<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003b2</UniqueId>
 				</Properties>
 			</Item>
 		</Item>
-		<Item class="Terrain" referent="RBX627A0571DADC4825A7A0B9CE38224A75">
+		<Item class="Terrain" referent="RBX8E53B87D51FC48E3BAE34D662A8191EE">
 			<Properties>
 				<token name="AcquisitionMethod">0</token>
 				<bool name="Decoration">true</bool>
 				<float name="GrassLength">0.699999988</float>
 				<BinaryString name="MaterialColors"><![CDATA[AAAAAAAAb34+WFlWmJiYimFJz8unrJRsY2Rm3eTl6/3/lHxfeXBiS0pKjIJo/xhDUFRUhoZ2
 zNLfaoZA///+//PAj5CH]]></BinaryString>
+				<SharedString name="Materials">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
 				<BinaryString name="PhysicsGrid">AgMAAAAAAAAAAAAAAAA=</BinaryString>
 				<BinaryString name="SmoothGrid">AQU=</BinaryString>
 				<bool name="SmoothVoxelsUpgraded">false</bool>
@@ -404,10 +405,10 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 				<string name="Name">Terrain</string>
 				<int64 name="SourceAssetId">-1</int64>
 				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003a4</UniqueId>
+				<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003b3</UniqueId>
 			</Properties>
 		</Item>
-		<Item class="SpawnLocation" referent="RBXF94C2A93CC8747DEB6F592D1FA2AE435">
+		<Item class="SpawnLocation" referent="RBXE72E3A1662F743C0B8EB13486C196914">
 			<Properties>
 				<bool name="AllowTeamChangeOnTouch">false</bool>
 				<int name="Duration">0</int>
@@ -510,9 +511,9 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 				<string name="Name">SpawnLocation</string>
 				<int64 name="SourceAssetId">-1</int64>
 				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003a5</UniqueId>
+				<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003b4</UniqueId>
 			</Properties>
-			<Item class="Decal" referent="RBXB51AE1C5220C4EE5A33616084FF9A7B7">
+			<Item class="Decal" referent="RBXD00D77C16F864122B370BE7BC5BD8F76">
 				<Properties>
 					<Color3 name="Color3">
 						<R>1</R>
@@ -521,6 +522,7 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 					</Color3>
 					<Content name="MetalnessMap"><null></null></Content>
 					<Content name="NormalMap"><null></null></Content>
+					<float name="Rotation">0</float>
 					<Content name="RoughnessMap"><null></null></Content>
 					<Content name="Texture"><url>rbxasset://textures/SpawnLocation.png</url></Content>
 					<Content name="TexturePack"><null></null></Content>
@@ -543,87 +545,12 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 					<string name="Name">Decal</string>
 					<int64 name="SourceAssetId">-1</int64>
 					<BinaryString name="Tags"></BinaryString>
-					<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003a6</UniqueId>
-				</Properties>
-			</Item>
-		</Item>
-		<Item class="Model" referent="RBX5AD13DD59BEA453FB9A40564C37D338D">
-			<Properties>
-				<token name="LevelOfDetail">0</token>
-				<CoordinateFrame name="ModelMeshCFrame">
-					<X>0</X>
-					<Y>0</Y>
-					<Z>0</Z>
-					<R00>1</R00>
-					<R01>0</R01>
-					<R02>0</R02>
-					<R10>0</R10>
-					<R11>1</R11>
-					<R12>0</R12>
-					<R20>0</R20>
-					<R21>0</R21>
-					<R22>1</R22>
-				</CoordinateFrame>
-				<SharedString name="ModelMeshData">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
-				<Vector3 name="ModelMeshSize">
-					<X>0</X>
-					<Y>0</Y>
-					<Z>0</Z>
-				</Vector3>
-				<token name="ModelStreamingMode">0</token>
-				<bool name="NeedsPivotMigration">false</bool>
-				<Ref name="PrimaryPart">null</Ref>
-				<float name="ScaleFactor">1</float>
-				<SharedString name="SlimHash">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
-				<OptionalCoordinateFrame name="WorldPivotData"></OptionalCoordinateFrame>
-				<BinaryString name="AttributesSerialize"></BinaryString>
-				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-				<bool name="DefinesCapabilities">false</bool>
-				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-				<string name="Name">FPX</string>
-				<int64 name="SourceAssetId">-1</int64>
-				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000001b1d</UniqueId>
-			</Properties>
-			<Item class="Folder" referent="RBX4C73D48BC4AA4D5589B08872E7A77C78">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-					<bool name="DefinesCapabilities">false</bool>
-					<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-					<string name="Name">ReplicatedStorage</string>
-					<int64 name="SourceAssetId">-1</int64>
-					<BinaryString name="Tags"></BinaryString>
-					<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000001b1e</UniqueId>
-				</Properties>
-			</Item>
-			<Item class="Folder" referent="RBXB2847A756C2F4D0B9CB6B981DB561862">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-					<bool name="DefinesCapabilities">false</bool>
-					<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-					<string name="Name">StarterPlayerScripts</string>
-					<int64 name="SourceAssetId">-1</int64>
-					<BinaryString name="Tags"></BinaryString>
-					<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000001b23</UniqueId>
-				</Properties>
-			</Item>
-			<Item class="Folder" referent="RBXF1F1DE8604F4450F8AE92A9EA9D2C809">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-					<bool name="DefinesCapabilities">false</bool>
-					<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-					<string name="Name">ServerScriptService</string>
-					<int64 name="SourceAssetId">-1</int64>
-					<BinaryString name="Tags"></BinaryString>
-					<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000001b26</UniqueId>
+					<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003b5</UniqueId>
 				</Properties>
 			</Item>
 		</Item>
 	</Item>
-	<Item class="TimerService" referent="RBXD4B70AF0BE6440B0ACFED034E6654DFA">
+	<Item class="TimerService" referent="RBX52A175285A3D421CB19723AFE2639CC7">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
@@ -632,10 +559,10 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 			<string name="Name">Instance</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000032d</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000332</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="CollectionService" referent="RBX8EF2931EF3F0494DBC0CCFAD3E2A9196">
+	<Item class="CollectionService" referent="RBXF9DEB737745745B593F09E3A368F33FF">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
@@ -644,10 +571,10 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 			<string name="Name">CollectionService</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000032e</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000333</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="SoundService" referent="RBXE9D528E7B7544D8DA6027BDDB0511A47">
+	<Item class="SoundService" referent="RBX0C27ACDC50EB47F9871A5A6C1FE5E260">
 		<Properties>
 			<bool name="AcousticSimulationEnabled">false</bool>
 			<token name="AmbientReverb">0</token>
@@ -667,10 +594,10 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 			<string name="Name">SoundService</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000032f</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000334</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="VideoCaptureService" referent="RBX78986ADF95574779A03A1B773E240339">
+	<Item class="VideoCaptureService" referent="RBX50AFAA19F0144FD3960DE2C5A0D9055E">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
@@ -679,10 +606,10 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 			<string name="Name">VideoCaptureService</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000033b</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000340</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="NonReplicatedCSGDictionaryService" referent="RBXC3C3FAE84162433B96E2AE4682E825BD">
+	<Item class="NonReplicatedCSGDictionaryService" referent="RBX06C7A82CA9394B2C82E3681BF591E459">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
@@ -691,10 +618,10 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 			<string name="Name">NonReplicatedCSGDictionaryService</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000033c</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000341</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="CSGDictionaryService" referent="RBXEB97C7AF3C3B4D6A9C066F58A63C1B29">
+	<Item class="CSGDictionaryService" referent="RBX64B122A55B3A42B1A72C75FBB835EA02">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
@@ -703,10 +630,10 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 			<string name="Name">CSGDictionaryService</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000033d</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000342</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="Chat" referent="RBX4158474C48CC4CECA7AE174E30A3B09A">
+	<Item class="Chat" referent="RBXEE4C43A712F24A108971E7114232C744">
 		<Properties>
 			<bool name="BubbleChatEnabled">true</bool>
 			<bool name="IsAutoMigrated">false</bool>
@@ -718,10 +645,10 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 			<string name="Name">Chat</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000000343</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000348</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="Players" referent="RBXFEAA2E1D3CAA4EB6B63BD0C9DDCDD2BF">
+	<Item class="Players" referent="RBX4C90B981134B4523A094F63190283419">
 		<Properties>
 			<bool name="BanningEnabled">true</bool>
 			<bool name="CharacterAutoLoads">true</bool>
@@ -736,10 +663,10 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 			<string name="Name">Players</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000000345</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb780000034a</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="ReplicatedFirst" referent="RBX324F63D0171044FC90629A49D65FE3B2">
+	<Item class="ReplicatedFirst" referent="RBXFDD894F54BB94249B1A46147820213A3">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
@@ -748,10 +675,10 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 			<string name="Name">ReplicatedFirst</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000000348</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb780000034d</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="TweenService" referent="RBX871AA96E89844ADC81552A6AE679070A">
+	<Item class="TweenService" referent="RBX6AA178E03A824AC59BD30B49EBFCE7A3">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
@@ -760,10 +687,10 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 			<string name="Name">TweenService</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000034a</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb780000034f</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="MaterialService" referent="RBX342B0D5EB76048748D47276EBB8CDFE3">
+	<Item class="MaterialService" referent="RBX9EE03877E0714BE1A156ABD0261C8785">
 		<Properties>
 			<string name="AsphaltName">Asphalt</string>
 			<string name="BasaltName">Basalt</string>
@@ -813,10 +740,10 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 			<string name="Name">MaterialService</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000034b</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000350</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="TextChatService" referent="RBX24AB8570A7EC4F6C9F22EF6A7F6E72FA">
+	<Item class="TextChatService" referent="RBXB0E4629D8FC34DFD8CEB6A2FCCBD184B">
 		<Properties>
 			<bool name="ChatTranslationFTUXShown">true</bool>
 			<bool name="ChatTranslationToggleEnabled">false</bool>
@@ -832,9 +759,9 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 			<string name="Name">TextChatService</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000034c</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000351</UniqueId>
 		</Properties>
-		<Item class="ChatWindowConfiguration" referent="RBXF78CF212B1B145A7B6D038E907CB8E35">
+		<Item class="ChatWindowConfiguration" referent="RBXD8421E01838242699871C376977CE814">
 			<Properties>
 				<Color3 name="BackgroundColor3">
 					<R>0.0980392173</R>
@@ -872,10 +799,10 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 				<string name="Name">ChatWindowConfiguration</string>
 				<int64 name="SourceAssetId">-1</int64>
 				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003b0</UniqueId>
+				<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003bf</UniqueId>
 			</Properties>
 		</Item>
-		<Item class="ChatInputBarConfiguration" referent="RBX17D2C26A91834BC096AF6D67917CF445">
+		<Item class="ChatInputBarConfiguration" referent="RBX897791DC25444D97865EA90689CC8048">
 			<Properties>
 				<bool name="AutocompleteEnabled">true</bool>
 				<Color3 name="BackgroundColor3">
@@ -917,10 +844,10 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 				<string name="Name">ChatInputBarConfiguration</string>
 				<int64 name="SourceAssetId">-1</int64>
 				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003b1</UniqueId>
+				<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003c0</UniqueId>
 			</Properties>
 		</Item>
-		<Item class="BubbleChatConfiguration" referent="RBX95A39B43EE9B4B4D9EDB2BA1DCE0A989">
+		<Item class="BubbleChatConfiguration" referent="RBXB47D35A7644C43E7A6A945D2E2D9D88D">
 			<Properties>
 				<string name="AdorneeName">HumanoidRootPart</string>
 				<Color3 name="BackgroundColor3">
@@ -962,9 +889,9 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 				<string name="Name">BubbleChatConfiguration</string>
 				<int64 name="SourceAssetId">-1</int64>
 				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003b2</UniqueId>
+				<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003c1</UniqueId>
 			</Properties>
-			<Item class="UIGradient" referent="RBX913AD4CD0D8444E3B68108963B71AD06">
+			<Item class="UIGradient" referent="RBXFEEFEBAF4683446E863E7E72DEC079F6">
 				<Properties>
 					<ColorSequence name="Color">0 1 1 1 0 1 1 1 1 0 </ColorSequence>
 					<bool name="Enabled">false</bool>
@@ -981,10 +908,10 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 					<string name="Name">UIGradient</string>
 					<int64 name="SourceAssetId">-1</int64>
 					<BinaryString name="Tags"></BinaryString>
-					<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003b3</UniqueId>
+					<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003c2</UniqueId>
 				</Properties>
 			</Item>
-			<Item class="ImageLabel" referent="RBXEE7DE84B2CD2440EBE56147646B99F5B">
+			<Item class="ImageLabel" referent="RBXEC5D34ABC09C475E8E8712FB5B8A3B96">
 				<Properties>
 					<Content name="Image"><null></null></Content>
 					<Color3 name="ImageColor3">
@@ -1041,6 +968,7 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 					<int name="BorderSizePixel">1</int>
 					<bool name="ClipsDescendants">false</bool>
 					<bool name="Draggable">false</bool>
+					<token name="InputSink">0</token>
 					<bool name="Interactable">true</bool>
 					<int name="LayoutOrder">0</int>
 					<Ref name="NextSelectionDown">null</Ref>
@@ -1080,10 +1008,10 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 					<string name="Name">ImageLabel</string>
 					<int64 name="SourceAssetId">-1</int64>
 					<BinaryString name="Tags"></BinaryString>
-					<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003b4</UniqueId>
+					<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003c3</UniqueId>
 				</Properties>
 			</Item>
-			<Item class="UICorner" referent="RBX4A09539A56DD4748AA190BB83F469D1F">
+			<Item class="UICorner" referent="RBX0B5E06C06C284387923FE82C3895A04E">
 				<Properties>
 					<UDim name="CornerRadius">
 						<S>0</S>
@@ -1096,10 +1024,10 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 					<string name="Name">UICorner</string>
 					<int64 name="SourceAssetId">-1</int64>
 					<BinaryString name="Tags"></BinaryString>
-					<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003b5</UniqueId>
+					<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003c4</UniqueId>
 				</Properties>
 			</Item>
-			<Item class="UIPadding" referent="RBX131BAA968E864A8098B16C329D7BFF77">
+			<Item class="UIPadding" referent="RBX86BEAD210C5449EC92F18C21FB429B44">
 				<Properties>
 					<UDim name="PaddingBottom">
 						<S>0</S>
@@ -1124,11 +1052,11 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 					<string name="Name">UIPadding</string>
 					<int64 name="SourceAssetId">-1</int64>
 					<BinaryString name="Tags"></BinaryString>
-					<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003b6</UniqueId>
+					<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003c5</UniqueId>
 				</Properties>
 			</Item>
 		</Item>
-		<Item class="ChannelTabsConfiguration" referent="RBXA84B7E9F47AD4F14B5B1F90381F5F338">
+		<Item class="ChannelTabsConfiguration" referent="RBX84189988F4DB4F4EA05D92F77CF57F01">
 			<Properties>
 				<Color3 name="BackgroundColor3">
 					<R>0.0980392173</R>
@@ -1172,11 +1100,11 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 				<string name="Name">ChannelTabsConfiguration</string>
 				<int64 name="SourceAssetId">-1</int64>
 				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003b7</UniqueId>
+				<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003c6</UniqueId>
 			</Properties>
 		</Item>
 	</Item>
-	<Item class="PermissionsService" referent="RBXDF7AA59E83B74C749E3F654E9A0E0626">
+	<Item class="PermissionsService" referent="RBX5251F30630844A4CB03B043092B33027">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
@@ -1185,10 +1113,10 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 			<string name="Name">PermissionsService</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000034e</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000353</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="PlayerEmulatorService" referent="RBX3B637469ED7E4E7A8FDD6EAAF1A636EB">
+	<Item class="PlayerEmulatorService" referent="RBX95BEE0495AD247B2971C60AF5BDD453E">
 		<Properties>
 			<bool name="CustomPoliciesEnabled">false</bool>
 			<string name="EmulatedCountryCode"></string>
@@ -1204,10 +1132,10 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 			<string name="Name">PlayerEmulatorService</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000034f</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000354</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="StudioData" referent="RBXD862AB1C32DC4B9B9985387059018A3A">
+	<Item class="StudioData" referent="RBXA42C08A2F2874FD8B528DCD332047605">
 		<Properties>
 			<bool name="EnableScriptCollabByDefaultOnLoad">false</bool>
 			<BinaryString name="AttributesSerialize"></BinaryString>
@@ -1217,32 +1145,32 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 			<string name="Name">StudioData</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000000353</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000357</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="StarterPlayer" referent="RBX0E00C126952F47E19DADBCBBE5CD5760">
+	<Item class="StarterPlayer" referent="RBX65EC39D896D349F9B2CDABED30E7F571">
 		<Properties>
 			<bool name="AllowCustomAnimations">true</bool>
 			<bool name="AutoJumpEnabled">true</bool>
-			<token name="AvatarJointUpgrade_SerializedRollout">0</token>
+			<token name="AvatarJointUpgrade_SerializedRollout">2</token>
 			<float name="CameraMaxZoomDistance">128</float>
 			<float name="CameraMinZoomDistance">0.5</float>
 			<token name="CameraMode">0</token>
-			<bool name="CharacterBreakJointsOnDeath">true</bool>
+			<bool name="CharacterBreakJointsOnDeath">false</bool>
 			<float name="CharacterJumpHeight">7.19999981</float>
 			<float name="CharacterJumpPower">50</float>
 			<float name="CharacterMaxSlopeAngle">89</float>
 			<bool name="CharacterUseJumpPower">false</bool>
 			<float name="CharacterWalkSpeed">16</float>
 			<bool name="ClassicDeath">true</bool>
-			<bool name="CreateDefaultPlayerModule">true</bool>
+			<bool name="CreateDefaultPlayerModule">false</bool>
 			<token name="DevCameraOcclusionMode">0</token>
 			<token name="DevComputerCameraMovementMode">0</token>
-			<token name="DevComputerMovementMode">0</token>
+			<token name="DevComputerMovementMode">3</token>
 			<token name="DevTouchCameraMovementMode">0</token>
-			<token name="DevTouchMovementMode">0</token>
+			<token name="DevTouchMovementMode">5</token>
 			<token name="EnableDynamicHeads">0</token>
-			<bool name="EnableMouseLockOption">true</bool>
+			<bool name="EnableMouseLockOption">false</bool>
 			<int64 name="GameSettingsAssetIDFace">0</int64>
 			<int64 name="GameSettingsAssetIDHead">0</int64>
 			<int64 name="GameSettingsAssetIDLeftArm">0</int64>
@@ -1273,9 +1201,9 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 			<string name="Name">StarterPlayer</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000000355</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000359</UniqueId>
 		</Properties>
-		<Item class="StarterPlayerScripts" referent="RBX34025DE3658A46E1B6C3177FBF07C8DE">
+		<Item class="StarterPlayerScripts" referent="RBX3905A027A1DF4417B90B5402CB06452E">
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
@@ -1284,13 +1212,295 @@ zNLfaoZA///+//PAj5CH]]></BinaryString>
 				<string name="Name">StarterPlayerScripts</string>
 				<int64 name="SourceAssetId">-1</int64>
 				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003a8</UniqueId>
+				<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003b7</UniqueId>
 			</Properties>
-			<Item class="LocalScript" referent="RBXEA85E6EA41B54FD28BA7FA76D9F1DD4C">
-				<Properties>
-					<ProtectedString name="Source"><![CDATA[--!optimize 2
+		</Item>
+		<Item class="StarterCharacterScripts" referent="RBX2A6D124E60D445B483DCB7E6517973C7">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+				<string name="Name">StarterCharacterScripts</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+				<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003b8</UniqueId>
+			</Properties>
+		</Item>
+	</Item>
+	<Item class="StarterPack" referent="RBXFC921A3D172841A6A92255A70742DFD1">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">StarterPack</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb780000035a</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="StarterGui" referent="RBXA821A89C760B4A0291C0BB4DA3CE7DEF">
+		<Properties>
+			<bool name="ResetPlayerGuiOnSpawn">true</bool>
+			<token name="RtlTextSupport">0</token>
+			<token name="ScreenOrientation">4</token>
+			<bool name="ShowDevelopmentGui">true</bool>
+			<Ref name="StudioDefaultStyleSheet">null</Ref>
+			<Ref name="StudioInsertWidgetLayerCollectorAutoLinkStyleSheet">null</Ref>
+			<token name="VirtualCursorMode">0</token>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">StarterGui</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb780000035b</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="LocalizationService" referent="RBX03A6DFF5EAE246B6A734F58EB36AE864">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">LocalizationService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb780000035d</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="TeleportService" referent="RBX1F5F8C09EA1B45DE85C78868EEC8EB0B">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">Teleport Service</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000361</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="PhysicsService" referent="RBXB4D2F97FEB954394B717F7D9156F3F5E">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">PhysicsService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000363</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="InsertService" referent="RBX72DC762AF6DD45C7BF9EF5A8A11E654B">
+		<Properties>
+			<bool name="AllowClientInsertModels">false</bool>
+			<bool name="AllowInsertFreeModels">false</bool>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">InsertService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000366</UniqueId>
+		</Properties>
+		<Item class="StringValue" referent="RBXA0A52F94394F4506BC209055D91818A7">
+			<Properties>
+				<string name="Value">{CF1CD346-99BF-4627-8558-35DD7CDB2DA0}</string>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+				<string name="Name">InsertionHash</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+				<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003b9</UniqueId>
+			</Properties>
+		</Item>
+	</Item>
+	<Item class="GamePassService" referent="RBXD9BB1208378442E8AFF1B58EB261AA1A">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">GamePassService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000367</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="Debris" referent="RBXC781942B4B824CF3B9A32007F99804F0">
+		<Properties>
+			<int name="MaxItems">1000</int>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">Debris</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000368</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="CookiesService" referent="RBX29E97B48FD4B4C16BFE511E7E84F0B7F">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">CookiesService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000369</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="Selection" referent="RBX95CEAE42BFA94D3D8EB9784B77EEDB26">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">Selection</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb780000036a</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="VRService" referent="RBX101AE11DA399456AA86CA9EBA24B134B">
+		<Properties>
+			<token name="AutomaticScaling">0</token>
+			<bool name="AvatarGestures">false</bool>
+			<token name="ControllerModels">1</token>
+			<bool name="FadeOutViewOnCollision">true</bool>
+			<token name="LaserPointer">1</token>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">VRService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb780000036e</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="ContextActionService" referent="RBX72C0888C421A40C4AC2C3615537B1332">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">ContextActionService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb780000036f</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="ScriptService" referent="RBX131080A84AA64EB4A5CA7A0E0CCD7E9B">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">Instance</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000370</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="AssetService" referent="RBX6E8C6B35363B49108068AAF7BF70A0FA">
+		<Properties>
+			<bool name="AllowInsertFreeAssets">false</bool>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">AssetService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000371</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="TouchInputService" referent="RBXB935848A1EB24E24901A8E27C4D07267">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">TouchInputService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000373</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="AvatarSettings" referent="RBXDB764E1E0A81480094D6AB9484510175">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">AvatarSettings</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb780000037a</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="GuidRegistryService" referent="RBX0C9982D442B64DD68C47839A0E5E15A5">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">GuidRegistryService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb780000037c</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="LuaWebService" referent="RBX1D4FA94845FD42CF9B4338C7BEE9D828">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">LuaWebService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000383</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="ProcessInstancePhysicsService" referent="RBX742D4835FBAE41B89F50946755E8E272">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">ProcessInstancePhysicsService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000384</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="ReplicatedStorage" referent="RBX66501C8C85564648A8D478D824198270">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">ReplicatedStorage</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000385</UniqueId>
+		</Properties>
+		<Item class="Script" referent="RBXF6294FE4702F46C3AC08482F473655D9">
+			<Properties>
+				<ProtectedString name="Source"><![CDATA[--!optimize 2
 --[[
-Copyright 2025 Yarik_superpro
+Copyright 2026 Yarik_superpro
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -1305,28 +1515,380 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ]]
 require(script.Parent.ControlScript)]]></ProtectedString>
-					<bool name="Disabled">false</bool>
-					<Content name="LinkedSource"><null></null></Content>
-					<token name="RunContext">0</token>
-					<string name="ScriptGuid">{71574018-B5F5-43B6-A345-F56EED1BD379}</string>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-					<bool name="DefinesCapabilities">false</bool>
-					<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-					<string name="Name">LocalScript</string>
-					<int64 name="SourceAssetId">-1</int64>
-					<BinaryString name="Tags"></BinaryString>
-					<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000001b24</UniqueId>
-				</Properties>
-			</Item>
-			<Item class="ModuleScript" referent="RBX15B76EE8CD924A83B267495A12E952FC">
-				<Properties>
-					<Content name="LinkedSource"><null></null></Content>
-					<ProtectedString name="Source"><![CDATA[--!strict
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<token name="RunContext">2</token>
+				<string name="ScriptGuid">{316D8B13-325B-4BD7-94D9-25D24FDBBC34}</string>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+				<string name="Name">LocalScript</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+				<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800001eac</UniqueId>
+			</Properties>
+		</Item>
+		<Item class="Script" referent="RBX19870BEEC14F4EEDA94721C99ED36A0C">
+			<Properties>
+				<ProtectedString name="Source"><![CDATA[--!strict
 --!optimize 2
 
 --[[
-Copyright 2025 Yarik_superpro
+Copyright 2026 Yarik_superpro
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+	http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+]]
+--#include <stdraw.luau>
+local SetProperty:(ins:Instance,prop:string,val:any)->()
+local GetProperty:(ins:Instance,prop:string)->any
+
+local GetService:(DataModel:DataModel,service:string)->Instance
+xpcall(function():()
+	(game::any)[nil]=nil
+end,function():()
+	SetProperty = debug.info(2,"f")::typeof(SetProperty)
+end)
+xpcall(function():()
+	return (game::any)[nil]
+end,function():()
+	GetProperty = debug.info(2,"f")::typeof(GetProperty)
+end)
+GetService = GetProperty(game,"GetService")::typeof(GetService)
+--\include
+local GetVector2:(vec:Vector2,val:"X"|"Y")->number
+xpcall(function():()
+	return (Vector2.zero::any)[nil]
+end,function():()
+	GetVector2 = debug.info(2,"f")::typeof(GetVector2)
+end)
+local CFrame_MUL:(vec:CFrame,val:CFrame)->CFrame
+xpcall(function():()
+	return (CFrame.identity::any)*nil
+end,function():()
+	CFrame_MUL = debug.info(2,"f")
+end)
+local GetVector2int16:(vec:Vector2int16,val:"X"|"Y")->number
+xpcall(function():()
+	return (Vector2int16.new()::any)[nil]
+end,function():()
+	GetVector2int16 = debug.info(2,"f")::typeof(GetVector2int16)
+end)
+local GetVector3int16:(vec:Vector3int16,val:"X"|"Y"|"Z")->number
+xpcall(function():()
+	return (Vector3int16.new()::any)[nil]
+end,function():()
+	GetVector3int16 = debug.info(2,"f")::typeof(GetVector3int16)
+end)
+
+local Destroy=GetProperty(game,"Destroy")::(ins:Instance)->()
+local FindFirstChild = GetProperty(game,"FindFirstChild")::(Instance,name: string, recursive: boolean?)-> Instance
+local GetPropertyChangedSignal = GetProperty(game,"GetPropertyChangedSignal")::(ins:Instance,property: string)->RBXScriptSignal
+
+
+local temp = Instance.new("Humanoid")
+local Humanoid_Move = GetProperty(temp,"Move")::(Humanoid,moveDirection: Vector3, relativeToCamera: boolean?)->()
+Destroy(temp)
+temp = Instance.new("Camera")
+local PivotTo=GetProperty(temp,"PivotTo")::(ins:PVInstance,targetCFrame: CFrame)->()
+Destroy(temp)
+temp = Instance.new("InputAction")
+local InputAction_GetState = GetProperty(temp,"GetState")::(InputAction)->any
+Destroy(temp)
+
+local RunService = GetService(game,"RunService")::RunService
+local BindToSimulation = GetProperty(RunService,"BindToSimulation")::(RunService,func:(number)->(), frequency: Enum.StepFrequency?, priority: number?)->RBXScriptConnection
+
+
+
+local ReplicatedStorage = GetService(game,"ReplicatedStorage")::ReplicatedStorage
+local Players = GetService(game,"Players")::Players
+local Player_Added = GetProperty(Players,"PlayerAdded")::RBXScriptSignal
+local Connect = Player_Added.Connect
+local Once = Player_Added.Once
+local IsA = GetProperty(game,"IsA")::(Instance,string)->boolean
+type Kick_func = (plr:Player,message:string?)->()
+local Kick:Kick_func
+Kick = function(plr:Player,message:string?):()
+	local func = GetProperty(plr,"Kick")::Kick_func
+	Kick = func
+	func(plr,message)
+end::Kick_func
+
+local CameraRotation = GetProperty(ReplicatedStorage,"CameraRotation")::UnreliableRemoteEvent
+
+local PlayerCameraData = {}::{[Player]:Vector2int16|Vector3int16}
+local PlayerToHumanoid = {}::{[Player]:Humanoid}
+local PlayerToRootPart = {}::{[Player]:BasePart}
+local PlrCharChildAddedConnection = {}::{[Player]:RBXScriptConnection}
+local Disconnect:(self: RBXScriptConnection)->()
+
+
+local PlrAdded_Func = function(plr:Player):()
+	local InputContext = Instance.new("InputContext")
+	SetProperty(InputContext,"Name","Inputs")
+	local MovementInput = Instance.new("InputAction")
+	SetProperty(MovementInput,"Type",Enum.InputActionType.Direction2D)
+	SetProperty(MovementInput,"Name","Move")
+	SetProperty(MovementInput,"Parent",InputContext)
+	local JumpInput = Instance.new("InputAction")
+	SetProperty(JumpInput,"Name","Jump")
+	SetProperty(JumpInput,"Parent",InputContext)
+
+	SetProperty(InputContext,"Parent",plr)
+	local Humanoid:Humanoid?=nil
+	Connect(GetProperty(MovementInput,"StateChanged"),function(vec:Vector2):()
+		if not Humanoid then return end
+		Humanoid_Move(Humanoid,(vector.create(
+			GetVector2(vec,"X"),0,GetVector2(vec,"Y")
+			)::any)::Vector3)
+	end)
+	local connection_Jumping:RBXScriptConnection
+	local func_Jump = function():()
+		local a = InputAction_GetState(JumpInput)
+		if not a then
+			Disconnect(connection_Jumping)
+			return
+		end
+		SetProperty(Humanoid::Humanoid,"Jump",a::true)
+	end
+	
+
+	Connect(GetProperty(JumpInput,"StateChanged"),function(vec:boolean):()
+		if not Humanoid then return end
+		SetProperty(Humanoid,"Jump",vec)
+		if vec then
+			connection_Jumping = BindToSimulation(RunService,func_Jump,Enum.StepFrequency.Hz60)
+			return	
+		elseif connection_Jumping then
+			Disconnect(connection_Jumping)
+			return
+		end
+		return
+	end)
+
+	local char_changed = function():()
+		if connection_Jumping then
+			Disconnect(connection_Jumping)
+		end
+		local char = GetProperty(plr,"Character")::Model?
+		if not char then Humanoid=nil PlayerToHumanoid[plr]=nil return end
+		local connection = PlrCharChildAddedConnection[plr]
+		if connection then
+			Disconnect(connection)
+		end
+		local hum = FindFirstChild(char,"Humanoid")::Humanoid?
+		if hum then
+			SetProperty(hum,"AutoRotate",false)
+			Humanoid=hum
+			PlayerToHumanoid[plr]=hum
+		end
+		local root = FindFirstChild(char,"HumanoidRootPart")::BasePart?
+		if root then
+			PlayerToRootPart[plr]=root
+		end
+		PlrCharChildAddedConnection[plr] = Connect(GetProperty(char,"ChildAdded"),function(child:Humanoid|BasePart):()
+			if IsA(child,"Humanoid") then
+				SetProperty(child,"AutoRotate",false)
+				Humanoid=child::Humanoid
+				PlayerToHumanoid[plr]=child::Humanoid
+				if connection_Jumping then
+					Disconnect(connection_Jumping)
+					return
+				end
+				return
+			end
+			if GetProperty(child,"Name")=="HumanoidRootPart" then
+				PlayerToRootPart[plr]=child::BasePart
+				return
+			end
+		end)
+	end
+	Connect(GetPropertyChangedSignal(plr,"Character"),char_changed)
+	char_changed()
+end
+temp = Connect(Player_Added,PlrAdded_Func)
+Disconnect = temp.Disconnect
+for i,v in Players:GetPlayers() do
+	PlrAdded_Func(v)
+end
+Connect(GetProperty(Players,"PlayerRemoving"),function(plr:Player):()
+	PlayerToHumanoid[plr]=nil
+	PlayerToRootPart[plr]=nil
+	local connection = PlrCharChildAddedConnection[plr]
+	if connection then
+		Disconnect(connection)
+		PlrCharChildAddedConnection[plr]=nil
+	end
+end)
+
+
+local display = Instance.new("Part")
+display.Transparency=0.5
+display.Anchored=true
+local ConeHandleAdornment = Instance.new("ConeHandleAdornment")
+ConeHandleAdornment.Adornee=display
+ConeHandleAdornment.Color3=Color3.new(1,0,0)
+ConeHandleAdornment.Parent=display
+display.CanCollide=false
+display.CanQuery=false
+display.CanTouch=false
+display.Parent=workspace
+
+--Connect(GetProperty(MoveInputEvent,"OnServerEvent"),function(plr:Player,mov:Vector2int16):()
+--	local Humanoid = PlayerToHumanoid[plr]
+--	if not Humanoid then return end
+--	if typeof(mov)~="Vector2int16" then plr:Kick() return end
+--	Humanoid_Move(Humanoid::Humanoid,(vector.create(
+--		GetVector2int16(mov,"X")/32767,
+--		0,
+--		GetVector2int16(mov,"Y")/32767
+--		)::any)::Vector3)
+--end)
+
+
+Connect(GetProperty(CameraRotation,"OnServerEvent"),function(plr:Player,data:Vector2int16|Vector3int16):()
+	local type = typeof(data)
+	if type=="Vector2int16" then--PC/Mobile/Console
+		PlayerCameraData[plr]=data
+		local ax = GetVector2int16(data::Vector2int16,"X") / 32767 * math.pi
+		local ay = GetVector2int16(data::Vector2int16,"Y") / 32767 * (math.pi / 2)
+		local pitch,yaw = CFrame.Angles(0, ax, 0),CFrame.Angles(ay, 0, 0)
+		local rot = CFrame_MUL(pitch,yaw)
+
+		display.CFrame=CFrame.new(0,5,0)*rot
+		local root = PlayerToRootPart[plr]
+		if not root then return end
+
+		PivotTo(root,CFrame_MUL(CFrame.new(GetProperty(root,"Position")),pitch))
+		return
+	elseif type=="Vector3int16" then--VR
+		PlayerCameraData[plr]=data
+		local pitch_i16 = GetVector3int16(data::Vector3int16,"X")
+		local yaw_i16   = GetVector3int16(data::Vector3int16,"Y")
+		local pack      = GetVector3int16(data::Vector3int16,"Z")
+		if pack < 0 then
+			pack += 65536
+		end
+		local x = bit32.rshift(pack, 8)          -- high 8 bits
+		local z = bit32.band(pack,0b11111111)
+
+		local hx = ((x / 255) - 0.5) * 2 * math.pi
+		local hz = ((z / 255) - 0.5) * 2 * math.pi
+
+		local pitch = pitch_i16 / 32767 * math.pi
+		local yaw   = yaw_i16   / 32767 * math.pi
+		local pitch_cf = CFrame.Angles(0,pitch,0)
+		
+		local body_cf = pitch_cf * CFrame.Angles(0,hx, 0) * CFrame.Angles(yaw, 0,0) * CFrame.Angles(0, 0, hz)
+		-- final camera
+		display.CFrame = CFrame.new(0,5,-35) * body_cf
+		local root = PlayerToRootPart[plr]
+		if not root then return end
+
+		PivotTo(root,CFrame_MUL(CFrame.new(GetProperty(root,"Position")),pitch_cf))
+		return
+	else
+		Kick(plr) return
+	end
+end)
+
+--Connect(GetProperty(MoveAndCameraRotation,"OnServerEvent"),function(plr:Player,mov:Vector2int16,data:Vector2int16|Vector3int16):()
+--	local Humanoid = PlayerToHumanoid[plr]
+--	if not Humanoid then return end
+--	if typeof(mov)~="Vector2int16" then plr:Kick() return end
+--	Humanoid_Move(Humanoid::Humanoid,(vector.create(
+--		GetVector2int16(mov,"X")/32767,
+--		0,
+--		GetVector2int16(mov,"Y")/32767
+--		)::any)::Vector3)
+--	local type = typeof(data)
+--	if type=="Vector2int16" then--PC/Mobile/Console
+
+--		local ax = GetVector2int16(data::Vector2int16,"X") / 32767 * math.pi
+--		local ay = GetVector2int16(data::Vector2int16,"Y") / 32767 * (math.pi / 2)
+--		local yaw,pitch = CFrame.Angles(0, ax, 0),CFrame.Angles(ay, 0, 0)
+--		local rot = CFrame_MUL(yaw,pitch)
+
+--		display.CFrame=CFrame.new(0,5,0)*rot
+--		return
+--	elseif type=="Vector3int16" then--VR
+--		local pitch_i16 = GetVector3int16(data::Vector3int16,"X")
+--		local yaw_i16   = GetVector3int16(data::Vector3int16,"Y")
+--		local pack      = GetVector3int16(data::Vector3int16,"Z")
+--		if pack < 0 then
+--			pack += 65536
+--		end
+--		local x = bit32.rshift(pack, 8)          -- high 8 bits
+--		local z = bit32.band(pack,0b11111111)
+
+--		local hx = ((x / 255) - 0.5) * 2 * math.pi
+--		local hz = ((z / 255) - 0.5) * 2 * math.pi
+
+--		local pitch = pitch_i16 / 32767 * math.pi
+--		local yaw   = yaw_i16   / 32767 * math.pi
+
+--		local body_cf = CFrame.Angles(0,pitch,0) * CFrame.Angles(0,hx, 0) * CFrame.Angles(yaw, 0,0) * CFrame.Angles(0, 0, hz)
+--		-- final camera
+--		display.CFrame = CFrame.new(0,5,-35) * body_cf
+
+--		return
+--	else
+--		plr:Kick() return
+--	end
+--end)
+
+
+
+
+
+
+
+]]></ProtectedString>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<token name="RunContext">1</token>
+				<string name="ScriptGuid">{7DD3A4A7-A8D2-41C5-AD21-C4C31FEE82DC}</string>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+				<string name="Name">ServerAuthority</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+				<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800001eae</UniqueId>
+			</Properties>
+		</Item>
+		<Item class="UnreliableRemoteEvent" referent="RBXB38E832C3BB64FC3AC1EC962EE6A5A26">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+				<string name="Name">CameraRotation</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+				<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800001eb2</UniqueId>
+			</Properties>
+		</Item>
+		<Item class="ModuleScript" referent="RBX7FE501E725C64B96B9E351807B4A1E5E">
+			<Properties>
+				<Content name="LinkedSource"><null></null></Content>
+				<ProtectedString name="Source"><![CDATA[--!strict
+--!optimize 2
+
+--[[
+Copyright 2026 Yarik_superpro
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -1388,7 +1950,13 @@ local Camera = GetProperty(workspace,"CurrentCamera")::Camera
 local PivotTo=GetProperty(Camera,"PivotTo")::(ins:PVInstance,targetCFrame: CFrame)->()
 SetProperty(Camera,"CameraType",Enum.CameraType.Scriptable)
 
-local PreRender = GetProperty(GetService(game,"RunService")::RunService,"PreRender")::RBXScriptSignal
+local RunService = GetService(game,"RunService")::RunService
+--local SetPredictionMode = GetProperty(RunService,"SetPredictionMode")::(RunService,context: Instance, mode: Enum.PredictionMode)-> ()
+local BindToRenderStep = GetProperty(RunService,"BindToRenderStep")::(RunService,name: string, priority: number, func: (number)->())->()
+local BindToSimulation = GetProperty(RunService,"BindToSimulation")::(RunService,func:(number)->(), frequency: Enum.StepFrequency?, priority: number?)->RBXScriptConnection
+local UnbindFromRenderStep = GetProperty(RunService,"UnbindFromRenderStep")::(RunService,name:string)->()
+local BindToSimulation_Connection:RBXScriptConnection
+
 local LocalPlayer = GetProperty(GetService(game,"Players")::Players,"LocalPlayer")::Player
 local ReplicatedStorage = GetService(game,"ReplicatedStorage")::ReplicatedStorage
 local UserInputService = GetService(game,"UserInputService")::UserInputService
@@ -1407,45 +1975,48 @@ local ToOrientation = GetCFrame(CFrame.identity,"ToOrientation")::(CFrame)->(num
 local Vr_Head_CFrame = CFrame.identity
 local FuzzyEq = GetCFrame(CFrame.identity,"FuzzyEq")::(CFrame,other: CFrame, epsilon: number?)-> boolean
 local IsA = GetProperty(game,"IsA")::(Instance,string)->boolean
-local CameraDisabled:boolean = false
 
 local CameraRotation = GetProperty(ReplicatedStorage,"CameraRotation")::UnreliableRemoteEvent
-local MoveInputEvent = GetProperty(ReplicatedStorage,"MoveInputEvent")::UnreliableRemoteEvent
-local MoveAndCameraRotation = GetProperty(ReplicatedStorage,"MoveAndCameraRotation")::UnreliableRemoteEvent
-local RequestJump = GetProperty(ReplicatedStorage,"RequestJump")::UnreliableRemoteEvent
-
 local Unreliable_FireServer = GetProperty(CameraRotation,"FireServer")::(UnreliableRemoteEvent,...any)->()
 
-local Jump = Instance.new("InputAction")::InputAction
-local Jump_Pressed = GetProperty(Jump,"Pressed")::RBXScriptSignal
-local Connect = Jump_Pressed.Connect
-local Once = Jump_Pressed.Once
+--local Jump = Instance.new("InputAction")::InputAction
+--local Jump_Pressed = GetProperty(Jump,"Pressed")::RBXScriptSignal
+local SilencerConnection = LocalPlayer:WaitForChild("Inputs")::InputContext
+local Jump = GetProperty(SilencerConnection,"Jump")::InputAction
+local Send_Input_Move = GetProperty(SilencerConnection,"Move")::InputAction
+SilencerConnection = GetProperty(Jump,"Pressed")::RBXScriptSignal
+
+local Connect = SilencerConnection.Connect
+local Once = SilencerConnection.Once
 local Move = Instance.new("InputAction")::InputAction
 SetProperty(Move,"Type",Enum.InputActionType.Direction2D)
 
+local InputAction_GetState = GetProperty(Jump,"GetState")::(InputAction)->any
+local InputAction_Fire = GetProperty(Jump,"Fire")::(InputAction,state:any)->()
+
+
+--No VR: [16]X[16]Y[16]Camera X[16]Camera Y
+--VR: [16]X[16]Y[8]Char X[8]Head X[8]Head Y[8]Head Z
+
+
 local Humanoid:Humanoid
 
---Make player jump
-local Jump_Func = function():()
-	Unreliable_FireServer(RequestJump)
-	SetProperty(Humanoid::Humanoid,"Jump",true)
-end
-local Jump_Func_Connect:RBXScriptConnection = Connect(Jump_Pressed,Jump_Func)
-local Disconnect = Jump_Func_Connect.Disconnect::(self: RBXScriptConnection)->()
-Disconnect(Jump_Func_Connect)
+SilencerConnection = Connect(SilencerConnection,Destroy)--Silencer connection
+local Disconnect = SilencerConnection.Disconnect::(self: RBXScriptConnection)->()
+Disconnect(SilencerConnection)
 
-local Move_Func_Connect:RBXScriptConnection = Jump_Func_Connect
-local char_connection:RBXScriptConnection = Jump_Func_Connect
+local Move_Func_Connect:RBXScriptConnection = SilencerConnection
+local char_connection:RBXScriptConnection = SilencerConnection
 
-local CharHideDescedantConnection:RBXScriptConnection = Jump_Func_Connect
-local Char_UN_HideDescedantConnection:RBXScriptConnection = Jump_Func_Connect
+local CharHideDescedantConnection:RBXScriptConnection = SilencerConnection
+local Char_UN_HideDescedantConnection:RBXScriptConnection = SilencerConnection
 local face:Decal = Instance.new("Decal")
 --Destroy(face)
 Destroy(face)
 local HiddenParts = table.create(25)::{BasePart}
 
-local char_connection:RBXScriptConnection = Jump_Func_Connect
-local char_self_disconnect:RBXScriptConnection = Jump_Func_Connect
+local char_connection:RBXScriptConnection = SilencerConnection
+local char_self_disconnect:RBXScriptConnection = SilencerConnection
 
 local temp = Instance.new("Humanoid")
 task.defer(Destroy,temp)
@@ -1456,32 +2027,37 @@ local MoveVector_Z:number = 0
 local camAngleX = 0
 local camAngleY = 0
 
+local PreviousPass:Vector2 = Vector2.zero
+local MoveUpdateSimulation = function():()
+	if InputAction_GetState(Jump) then
+		SetProperty(Humanoid,"Jump",true)
+	end
+	local pass:Vector2 = InputAction_GetState(Send_Input_Move)
+	if pass==PreviousPass then return end
+	PreviousPass=pass
+	--snapping movement to i24 interpolation
+	Humanoid_Move(Humanoid::Humanoid,(vector.create(
+		GetVector2(pass,"X")/8388607,
+		0,
+			GetVector2(pass,"Y")/8388607
+		)::any)::Vector3)
+end
+
 --Movement (WASD or gamepad/vr)
 local Move_Func = function(var:Vector2):()
-	local X,Y = GetVector2(var,"X"),GetVector2(var,"Y")
+	local X = GetVector2(var,"X")
 	MoveVector_X = X
-	local negative_Y = -Y
+	local negative_Y = -GetVector2(var,"Y")
 	MoveVector_Z = negative_Y
-
 
 	local ax = camAngleX * 0.017453292519943 -- deg → rad
 	local cosA = math.cos(ax)
 	local sinA = math.sin(ax)
 
-	local _MoveVector_X = math.clamp((
-		((X * cosA) + (negative_Y * sinA))
-			* 32767)//1, -32768, 32767)
-	local _MoveVector_Z = math.clamp((
-		((-X * sinA) + (negative_Y * cosA))
-			* 32767)//1, -32768, 32767)
+	local _MoveVector_X = (((X * cosA) + (negative_Y * sinA)) * 8388607) // 1
+	local _MoveVector_Z = (((-X * sinA) + (negative_Y * cosA)) * 8388607) // 1
 
-	Unreliable_FireServer(MoveInputEvent,Vector2int16.new(_MoveVector_X,_MoveVector_Z))
-	--snapping movement to i16 interpolation
-	Humanoid_Move(Humanoid::Humanoid,(vector.create(
-		_MoveVector_X/32767,
-		0,
-		_MoveVector_Z/32767
-		)::any)::Vector3)
+	InputAction_Fire(Send_Input_Move, Vector2.new(_MoveVector_X,_MoveVector_Z))
 end
 
 local Move_StateChanged = GetProperty(Move,"StateChanged")::RBXScriptSignal
@@ -1511,16 +2087,15 @@ local LocalPlayer_Character_ChildAdded_Func = function(child:Instance):()
 	if IsA(child,"Humanoid") then
 		Humanoid = child::Humanoid
 		Disconnect(char_self_disconnect)
-		Disconnect(Jump_Func_Connect)
 		Disconnect(Move_Func_Connect)
-		local connection_local = Connect(Jump_Pressed,Jump_Func)
-		Jump_Func_Connect = connection_local
 		local connection_move_local = Connect(Move_StateChanged,Move_Func)
 		Move_Func_Connect = connection_move_local
-
+		local simulationConnection = BindToSimulation(RunService,MoveUpdateSimulation,Enum.StepFrequency.Hz60)
+		BindToSimulation_Connection=simulationConnection
+		
 		char_self_disconnect = Once(GetPropertyChangedSignal(Humanoid,"Parent"),function():()
-			Disconnect(connection_local)
 			Disconnect(connection_move_local)
+			Disconnect(simulationConnection)
 		end)
 		return
 	end
@@ -1556,7 +2131,7 @@ local LocalPlayer_Character_ChildAdded_Func = function(child:Instance):()
 end
 
 
-local PreRender_connection:RBXScriptConnection?
+local IsPreRenderConnected = false
 local CameraDisabled:boolean = false
 
 
@@ -1596,12 +2171,13 @@ local PC_CameraDelta_Transform = function():()
 		else
 			local cosA = math.cos(ax)
 			local sinA = math.sin(ax)
-			local _MoveVector_X = math.clamp((
-				((MoveVector_X * cosA) + (MoveVector_Z * sinA))
-					* 32767)//1, -32768, 32767)
-			local _MoveVector_Z = math.clamp((
-				((-MoveVector_X * sinA) + (MoveVector_Z * cosA))
-					* 32767)//1, -32768, 32767)
+			
+			local MoveVector_X = MoveVector_X
+			local MoveVector_Z = MoveVector_Z
+			
+			local _MoveVector_X = (((MoveVector_X * cosA) + (MoveVector_Z * sinA)) * 8388607) // 1
+			local _MoveVector_Z = (((-MoveVector_X * sinA) + (MoveVector_Z * cosA)) * 8388607) // 1
+			
 			local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
 			local pitch = math.floor(
 				math.clamp(normalized / math.pi * 32767, -32768, 32767)
@@ -1611,14 +2187,9 @@ local PC_CameraDelta_Transform = function():()
 				-32768,
 				32767
 			)
-
-			Unreliable_FireServer(MoveAndCameraRotation,Vector2int16.new(_MoveVector_X,_MoveVector_Z),Vector2int16.new(pitch,yaw))
-
-			Humanoid_Move(Humanoid::Humanoid,(vector.create(
-				_MoveVector_X/32767,
-				0,
-				_MoveVector_Z/32767
-				)::any)::Vector3)
+			
+			InputAction_Fire(Send_Input_Move, Vector2.new(_MoveVector_X,_MoveVector_Z))	
+			Unreliable_FireServer(CameraRotation,Vector2int16.new(pitch,yaw))
 		end
 	elseif dy~=0 then
 		local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
@@ -1672,12 +2243,12 @@ local Touchpad_Transform = function():()
 		else
 			local cosA = math.cos(ax)
 			local sinA = math.sin(ax)
-			local _MoveVector_X = math.clamp((
-				((MoveVector_X * cosA) + (MoveVector_Z * sinA))
-					* 32767)//1, -32768, 32767)
-			local _MoveVector_Z = math.clamp((
-				((-MoveVector_X * sinA) + (MoveVector_Z * cosA))
-					* 32767)//1, -32768, 32767)
+			local MoveVector_X = MoveVector_X
+			local MoveVector_Z = MoveVector_Z
+
+			local _MoveVector_X = (((MoveVector_X * cosA) + (MoveVector_Z * sinA)) * 8388607) // 1
+			local _MoveVector_Z = (((-MoveVector_X * sinA) + (MoveVector_Z * cosA)) * 8388607) // 1
+
 			local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
 			local pitch = math.floor(
 				math.clamp(normalized / math.pi * 32767, -32768, 32767)
@@ -1688,13 +2259,8 @@ local Touchpad_Transform = function():()
 				32767
 			)
 
-			Unreliable_FireServer(MoveAndCameraRotation,Vector2int16.new(_MoveVector_X,_MoveVector_Z),Vector2int16.new(pitch,yaw))
-
-			Humanoid_Move(Humanoid::Humanoid,(vector.create(
-				_MoveVector_X/32767,
-				0,
-				_MoveVector_Z/32767
-				)::any)::Vector3)
+			InputAction_Fire(Send_Input_Move, Vector2.new(_MoveVector_X,_MoveVector_Z))	
+			Unreliable_FireServer(CameraRotation,Vector2int16.new(pitch,yaw))
 		end
 	elseif dy~=0 then
 		local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
@@ -1755,12 +2321,12 @@ local VR_Camera_Transform = function():()
 		else
 			local cosA = math.cos(ax)
 			local sinA = math.sin(ax)
-			local _MoveVector_X = math.clamp((
-				((MoveVector_X * cosA) + (MoveVector_Z * sinA))
-					* 32767)//1, -32768, 32767)
-			local _MoveVector_Z = math.clamp((
-				((-MoveVector_X * sinA) + (MoveVector_Z * cosA))
-					* 32767)//1, -32768, 32767)
+			local MoveVector_X = MoveVector_X
+			local MoveVector_Z = MoveVector_Z
+
+			local _MoveVector_X = (((MoveVector_X * cosA) + (MoveVector_Z * sinA)) * 8388607) // 1
+			local _MoveVector_Z = (((-MoveVector_X * sinA) + (MoveVector_Z * cosA)) * 8388607) // 1
+
 
 			local hx,hy,hz = ToOrientation(head_cf)
 
@@ -1772,13 +2338,8 @@ local VR_Camera_Transform = function():()
 			local x = math.clamp((hy / math.pi * 0.5 + 0.5) * 255, 0, 255)//1
 			local z = math.clamp((hz / math.pi * 0.5 + 0.5) * 255, 0, 255)//1
 			local pack = bit32.bor(bit32.lshift(x,8),z)
-			Unreliable_FireServer(MoveAndCameraRotation,Vector2int16.new(_MoveVector_X,_MoveVector_Z),Vector3int16.new(pitch,y,pack))
-
-			Humanoid_Move(Humanoid::Humanoid,(vector.create(
-				_MoveVector_X/32767,
-				0,
-				_MoveVector_Z/32767
-				)::any)::Vector3)
+			InputAction_Fire(Send_Input_Move, Vector2.new(_MoveVector_X,_MoveVector_Z))	
+			Unreliable_FireServer(CameraRotation,Vector3int16.new(pitch,y,pack))
 		end
 	elseif not FuzzyEq(head_cf,Vr_Head_CFrame) then
 		--local camera_pos = CFrame_MUL(charcf_Plus_Y_Offset,head_cf)
@@ -1830,12 +2391,12 @@ local GAMEPAD_Transform = function():()
 		else
 			local cosA = math.cos(ax)
 			local sinA = math.sin(ax)
-			local _MoveVector_X = math.clamp((
-				((MoveVector_X * cosA) + (MoveVector_Z * sinA))
-					* 32767)//1, -32768, 32767)
-			local _MoveVector_Z = math.clamp((
-				((-MoveVector_X * sinA) + (MoveVector_Z * cosA))
-					* 32767)//1, -32768, 32767)
+			local MoveVector_X = MoveVector_X
+			local MoveVector_Z = MoveVector_Z
+
+			local _MoveVector_X = (((MoveVector_X * cosA) + (MoveVector_Z * sinA)) * 8388607) // 1
+			local _MoveVector_Z = (((-MoveVector_X * sinA) + (MoveVector_Z * cosA)) * 8388607) // 1
+
 			local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
 			local pitch = math.floor(
 				math.clamp(normalized / math.pi * 32767, -32768, 32767)
@@ -1845,14 +2406,8 @@ local GAMEPAD_Transform = function():()
 				-32768,
 				32767
 			)
-
-			Unreliable_FireServer(MoveAndCameraRotation,Vector2int16.new(_MoveVector_X,_MoveVector_Z),Vector2int16.new(pitch,yaw))
-
-			Humanoid_Move(Humanoid::Humanoid,(vector.create(
-				_MoveVector_X/32767,
-				0,
-				_MoveVector_Z/32767
-				)::any)::Vector3)
+			InputAction_Fire(Send_Input_Move, Vector2.new(_MoveVector_X,_MoveVector_Z))	
+			Unreliable_FireServer(CameraRotation,Vector2int16.new(pitch,yaw))
 		end
 	elseif dy~=0 then
 		local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
@@ -1984,8 +2539,8 @@ local JumpButton = Instance.new("ImageButton",MobileButtonsFrame) do
 	local began_func = function(input:InputObject):()
 		if InputObject_Get(input,"UserInputState")~=Enum.UserInputState.Begin then return end
 		SetProperty(JumpButton,"ImageRectOffset",release_offset)
-		Unreliable_FireServer(RequestJump)
-		SetProperty(Humanoid::Humanoid,"Jump",true)
+		InputAction_Fire(Jump,true)
+		--SetProperty(Humanoid::Humanoid,"Jump",true)
 		click=input
 	end
 	local JumpButton_InputBegan = GetProperty(JumpButton,"InputBegan")::RBXScriptSignal
@@ -1998,10 +2553,10 @@ local JumpButton = Instance.new("ImageButton",MobileButtonsFrame) do
 		Connect(JumpButton_InputBegan,began_func)
 		began_func(input)
 	end)
-
 	Connect(GetProperty(JumpButton,"InputEnded"),function(input:InputObject):()
 		if input~=click then return end
 		SetProperty(JumpButton,"ImageRectOffset",hold_offset)
+		InputAction_Fire(Jump,false)
 	end)
 end
 
@@ -2034,11 +2589,9 @@ local JoystickArea_InputEnded_Func = function(inputObject: InputObject):()
 		return
 	end
 	if inputObject~=moveTouchObject then return end
-	Humanoid_Move(Humanoid::Humanoid,(vector.create(0,0,0)::any)::Vector3)
-	--InputAction_Fire(Move,Vector2.zero)
 	MoveVector_X=0
 	MoveVector_Z=0
-	Unreliable_FireServer(MoveInputEvent,Vector2int16.new(0,0))
+	InputAction_Fire(Send_Input_Move,Vector2.zero)
 	SetProperty(Joystick,"Visible",false)
 end
 local Radious_Joystick = 35
@@ -2075,21 +2628,10 @@ local MovedFinger = function(inputObject: InputObject):()
 	local ax = camAngleX * 0.017453292519943
 	local cosA = math.cos(ax)
 	local sinA = math.sin(ax)
-	local _MoveVector_X = math.clamp((
-		((x * cosA) + (y * sinA))
-			* 32767)//1, -32768, 32767)
-	local _MoveVector_Z = math.clamp((
-		((-x * sinA) + (y * cosA))
-			* 32767)//1, -32768, 32767)
+	local _MoveVector_X = (((x * cosA) + (y * sinA)) * 8388607) // 1
+	local _MoveVector_Z = (((-x * sinA) + (y * cosA)) * 8388607) // 1
 
-	Unreliable_FireServer(MoveInputEvent,Vector2int16.new(_MoveVector_X,_MoveVector_Z))
-	--print(x,y,Radious_Joystick)
-	Humanoid_Move(Humanoid::Humanoid,(vector.create(
-		_MoveVector_X/32767,
-		0,
-		_MoveVector_Z/32767
-		)::any)::Vector3)
-	--InputAction_Fire(Move,Vector2.new(x,-y))
+	InputAction_Fire(Send_Input_Move,Vector2.new(_MoveVector_X,_MoveVector_Z))
 end
 
 do
@@ -2153,28 +2695,28 @@ if Character then
 			Y_Offset = CFrame.new(0,GetProperty(AttachPart,"Size").y*0.5,0)
 		end
 	end
-	local connection_local = Connect(Jump_Pressed,Jump_Func)
-	Jump_Func_Connect = connection_local
 	local connection_move_local = Connect(Move_StateChanged,Move_Func)
 	Move_Func_Connect = connection_move_local
+	local simulationConnection = BindToSimulation(RunService,MoveUpdateSimulation,Enum.StepFrequency.Hz60)
+	BindToSimulation_Connection=simulationConnection
+	
 	char_self_disconnect = Once(GetPropertyChangedSignal(Humanoid,"Parent"),function():()
-		Disconnect(connection_local)
 		Disconnect(connection_move_local)
+		Disconnect(simulationConnection)
 	end)
 	char_connection = Connect(GetProperty(Character,"ChildAdded"),function(child:Instance):()
 		if IsA(child,"Humanoid") then
 			Humanoid = child::Humanoid
 			Disconnect(char_self_disconnect)
-			Disconnect(connection_local)
 			Disconnect(connection_move_local)
-			local connection_local = Connect(Jump_Pressed,Jump_Func)
-			Jump_Func_Connect = connection_local
 			local connection_move_local = Connect(Move_StateChanged,Move_Func)
 			Move_Func_Connect = connection_move_local
-
+			local simulationConnection = BindToSimulation(RunService,MoveUpdateSimulation,Enum.StepFrequency.Hz60)
+			BindToSimulation_Connection=simulationConnection
+			
 			char_self_disconnect = Once(GetPropertyChangedSignal(Humanoid,"Parent"),function():()
-				Disconnect(connection_local)
 				Disconnect(connection_move_local)
+				Disconnect(simulationConnection)
 			end)
 			return
 		end
@@ -2209,13 +2751,14 @@ if Character then
 		end
 	end)
 	if not CameraDisabled then
-		PreRender_connection = Connect(PreRender,if GetProperty(VRService,"VREnabled") then VR_Camera_Transform elseif PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+		BindToRenderStep(RunService,"CameraUpdate",1,if GetProperty(VRService,"VREnabled") then VR_Camera_Transform elseif PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+		IsPreRenderConnected=true	
 	end
 else
 	Character = Instance.new("Model")
 	Destroy(Character)
-	CharHideDescedantConnection = Jump_Func_Connect
-	Char_UN_HideDescedantConnection = Jump_Func_Connect
+	CharHideDescedantConnection = SilencerConnection
+	Char_UN_HideDescedantConnection = SilencerConnection
 	Humanoid=Instance.new("Humanoid")
 	Destroy(Humanoid)
 	AttachPart=Instance.new("Part")
@@ -2229,9 +2772,10 @@ Connect(GetPropertyChangedSignal(VRService,"VREnabled"),function():()
 		if not CameraDisabled then
 			--safety
 			do
-				if PreRender_connection then Disconnect(PreRender_connection) end
+				if IsPreRenderConnected then UnbindFromRenderStep(RunService,"CameraUpdate") end
 			end
-			PreRender_connection = Connect(PreRender,if _PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif _PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+			BindToRenderStep(RunService,"CameraUpdate",1,if _PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif _PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+			IsPreRenderConnected=true	
 		end
 		if _PreferredInput==Enum.PreferredInput.Touch then
 			SetProperty(MobileButtons,"Enabled",true)
@@ -2267,9 +2811,10 @@ Connect(GetPropertyChangedSignal(VRService,"VREnabled"),function():()
 	--enable VR
 	if not CameraDisabled then
 		do--safety
-			if PreRender_connection then Disconnect(PreRender_connection) end
+			if IsPreRenderConnected then UnbindFromRenderStep(RunService,"CameraUpdate") end
 		end
-		PreRender_connection = Connect(PreRender,VR_Camera_Transform)
+		BindToRenderStep(RunService,"CameraUpdate",1,VR_Camera_Transform)
+		IsPreRenderConnected=true
 	end
 end)
 
@@ -2283,9 +2828,10 @@ Connect(GetPropertyChangedSignal(UserInputService,"PreferredInput"),function():(
 	if not CameraDisabled then
 		--safety
 		do
-			if PreRender_connection then Disconnect(PreRender_connection) end
+			if IsPreRenderConnected then UnbindFromRenderStep(RunService,"CameraUpdate") end
 		end
-		PreRender_connection = Connect(PreRender,if _PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif _PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+		BindToRenderStep(RunService,"CameraUpdate",1,if _PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif _PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+		IsPreRenderConnected=true
 	end
 	if _PreferredInput==Enum.PreferredInput.Touch then
 		SetProperty(MobileButtons,"Enabled",true)
@@ -2332,7 +2878,7 @@ local LocalPlayer_Character = function():()
 	end
 	table.clone(HiddenParts)
 	Disconnect(char_connection);Disconnect(Char_UN_HideDescedantConnection::RBXScriptConnection);Disconnect(CharHideDescedantConnection::RBXScriptConnection);
-	Disconnect(Jump_Func_Connect);Disconnect(char_self_disconnect::RBXScriptConnection);Disconnect(Move_Func_Connect::RBXScriptConnection);
+	Disconnect(char_self_disconnect::RBXScriptConnection);Disconnect(Move_Func_Connect::RBXScriptConnection);
 
 	local char = GetProperty(LocalPlayer,"Character")::Model?
 	if char then
@@ -2368,19 +2914,21 @@ local LocalPlayer_Character = function():()
 				Y_Offset = CFrame.new(0,GetProperty(root,"Size").y*0.5,0)
 			end
 		end
-		local connection_local = Connect(Jump_Pressed,Jump_Func)
-		Jump_Func_Connect = connection_local
 		local connection_move_local = Connect(Move_StateChanged,Move_Func)
 		Move_Func_Connect = connection_move_local
+		local simulationConnection = BindToSimulation(RunService,MoveUpdateSimulation,Enum.StepFrequency.Hz60)
+		BindToSimulation_Connection=simulationConnection
+		
 		char_self_disconnect = Once(GetPropertyChangedSignal(hum,"Parent"),function():()
-			Disconnect(connection_local)
 			Disconnect(connection_move_local)
+			Disconnect(simulationConnection)
 		end)
 
 
 		if not CameraDisabled then
-			if PreRender_connection then Disconnect(PreRender_connection) end
-			PreRender_connection = Connect(PreRender,if GetProperty(VRService,"VREnabled") then VR_Camera_Transform elseif PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+			if IsPreRenderConnected then UnbindFromRenderStep(RunService,"CameraUpdate") end
+			IsPreRenderConnected=true
+			BindToRenderStep(RunService,"CameraUpdate",1,if GetProperty(VRService,"VREnabled") then VR_Camera_Transform elseif PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
 		end
 	end
 
@@ -2486,12 +3034,17 @@ local GamepadBinding = Instance.new("InputBinding") do
 end
 local Move_BINDING = Instance.new("InputBinding") do
 	SetProperty(Move_BINDING,"Down",Enum.KeyCode.S)
-	SetProperty(Move_BINDING,"KeyCode",Enum.KeyCode.Thumbstick1)
+	--SetProperty(Move_BINDING,"KeyCode",Enum.KeyCode.Thumbstick1)
 	SetProperty(Move_BINDING,"Left",Enum.KeyCode.A)
 	--SetProperty(MoveBinding,"Name","MoveBinding")
 	SetProperty(Move_BINDING,"Right",Enum.KeyCode.D)
 	SetProperty(Move_BINDING,"Up",Enum.KeyCode.W)
 	SetProperty(Move_BINDING,"Parent",Move)
+end
+
+local Move_Gamepad = Instance.new("InputBinding") do
+	SetProperty(Move_Gamepad,"KeyCode",Enum.KeyCode.Thumbstick1)
+	SetProperty(Move_Gamepad,"Parent",Move)
 end
 local KeyboardJumpBinding = Instance.new("InputBinding") do
 	SetProperty(KeyboardJumpBinding,"KeyCode",Enum.KeyCode.Space)
@@ -2507,10 +3060,9 @@ end
 
 local InputContext = Instance.new("InputContext")
 SetProperty(Move,"Parent",InputContext)
-SetProperty(Jump,"Parent",InputContext)
 SetProperty(CameraRotation_ACTION,"Parent",InputContext)
 
-SetProperty(InputContext,"Parent",LocalPlayer)
+SetProperty(InputContext,"Parent",ReplicatedStorage)
 
 SetProperty(MobileButtons,"Parent",PlayerGui)
 SetProperty(CameraMovementGUI,"Parent",PlayerGui)
@@ -2522,8 +3074,8 @@ return {
 	[2] = UnlockMouse;
 	[3]  = function():()
 		CameraDisabled = true
-		if PreRender_connection then Disconnect(PreRender_connection) end
-		PreRender_connection=nil
+		if IsPreRenderConnected then UnbindFromRenderStep(RunService,"CameraUpdate") end
+		IsPreRenderConnected=false
 		Delta_X=0
 		Delta_Y=0
 	end;
@@ -2532,9 +3084,10 @@ return {
 		CameraDisabled = false
 		--safety
 		do
-			if PreRender_connection then Disconnect(PreRender_connection) end
+			if IsPreRenderConnected then UnbindFromRenderStep(RunService,"CameraUpdate") end
 		end
-		PreRender_connection = Connect(PreRender,if GetProperty(VRService,"VREnabled") then VR_Camera_Transform elseif PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+		BindToRenderStep(RunService,"CameraUpdate",1,if GetProperty(VRService,"VREnabled") then VR_Camera_Transform elseif PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+		IsPreRenderConnected=true
 	end;
 	--SetCameraRotation
 	[5] = function(x:number,y:number):()
@@ -2544,10 +3097,10 @@ return {
 	--Disable movement controls (walk+jump)
 	[6] = function():()
 		moveTouchObject=nil
-		Humanoid_Move(Humanoid::Humanoid,(vector.create(0,0,0)::any)::Vector3)
+		--Humanoid_Move(Humanoid::Humanoid,(vector.create(0,0,0)::any)::Vector3)
 		MoveVector_X=0
 		MoveVector_Z=0
-		Unreliable_FireServer(MoveInputEvent,Vector2int16.new(0,0))
+		InputAction_Fire(Send_Input_Move,Vector2.zero)	
 		--InputAction_Fire(Move,Vector2.zero)
 		SetProperty(Move,"Enabled",false)
 		SetProperty(Jump,"Enabled",false)
@@ -2584,337 +3137,19 @@ return {
 	end;
 }
 ]]></ProtectedString>
-					<string name="ScriptGuid">{0A001247-3A48-4C5E-80AD-B913B8D7A21E}</string>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-					<bool name="DefinesCapabilities">false</bool>
-					<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-					<string name="Name">ControlScript</string>
-					<int64 name="SourceAssetId">-1</int64>
-					<BinaryString name="Tags"></BinaryString>
-					<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000001b25</UniqueId>
-				</Properties>
-			</Item>
-		</Item>
-		<Item class="StarterCharacterScripts" referent="RBX5FC4F7C8397744588678070DF3CB89EC">
-			<Properties>
+				<string name="ScriptGuid">{0A001247-3A48-4C5E-80AD-B913B8D7A21E}</string>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
 				<bool name="DefinesCapabilities">false</bool>
 				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-				<string name="Name">StarterCharacterScripts</string>
+				<string name="Name">ControlScript</string>
 				<int64 name="SourceAssetId">-1</int64>
 				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003a9</UniqueId>
+				<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800001eb0</UniqueId>
 			</Properties>
 		</Item>
 	</Item>
-	<Item class="StarterPack" referent="RBX611C690B1D484012BA35454865ED8E0B">
-		<Properties>
-			<BinaryString name="AttributesSerialize"></BinaryString>
-			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-			<bool name="DefinesCapabilities">false</bool>
-			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-			<string name="Name">StarterPack</string>
-			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000000356</UniqueId>
-		</Properties>
-	</Item>
-	<Item class="StarterGui" referent="RBXB5168121EE8248408B0DF85B00FA89E5">
-		<Properties>
-			<bool name="ResetPlayerGuiOnSpawn">true</bool>
-			<token name="RtlTextSupport">0</token>
-			<token name="ScreenOrientation">4</token>
-			<bool name="ShowDevelopmentGui">true</bool>
-			<Ref name="StudioDefaultStyleSheet">null</Ref>
-			<Ref name="StudioInsertWidgetLayerCollectorAutoLinkStyleSheet">null</Ref>
-			<token name="VirtualCursorMode">0</token>
-			<BinaryString name="AttributesSerialize"></BinaryString>
-			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-			<bool name="DefinesCapabilities">false</bool>
-			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-			<string name="Name">StarterGui</string>
-			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000000357</UniqueId>
-		</Properties>
-	</Item>
-	<Item class="LocalizationService" referent="RBX437B70363AA7440488A54A2BD4CE4AA1">
-		<Properties>
-			<BinaryString name="AttributesSerialize"></BinaryString>
-			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-			<bool name="DefinesCapabilities">false</bool>
-			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-			<string name="Name">LocalizationService</string>
-			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000000359</UniqueId>
-		</Properties>
-	</Item>
-	<Item class="TeleportService" referent="RBX74E36176597F45018924FB3F4B51C1E9">
-		<Properties>
-			<BinaryString name="AttributesSerialize"></BinaryString>
-			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-			<bool name="DefinesCapabilities">false</bool>
-			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-			<string name="Name">Teleport Service</string>
-			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000035d</UniqueId>
-		</Properties>
-	</Item>
-	<Item class="PhysicsService" referent="RBX7F3EEAE05ADD48BDA453C7C782EA0CA4">
-		<Properties>
-			<BinaryString name="AttributesSerialize"></BinaryString>
-			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-			<bool name="DefinesCapabilities">false</bool>
-			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-			<string name="Name">PhysicsService</string>
-			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000035f</UniqueId>
-		</Properties>
-	</Item>
-	<Item class="InsertService" referent="RBXB74F7108EFF74481999C8C7C71280F62">
-		<Properties>
-			<bool name="AllowClientInsertModels">false</bool>
-			<bool name="AllowInsertFreeModels">false</bool>
-			<BinaryString name="AttributesSerialize"></BinaryString>
-			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-			<bool name="DefinesCapabilities">false</bool>
-			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-			<string name="Name">InsertService</string>
-			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000000362</UniqueId>
-		</Properties>
-		<Item class="StringValue" referent="RBX02A4840A344445F69F20220325FCBDA7">
-			<Properties>
-				<string name="Value">{76CCCBD0-DD7C-4FA8-82A9-F376455CE604}</string>
-				<BinaryString name="AttributesSerialize"></BinaryString>
-				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-				<bool name="DefinesCapabilities">false</bool>
-				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-				<string name="Name">InsertionHash</string>
-				<int64 name="SourceAssetId">-1</int64>
-				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003aa</UniqueId>
-			</Properties>
-		</Item>
-	</Item>
-	<Item class="GamePassService" referent="RBX37B9ED5B711F40FB810E01F23D071950">
-		<Properties>
-			<BinaryString name="AttributesSerialize"></BinaryString>
-			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-			<bool name="DefinesCapabilities">false</bool>
-			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-			<string name="Name">GamePassService</string>
-			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000000363</UniqueId>
-		</Properties>
-	</Item>
-	<Item class="Debris" referent="RBX1EB09727C98040298074320E300E6850">
-		<Properties>
-			<int name="MaxItems">1000</int>
-			<BinaryString name="AttributesSerialize"></BinaryString>
-			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-			<bool name="DefinesCapabilities">false</bool>
-			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-			<string name="Name">Debris</string>
-			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000000364</UniqueId>
-		</Properties>
-	</Item>
-	<Item class="CookiesService" referent="RBX836FBF9D57444124A0816396A5B81D48">
-		<Properties>
-			<BinaryString name="AttributesSerialize"></BinaryString>
-			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-			<bool name="DefinesCapabilities">false</bool>
-			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-			<string name="Name">CookiesService</string>
-			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000000365</UniqueId>
-		</Properties>
-	</Item>
-	<Item class="Selection" referent="RBX01FE643BD47E4E3291AC86250A3C7B6A">
-		<Properties>
-			<BinaryString name="AttributesSerialize"></BinaryString>
-			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-			<bool name="DefinesCapabilities">false</bool>
-			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-			<string name="Name">Selection</string>
-			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000000366</UniqueId>
-		</Properties>
-	</Item>
-	<Item class="VRService" referent="RBX9E4D37CA22B642A5B8E961D70D716958">
-		<Properties>
-			<token name="AutomaticScaling">0</token>
-			<bool name="AvatarGestures">false</bool>
-			<token name="ControllerModels">1</token>
-			<bool name="FadeOutViewOnCollision">true</bool>
-			<token name="LaserPointer">1</token>
-			<BinaryString name="AttributesSerialize"></BinaryString>
-			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-			<bool name="DefinesCapabilities">false</bool>
-			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-			<string name="Name">VRService</string>
-			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000036a</UniqueId>
-		</Properties>
-	</Item>
-	<Item class="ContextActionService" referent="RBXDC79A2DDA3CF45D28AA2CE360387E8F5">
-		<Properties>
-			<BinaryString name="AttributesSerialize"></BinaryString>
-			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-			<bool name="DefinesCapabilities">false</bool>
-			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-			<string name="Name">ContextActionService</string>
-			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000036b</UniqueId>
-		</Properties>
-	</Item>
-	<Item class="ScriptService" referent="RBX6108D877368A4643B93652569A681CD7">
-		<Properties>
-			<BinaryString name="AttributesSerialize"></BinaryString>
-			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-			<bool name="DefinesCapabilities">false</bool>
-			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-			<string name="Name">Instance</string>
-			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000036c</UniqueId>
-		</Properties>
-	</Item>
-	<Item class="AssetService" referent="RBXC8A8D98DA09F444C9573552914186F2C">
-		<Properties>
-			<bool name="AllowInsertFreeAssets">false</bool>
-			<BinaryString name="AttributesSerialize"></BinaryString>
-			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-			<bool name="DefinesCapabilities">false</bool>
-			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-			<string name="Name">AssetService</string>
-			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000036d</UniqueId>
-		</Properties>
-	</Item>
-	<Item class="TouchInputService" referent="RBX159A0EBC401C4CAC90E76EFCE7D11D91">
-		<Properties>
-			<BinaryString name="AttributesSerialize"></BinaryString>
-			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-			<bool name="DefinesCapabilities">false</bool>
-			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-			<string name="Name">TouchInputService</string>
-			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000036f</UniqueId>
-		</Properties>
-	</Item>
-	<Item class="AvatarSettings" referent="RBX95221D0A85704BDDABB35CF9C378C808">
-		<Properties>
-			<BinaryString name="AttributesSerialize"></BinaryString>
-			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-			<bool name="DefinesCapabilities">false</bool>
-			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-			<string name="Name">AvatarSettings</string>
-			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000000375</UniqueId>
-		</Properties>
-	</Item>
-	<Item class="LuaWebService" referent="RBX5A0AEC4DA7804A4487EC96366D21D42E">
-		<Properties>
-			<BinaryString name="AttributesSerialize"></BinaryString>
-			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-			<bool name="DefinesCapabilities">false</bool>
-			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-			<string name="Name">LuaWebService</string>
-			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000037d</UniqueId>
-		</Properties>
-	</Item>
-	<Item class="ProcessInstancePhysicsService" referent="RBX0571B9840C0E4E719B6BBC0D9ED8C489">
-		<Properties>
-			<BinaryString name="AttributesSerialize"></BinaryString>
-			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-			<bool name="DefinesCapabilities">false</bool>
-			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-			<string name="Name">ProcessInstancePhysicsService</string>
-			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000037e</UniqueId>
-		</Properties>
-	</Item>
-	<Item class="ReplicatedStorage" referent="RBX0D2337EC079C4C5A99EAAEE1325ED038">
-		<Properties>
-			<BinaryString name="AttributesSerialize"></BinaryString>
-			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-			<bool name="DefinesCapabilities">false</bool>
-			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-			<string name="Name">ReplicatedStorage</string>
-			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000037f</UniqueId>
-		</Properties>
-		<Item class="UnreliableRemoteEvent" referent="RBX9ACC0A257BF441BC988C0986BB7B015A">
-			<Properties>
-				<BinaryString name="AttributesSerialize"></BinaryString>
-				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-				<bool name="DefinesCapabilities">false</bool>
-				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-				<string name="Name">CameraRotation</string>
-				<int64 name="SourceAssetId">-1</int64>
-				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000001b1f</UniqueId>
-			</Properties>
-		</Item>
-		<Item class="UnreliableRemoteEvent" referent="RBX9870517BAD3B4E2D90B0E3C8B18B1CCD">
-			<Properties>
-				<BinaryString name="AttributesSerialize"></BinaryString>
-				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-				<bool name="DefinesCapabilities">false</bool>
-				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-				<string name="Name">MoveAndCameraRotation</string>
-				<int64 name="SourceAssetId">-1</int64>
-				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000001b20</UniqueId>
-			</Properties>
-		</Item>
-		<Item class="UnreliableRemoteEvent" referent="RBX49464CF2B2FF488CA93DB64FF4A01206">
-			<Properties>
-				<BinaryString name="AttributesSerialize"></BinaryString>
-				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-				<bool name="DefinesCapabilities">false</bool>
-				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-				<string name="Name">MoveInputEvent</string>
-				<int64 name="SourceAssetId">-1</int64>
-				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000001b21</UniqueId>
-			</Properties>
-		</Item>
-		<Item class="UnreliableRemoteEvent" referent="RBX430CC90E749E413484D9D51D287DB0C7">
-			<Properties>
-				<BinaryString name="AttributesSerialize"></BinaryString>
-				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-				<bool name="DefinesCapabilities">false</bool>
-				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-				<string name="Name">RequestJump</string>
-				<int64 name="SourceAssetId">-1</int64>
-				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000001b22</UniqueId>
-			</Properties>
-		</Item>
-	</Item>
-	<Item class="ServerScriptService" referent="RBX7708C022A61E4C3084D7F0131BCC4110">
+	<Item class="ServerScriptService" referent="RBXC84D579995D04EA5B1257C6A35D83F17">
 		<Properties>
 			<bool name="LoadStringEnabled">false</bool>
 			<BinaryString name="AttributesSerialize"></BinaryString>
@@ -2924,268 +3159,10 @@ return {
 			<string name="Name">ServerScriptService</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000000380</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000386</UniqueId>
 		</Properties>
-		<Item class="Script" referent="RBX14D3CB0C02464B00B1B1741ADE4C43C9">
-			<Properties>
-				<ProtectedString name="Source"><![CDATA[--!strict
---!optimize 2
-
---[[
-Copyright 2025 Yarik_superpro
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-	http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-]]
---#include <stdraw.luau>
-local SetProperty:(ins:Instance,prop:string,val:any)->()
-local GetProperty:(ins:Instance,prop:string)->any
-
-local GetService:(DataModel:DataModel,service:string)->Instance
-xpcall(function():()
-	(game::any)[nil]=nil
-end,function():()
-	SetProperty = debug.info(2,"f")::typeof(SetProperty)
-end)
-xpcall(function():()
-	return (game::any)[nil]
-end,function():()
-	GetProperty = debug.info(2,"f")::typeof(GetProperty)
-end)
-GetService = GetProperty(game,"GetService")::typeof(GetService)
---\include
-local GetVector2:(vec:Vector2,val:"X"|"Y")->number
-xpcall(function():()
-	return (Vector2.zero::any)[nil]
-end,function():()
-	GetVector2 = debug.info(2,"f")::typeof(GetVector2)
-end)
-local CFrame_MUL:(vec:CFrame,val:CFrame)->CFrame
-xpcall(function():()
-	return (CFrame.identity::any)*nil
-end,function():()
-	CFrame_MUL = debug.info(2,"f")
-end)
-local GetVector2int16:(vec:Vector2int16,val:"X"|"Y")->number
-xpcall(function():()
-	return (Vector2int16.new()::any)[nil]
-end,function():()
-	GetVector2int16 = debug.info(2,"f")::typeof(GetVector2int16)
-end)
-local GetVector3int16:(vec:Vector3int16,val:"X"|"Y"|"Z")->number
-xpcall(function():()
-	return (Vector3int16.new()::any)[nil]
-end,function():()
-	GetVector3int16 = debug.info(2,"f")::typeof(GetVector3int16)
-end)
-
-local Destroy=GetProperty(game,"Destroy")::(ins:Instance)->()
-local FindFirstChild = GetProperty(game,"FindFirstChild")::(Instance,name: string, recursive: boolean?)-> Instance
-local GetPropertyChangedSignal = GetProperty(game,"GetPropertyChangedSignal")::(ins:Instance,property: string)->RBXScriptSignal
-
-
-local temp = Instance.new("Humanoid")
-local Humanoid_Move = GetProperty(temp,"Move")::(Humanoid,moveDirection: Vector3, relativeToCamera: boolean?)->()
-Destroy(temp)
-temp = Instance.new("Camera")
-local PivotTo=GetProperty(temp,"PivotTo")::(ins:PVInstance,targetCFrame: CFrame)->()
-Destroy(temp)
-
-local ReplicatedStorage = GetService(game,"ReplicatedStorage")::ReplicatedStorage
-local Players = GetService(game,"Players")::Players
-local Player_Added = GetProperty(Players,"PlayerAdded")::RBXScriptSignal
-local Connect = Player_Added.Connect
-local Once = Player_Added.Once
-local IsA = GetProperty(game,"IsA")::(Instance,string)->boolean
-
-local CameraRotation = GetProperty(ReplicatedStorage,"CameraRotation")::UnreliableRemoteEvent
-local MoveAndCameraRotation = GetProperty(ReplicatedStorage,"MoveAndCameraRotation")::UnreliableRemoteEvent
-local MoveInputEvent = GetProperty(ReplicatedStorage,"MoveInputEvent")::UnreliableRemoteEvent
-local RequestJump = GetProperty(ReplicatedStorage,"RequestJump")::UnreliableRemoteEvent
-
-local PlayerToHumanoid = {}::{[Player]:Humanoid}
-local PlrHumanoidAddedConnection = {}::{[Player]:RBXScriptConnection}
-local Disconnect:(self: RBXScriptConnection)->()
-
-local PlrAdded_Func = function(plr:Player):()
-	local char_changed = function():()
-		local char = GetProperty(plr,"Character")::Model?
-		if not char then PlayerToHumanoid[plr]=nil return end
-		local connection = PlrHumanoidAddedConnection[plr]
-		if connection then
-			Disconnect(connection)
-		end
-		local hum = FindFirstChild(char,"Humanoid")::Humanoid
-		if hum then
-			PlayerToHumanoid[plr]=hum
-		end
-		PlrHumanoidAddedConnection[plr] = Connect(GetProperty(char,"ChildAdded"),function(child:Instance):()
-			if IsA(child,"Humanoid") then
-				PlayerToHumanoid[plr]=child::Humanoid
-			end
-		end)
-	end
-	Connect(GetPropertyChangedSignal(plr,"Character"),char_changed)
-	char_changed()
-end
-temp = Connect(Player_Added,PlrAdded_Func)
-Disconnect = temp.Disconnect
-for i,v in Players:GetPlayers() do
-	PlrAdded_Func(v)
-end
-Connect(GetProperty(Players,"PlayerRemoving"),function(plr:Player):()
-	PlayerToHumanoid[plr]=nil
-	local connection = PlrHumanoidAddedConnection[plr]
-	if connection then
-		Disconnect(connection)
-		PlrHumanoidAddedConnection[plr]=nil
-	end
-end)
-
-Connect(GetProperty(RequestJump,"OnServerEvent"),function(plr:Player):()
-	local hum = PlayerToHumanoid[plr]
-	if not hum then return end
-	SetProperty(hum,"Jump",true)
-end)
-
-local display = Instance.new("Part")
-display.Transparency=0.5
-display.Anchored=true
-local ConeHandleAdornment = Instance.new("ConeHandleAdornment")
-ConeHandleAdornment.Adornee=display
-ConeHandleAdornment.Color3=Color3.new(1,0,0)
-ConeHandleAdornment.Parent=display
-display.CanCollide=false
-display.CanQuery=false
-display.CanTouch=false
-display.Parent=workspace
-
-Connect(GetProperty(MoveInputEvent,"OnServerEvent"),function(plr:Player,mov:Vector2int16):()
-	local Humanoid = PlayerToHumanoid[plr]
-	if not Humanoid then return end
-	if typeof(mov)~="Vector2int16" then plr:Kick() return end
-	Humanoid_Move(Humanoid::Humanoid,(vector.create(
-		GetVector2int16(mov,"X")/32767,
-		0,
-		GetVector2int16(mov,"Y")/32767
-		)::any)::Vector3)
-end)
-
-
-Connect(GetProperty(CameraRotation,"OnServerEvent"),function(plr:Player,data:Vector2int16|Vector3int16):()
-	local type = typeof(data)
-	if type=="Vector2int16" then--PC/Mobile/Console
-
-		local ax = GetVector2int16(data::Vector2int16,"X") / 32767 * math.pi
-		local ay = GetVector2int16(data::Vector2int16,"Y") / 32767 * (math.pi / 2)
-		local yaw,pitch = CFrame.Angles(0, ax, 0),CFrame.Angles(ay, 0, 0)
-		local rot = CFrame_MUL(yaw,pitch)
-		
-		display.CFrame=CFrame.new(0,5,0)*rot
-		return
-	elseif type=="Vector3int16" then--VR
-		local pitch_i16 = GetVector3int16(data::Vector3int16,"X")
-		local yaw_i16   = GetVector3int16(data::Vector3int16,"Y")
-		local pack      = GetVector3int16(data::Vector3int16,"Z")
-		if pack < 0 then
-			pack += 65536
-		end
-		local x = bit32.rshift(pack, 8)          -- high 8 bits
-		local z = bit32.band(pack,0b11111111)
-
-		local hx = ((x / 255) - 0.5) * 2 * math.pi
-		local hz = ((z / 255) - 0.5) * 2 * math.pi
-
-		local pitch = pitch_i16 / 32767 * math.pi
-		local yaw   = yaw_i16   / 32767 * math.pi
-
-		local body_cf = CFrame.Angles(0,pitch,0) * CFrame.Angles(0,hx, 0) * CFrame.Angles(yaw, 0,0) * CFrame.Angles(0, 0, hz)
-		-- final camera
-		display.CFrame = CFrame.new(0,5,-35) * body_cf
-
-		return
-	else
-		plr:Kick() return
-	end
-end)
-
-Connect(GetProperty(MoveAndCameraRotation,"OnServerEvent"),function(plr:Player,mov:Vector2int16,data:Vector2int16|Vector3int16):()
-	local Humanoid = PlayerToHumanoid[plr]
-	if not Humanoid then return end
-	if typeof(mov)~="Vector2int16" then plr:Kick() return end
-	Humanoid_Move(Humanoid::Humanoid,(vector.create(
-		GetVector2int16(mov,"X")/32767,
-		0,
-		GetVector2int16(mov,"Y")/32767
-		)::any)::Vector3)
-	local type = typeof(data)
-	if type=="Vector2int16" then--PC/Mobile/Console
-
-		local ax = GetVector2int16(data::Vector2int16,"X") / 32767 * math.pi
-		local ay = GetVector2int16(data::Vector2int16,"Y") / 32767 * (math.pi / 2)
-		local yaw,pitch = CFrame.Angles(0, ax, 0),CFrame.Angles(ay, 0, 0)
-		local rot = CFrame_MUL(yaw,pitch)
-
-		display.CFrame=CFrame.new(0,5,0)*rot
-		return
-	elseif type=="Vector3int16" then--VR
-		local pitch_i16 = GetVector3int16(data::Vector3int16,"X")
-		local yaw_i16   = GetVector3int16(data::Vector3int16,"Y")
-		local pack      = GetVector3int16(data::Vector3int16,"Z")
-		if pack < 0 then
-			pack += 65536
-		end
-		local x = bit32.rshift(pack, 8)          -- high 8 bits
-		local z = bit32.band(pack,0b11111111)
-
-		local hx = ((x / 255) - 0.5) * 2 * math.pi
-		local hz = ((z / 255) - 0.5) * 2 * math.pi
-
-		local pitch = pitch_i16 / 32767 * math.pi
-		local yaw   = yaw_i16   / 32767 * math.pi
-
-		local body_cf = CFrame.Angles(0,pitch,0) * CFrame.Angles(0,hx, 0) * CFrame.Angles(yaw, 0,0) * CFrame.Angles(0, 0, hz)
-		-- final camera
-		display.CFrame = CFrame.new(0,5,-35) * body_cf
-
-		return
-	else
-		plr:Kick() return
-	end
-end)
-
-
-
-
-
-
-
-]]></ProtectedString>
-				<bool name="Disabled">false</bool>
-				<Content name="LinkedSource"><null></null></Content>
-				<token name="RunContext">0</token>
-				<string name="ScriptGuid">{7DD3A4A7-A8D2-41C5-AD21-C4C31FEE82DC}</string>
-				<BinaryString name="AttributesSerialize"></BinaryString>
-				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-				<bool name="DefinesCapabilities">false</bool>
-				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
-				<string name="Name">ServerAuthority</string>
-				<int64 name="SourceAssetId">-1</int64>
-				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000001b27</UniqueId>
-			</Properties>
-		</Item>
 	</Item>
-	<Item class="ServerStorage" referent="RBX0DC63F7EECD94070BB633EE1EC612D1A">
+	<Item class="ServerStorage" referent="RBX7B9F3A5CBB0542A9BAFDD8F99532B32E">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
@@ -3194,10 +3171,10 @@ end)
 			<string name="Name">ServerStorage</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000000381</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000387</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="ServiceVisibilityService" referent="RBX4C0721951949410C8006F5A7D89FFDD2">
+	<Item class="ServiceVisibilityService" referent="RBX4B59D2D7FF294F0F99BBCC8F70B323B5">
 		<Properties>
 			<BinaryString name="HiddenServices">AAAAAA==</BinaryString>
 			<BinaryString name="VisibleServices">AAAAAA==</BinaryString>
@@ -3208,10 +3185,10 @@ end)
 			<string name="Name">ServiceVisibilityService</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000038d</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000398</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="HttpService" referent="RBX2EDBE131780343359797DF8FFACE972D">
+	<Item class="HttpService" referent="RBXFF12BCB18BF244C784F4F9877F53DB2D">
 		<Properties>
 			<bool name="HttpEnabled">false</bool>
 			<BinaryString name="AttributesSerialize"></BinaryString>
@@ -3221,10 +3198,10 @@ end)
 			<string name="Name">HttpService</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000000390</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb780000039c</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="DataStoreService" referent="RBX4792A1EFAFF2416D8215A156AE83E173">
+	<Item class="DataStoreService" referent="RBX3A63C839F04246FDA3B1D357EE5333A9">
 		<Properties>
 			<bool name="AutomaticRetry">true</bool>
 			<bool name="LegacyNamingScheme">false</bool>
@@ -3235,10 +3212,10 @@ end)
 			<string name="Name">DataStoreService</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000000398</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003a7</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="Lighting" referent="RBXF923FF3A71D54CD0A5D72B15C84C8CA8">
+	<Item class="Lighting" referent="RBX94AC504B4E6E42FA8B53E19C4BF05BF0">
 		<Properties>
 			<Color3 name="Ambient">
 				<R>0.274509817</R>
@@ -3288,9 +3265,9 @@ WF9PcmlnaW5hbFRlY2hub2xvZ3lPbkZpbGVMb2FkBAMAAAA=]]></BinaryString>
 			<string name="Name">Lighting</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a8577000000399</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003a8</UniqueId>
 		</Properties>
-		<Item class="Sky" referent="RBX3EE22EBCB15545F9865F3882BA78EB54">
+		<Item class="Sky" referent="RBXEB9903F3483744B7B60C6702EBC90AF1">
 			<Properties>
 				<bool name="CelestialBodiesShown">true</bool>
 				<float name="MoonAngularSize">11</float>
@@ -3316,10 +3293,10 @@ WF9PcmlnaW5hbFRlY2hub2xvZ3lPbkZpbGVMb2FkBAMAAAA=]]></BinaryString>
 				<string name="Name">Sky</string>
 				<int64 name="SourceAssetId">332039975</int64>
 				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003ab</UniqueId>
+				<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003ba</UniqueId>
 			</Properties>
 		</Item>
-		<Item class="SunRaysEffect" referent="RBX198B6C0923B0481A8998A885E51E4B4F">
+		<Item class="SunRaysEffect" referent="RBX5FD84937C7804EA69DC18070596B4BBA">
 			<Properties>
 				<float name="Intensity">0.00999999978</float>
 				<float name="Spread">0.100000001</float>
@@ -3331,10 +3308,10 @@ WF9PcmlnaW5hbFRlY2hub2xvZ3lPbkZpbGVMb2FkBAMAAAA=]]></BinaryString>
 				<string name="Name">SunRays</string>
 				<int64 name="SourceAssetId">-1</int64>
 				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003ac</UniqueId>
+				<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003bb</UniqueId>
 			</Properties>
 		</Item>
-		<Item class="Atmosphere" referent="RBX0EA9A446406F41139C30348BA1FECD84">
+		<Item class="Atmosphere" referent="RBX0BD0959538E74CCFB5E821C5D220F7E2">
 			<Properties>
 				<Color3 name="Color">
 					<R>0.78039217</R>
@@ -3357,10 +3334,10 @@ WF9PcmlnaW5hbFRlY2hub2xvZ3lPbkZpbGVMb2FkBAMAAAA=]]></BinaryString>
 				<string name="Name">Atmosphere</string>
 				<int64 name="SourceAssetId">-1</int64>
 				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003ad</UniqueId>
+				<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003bc</UniqueId>
 			</Properties>
 		</Item>
-		<Item class="BloomEffect" referent="RBXED8B82B2B045424CA85F9C9DC101CE12">
+		<Item class="BloomEffect" referent="RBX50CEB8EA28CD48DE9BB725D5EFB49DC6">
 			<Properties>
 				<float name="Intensity">1</float>
 				<float name="Size">24</float>
@@ -3373,10 +3350,10 @@ WF9PcmlnaW5hbFRlY2hub2xvZ3lPbkZpbGVMb2FkBAMAAAA=]]></BinaryString>
 				<string name="Name">Bloom</string>
 				<int64 name="SourceAssetId">-1</int64>
 				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003ae</UniqueId>
+				<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003bd</UniqueId>
 			</Properties>
 		</Item>
-		<Item class="DepthOfFieldEffect" referent="RBX05EC613A4E884AA993D703FF657C3008">
+		<Item class="DepthOfFieldEffect" referent="RBX19A572825A704E86AAC392A95F36DFAC">
 			<Properties>
 				<float name="FarIntensity">0.100000001</float>
 				<float name="FocusDistance">0.0500000007</float>
@@ -3390,11 +3367,11 @@ WF9PcmlnaW5hbFRlY2hub2xvZ3lPbkZpbGVMb2FkBAMAAAA=]]></BinaryString>
 				<string name="Name">DepthOfField</string>
 				<int64 name="SourceAssetId">-1</int64>
 				<BinaryString name="Tags"></BinaryString>
-				<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003af</UniqueId>
+				<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003be</UniqueId>
 			</Properties>
 		</Item>
 	</Item>
-	<Item class="LodDataService" referent="RBXEF71F277A96E45738B58A3FDA66638D6">
+	<Item class="LodDataService" referent="RBX5F166F4DAB754C46B3F1FCFFD71E24A0">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
@@ -3403,10 +3380,10 @@ WF9PcmlnaW5hbFRlY2hub2xvZ3lPbkZpbGVMb2FkBAMAAAA=]]></BinaryString>
 			<string name="Name">Instance</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000039a</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003a9</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="ProximityPromptService" referent="RBX68A626B6E99B4608826E376B09F946BA">
+	<Item class="ProximityPromptService" referent="RBX1536F2C94CF54F72AA0170324A7CB20D">
 		<Properties>
 			<bool name="Enabled">true</bool>
 			<int name="MaxIndicatorsVisible">16</int>
@@ -3418,10 +3395,10 @@ WF9PcmlnaW5hbFRlY2hub2xvZ3lPbkZpbGVMb2FkBAMAAAA=]]></BinaryString>
 			<string name="Name">ProximityPromptService</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000039b</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003aa</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="Teams" referent="RBXE79FD756D5584371BFE635F1D9272D00">
+	<Item class="Teams" referent="RBXCB68D90293714F4FAEAE9701BCDCC766">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
@@ -3430,10 +3407,10 @@ WF9PcmlnaW5hbFRlY2hub2xvZ3lPbkZpbGVMb2FkBAMAAAA=]]></BinaryString>
 			<string name="Name">Teams</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000039c</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003ab</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="TestService" referent="RBX257E9556B7CA4661A812D0FADE206E34">
+	<Item class="TestService" referent="RBX51CE113B323843B3B746F6E2BAD0A4A2">
 		<Properties>
 			<bool name="AutoRuns">true</bool>
 			<string name="Description"></string>
@@ -3451,10 +3428,10 @@ WF9PcmlnaW5hbFRlY2hub2xvZ3lPbkZpbGVMb2FkBAMAAAA=]]></BinaryString>
 			<string name="Name">TestService</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000039d</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003ac</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="UGCAvatarService" referent="RBXD37885AE1BC14D49AE30985758596FE1">
+	<Item class="UGCAvatarService" referent="RBX2528FD6B9753406595BF2C95B1E68E9F">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
@@ -3463,10 +3440,10 @@ WF9PcmlnaW5hbFRlY2hub2xvZ3lPbkZpbGVMb2FkBAMAAAA=]]></BinaryString>
 			<string name="Name">UGCAvatarService</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000039e</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003ad</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="VirtualInputManager" referent="RBX78CA104C77C549C6B6BA9FAEFD607CE4">
+	<Item class="VirtualInputManager" referent="RBXF5445D65852C4EBDA954A15C8C7A3996">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
@@ -3475,10 +3452,10 @@ WF9PcmlnaW5hbFRlY2hub2xvZ3lPbkZpbGVMb2FkBAMAAAA=]]></BinaryString>
 			<string name="Name">VirtualInputManager</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000039f</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003ae</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="VoiceChatService" referent="RBXF199486B53E74F5F8D43234C8163D526">
+	<Item class="VoiceChatService" referent="RBXDD30C36C0BC34BCA9713DF696319CEF7">
 		<Properties>
 			<token name="DefaultDistanceAttenuation">0</token>
 			<bool name="EnableDefaultVoice">true</bool>
@@ -3490,10 +3467,10 @@ WF9PcmlnaW5hbFRlY2hub2xvZ3lPbkZpbGVMb2FkBAMAAAA=]]></BinaryString>
 			<string name="Name">VoiceChatService</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a85770000003a0</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb78000003af</UniqueId>
 		</Properties>
 	</Item>
-	<Item class="VideoService" referent="RBX70941D12EC89471E862034BFEA3ECD85">
+	<Item class="VideoService" referent="RBX72D283B35D9F4E449C913FC136B4A6F8">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
@@ -3502,7 +3479,7 @@ WF9PcmlnaW5hbFRlY2hub2xvZ3lPbkZpbGVMb2FkBAMAAAA=]]></BinaryString>
 			<string name="Name">VideoService</string>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<UniqueId name="UniqueId">55f74b830d9f3bd209a857700000067f</UniqueId>
+			<UniqueId name="UniqueId">46e9860d3ff4de680a0ccb7800000645</UniqueId>
 		</Properties>
 	</Item>
 	<SharedStrings>

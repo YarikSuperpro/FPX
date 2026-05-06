@@ -2,106 +2,11 @@
 	<Meta name="ExplicitAutoJoints">true</Meta>
 	<External>null</External>
 	<External>nil</External>
-	<Item class="Model" referent="RBX5AD13DD59BEA453FB9A40564C37D338D">
+	<Item class="Script" referent="RBX0C9154B45DD844CC86B6E997D2C23153">
 		<Properties>
-			<token name="LevelOfDetail">0</token>
-			<CoordinateFrame name="ModelMeshCFrame">
-				<X>0</X>
-				<Y>0</Y>
-				<Z>0</Z>
-				<R00>1</R00>
-				<R01>0</R01>
-				<R02>0</R02>
-				<R10>0</R10>
-				<R11>1</R11>
-				<R12>0</R12>
-				<R20>0</R20>
-				<R21>0</R21>
-				<R22>1</R22>
-			</CoordinateFrame>
-			<SharedString name="ModelMeshData">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
-			<Vector3 name="ModelMeshSize">
-				<X>0</X>
-				<Y>0</Y>
-				<Z>0</Z>
-			</Vector3>
-			<token name="ModelStreamingMode">0</token>
-			<bool name="NeedsPivotMigration">false</bool>
-			<Ref name="PrimaryPart">null</Ref>
-			<float name="ScaleFactor">1</float>
-			<SharedString name="SlimHash">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
-			<OptionalCoordinateFrame name="WorldPivotData"></OptionalCoordinateFrame>
-			<BinaryString name="AttributesSerialize"></BinaryString>
-			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-			<bool name="DefinesCapabilities">false</bool>
-			<string name="Name">FPX</string>
-			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags"></BinaryString>
-		</Properties>
-		<Item class="Folder" referent="RBX4C73D48BC4AA4D5589B08872E7A77C78">
-			<Properties>
-				<BinaryString name="AttributesSerialize"></BinaryString>
-				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-				<bool name="DefinesCapabilities">false</bool>
-				<string name="Name">ReplicatedStorage</string>
-				<int64 name="SourceAssetId">-1</int64>
-				<BinaryString name="Tags"></BinaryString>
-			</Properties>
-			<Item class="UnreliableRemoteEvent" referent="RBX9ACC0A257BF441BC988C0986BB7B015A">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-					<bool name="DefinesCapabilities">false</bool>
-					<string name="Name">CameraRotation</string>
-					<int64 name="SourceAssetId">-1</int64>
-					<BinaryString name="Tags"></BinaryString>
-				</Properties>
-			</Item>
-			<Item class="UnreliableRemoteEvent" referent="RBX9870517BAD3B4E2D90B0E3C8B18B1CCD">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-					<bool name="DefinesCapabilities">false</bool>
-					<string name="Name">MoveAndCameraRotation</string>
-					<int64 name="SourceAssetId">-1</int64>
-					<BinaryString name="Tags"></BinaryString>
-				</Properties>
-			</Item>
-			<Item class="UnreliableRemoteEvent" referent="RBX49464CF2B2FF488CA93DB64FF4A01206">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-					<bool name="DefinesCapabilities">false</bool>
-					<string name="Name">MoveInputEvent</string>
-					<int64 name="SourceAssetId">-1</int64>
-					<BinaryString name="Tags"></BinaryString>
-				</Properties>
-			</Item>
-			<Item class="UnreliableRemoteEvent" referent="RBX430CC90E749E413484D9D51D287DB0C7">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-					<bool name="DefinesCapabilities">false</bool>
-					<string name="Name">RequestJump</string>
-					<int64 name="SourceAssetId">-1</int64>
-					<BinaryString name="Tags"></BinaryString>
-				</Properties>
-			</Item>
-		</Item>
-		<Item class="Folder" referent="RBXB2847A756C2F4D0B9CB6B981DB561862">
-			<Properties>
-				<BinaryString name="AttributesSerialize"></BinaryString>
-				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-				<bool name="DefinesCapabilities">false</bool>
-				<string name="Name">StarterPlayerScripts</string>
-				<int64 name="SourceAssetId">-1</int64>
-				<BinaryString name="Tags"></BinaryString>
-			</Properties>
-			<Item class="LocalScript" referent="RBXEA85E6EA41B54FD28BA7FA76D9F1DD4C">
-				<Properties>
-					<ProtectedString name="Source"><![CDATA[--!optimize 2
+			<ProtectedString name="Source"><![CDATA[--!optimize 2
 --[[
-Copyright 2025 Yarik_superpro
+Copyright 2026 Yarik_superpro
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -116,26 +21,364 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ]]
 require(script.Parent.ControlScript)]]></ProtectedString>
-					<bool name="Disabled">false</bool>
-					<Content name="LinkedSource"><null></null></Content>
-					<token name="RunContext">0</token>
-					<string name="ScriptGuid">{71574018-B5F5-43B6-A345-F56EED1BD379}</string>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-					<bool name="DefinesCapabilities">false</bool>
-					<string name="Name">LocalScript</string>
-					<int64 name="SourceAssetId">-1</int64>
-					<BinaryString name="Tags"></BinaryString>
-				</Properties>
-			</Item>
-			<Item class="ModuleScript" referent="RBX15B76EE8CD924A83B267495A12E952FC">
-				<Properties>
-					<Content name="LinkedSource"><null></null></Content>
-					<ProtectedString name="Source"><![CDATA[--!strict
+			<bool name="Disabled">false</bool>
+			<Content name="LinkedSource"><null></null></Content>
+			<token name="RunContext">2</token>
+			<string name="ScriptGuid">{316D8B13-325B-4BD7-94D9-25D24FDBBC34}</string>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<string name="Name">LocalScript</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="Script" referent="RBX42AAF7E262854EB69EADCF692140FE60">
+		<Properties>
+			<ProtectedString name="Source"><![CDATA[--!strict
 --!optimize 2
 
 --[[
-Copyright 2025 Yarik_superpro
+Copyright 2026 Yarik_superpro
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+	http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+]]
+--#include <stdraw.luau>
+local SetProperty:(ins:Instance,prop:string,val:any)->()
+local GetProperty:(ins:Instance,prop:string)->any
+
+local GetService:(DataModel:DataModel,service:string)->Instance
+xpcall(function():()
+	(game::any)[nil]=nil
+end,function():()
+	SetProperty = debug.info(2,"f")::typeof(SetProperty)
+end)
+xpcall(function():()
+	return (game::any)[nil]
+end,function():()
+	GetProperty = debug.info(2,"f")::typeof(GetProperty)
+end)
+GetService = GetProperty(game,"GetService")::typeof(GetService)
+--\include
+local GetVector2:(vec:Vector2,val:"X"|"Y")->number
+xpcall(function():()
+	return (Vector2.zero::any)[nil]
+end,function():()
+	GetVector2 = debug.info(2,"f")::typeof(GetVector2)
+end)
+local CFrame_MUL:(vec:CFrame,val:CFrame)->CFrame
+xpcall(function():()
+	return (CFrame.identity::any)*nil
+end,function():()
+	CFrame_MUL = debug.info(2,"f")
+end)
+local GetVector2int16:(vec:Vector2int16,val:"X"|"Y")->number
+xpcall(function():()
+	return (Vector2int16.new()::any)[nil]
+end,function():()
+	GetVector2int16 = debug.info(2,"f")::typeof(GetVector2int16)
+end)
+local GetVector3int16:(vec:Vector3int16,val:"X"|"Y"|"Z")->number
+xpcall(function():()
+	return (Vector3int16.new()::any)[nil]
+end,function():()
+	GetVector3int16 = debug.info(2,"f")::typeof(GetVector3int16)
+end)
+
+local Destroy=GetProperty(game,"Destroy")::(ins:Instance)->()
+local FindFirstChild = GetProperty(game,"FindFirstChild")::(Instance,name: string, recursive: boolean?)-> Instance
+local GetPropertyChangedSignal = GetProperty(game,"GetPropertyChangedSignal")::(ins:Instance,property: string)->RBXScriptSignal
+
+
+local temp = Instance.new("Humanoid")
+local Humanoid_Move = GetProperty(temp,"Move")::(Humanoid,moveDirection: Vector3, relativeToCamera: boolean?)->()
+Destroy(temp)
+temp = Instance.new("Camera")
+local PivotTo=GetProperty(temp,"PivotTo")::(ins:PVInstance,targetCFrame: CFrame)->()
+Destroy(temp)
+temp = Instance.new("InputAction")
+local InputAction_GetState = GetProperty(temp,"GetState")::(InputAction)->any
+Destroy(temp)
+
+local RunService = GetService(game,"RunService")::RunService
+local BindToSimulation = GetProperty(RunService,"BindToSimulation")::(RunService,func:(number)->(), frequency: Enum.StepFrequency?, priority: number?)->RBXScriptConnection
+
+
+
+local ReplicatedStorage = GetService(game,"ReplicatedStorage")::ReplicatedStorage
+local Players = GetService(game,"Players")::Players
+local Player_Added = GetProperty(Players,"PlayerAdded")::RBXScriptSignal
+local Connect = Player_Added.Connect
+local Once = Player_Added.Once
+local IsA = GetProperty(game,"IsA")::(Instance,string)->boolean
+type Kick_func = (plr:Player,message:string?)->()
+local Kick:Kick_func
+Kick = function(plr:Player,message:string?):()
+	local func = GetProperty(plr,"Kick")::Kick_func
+	Kick = func
+	func(plr,message)
+end::Kick_func
+
+local CameraRotation = GetProperty(ReplicatedStorage,"CameraRotation")::UnreliableRemoteEvent
+
+local PlayerCameraData = {}::{[Player]:Vector2int16|Vector3int16}
+local PlayerToHumanoid = {}::{[Player]:Humanoid}
+local PlayerToRootPart = {}::{[Player]:BasePart}
+local PlrCharChildAddedConnection = {}::{[Player]:RBXScriptConnection}
+local Disconnect:(self: RBXScriptConnection)->()
+
+
+local PlrAdded_Func = function(plr:Player):()
+	local InputContext = Instance.new("InputContext")
+	SetProperty(InputContext,"Name","Inputs")
+	local MovementInput = Instance.new("InputAction")
+	SetProperty(MovementInput,"Type",Enum.InputActionType.Direction2D)
+	SetProperty(MovementInput,"Name","Move")
+	SetProperty(MovementInput,"Parent",InputContext)
+	local JumpInput = Instance.new("InputAction")
+	SetProperty(JumpInput,"Name","Jump")
+	SetProperty(JumpInput,"Parent",InputContext)
+
+	SetProperty(InputContext,"Parent",plr)
+	local Humanoid:Humanoid?=nil
+	Connect(GetProperty(MovementInput,"StateChanged"),function(vec:Vector2):()
+		if not Humanoid then return end
+		Humanoid_Move(Humanoid,(vector.create(
+			GetVector2(vec,"X"),0,GetVector2(vec,"Y")
+			)::any)::Vector3)
+	end)
+	local connection_Jumping:RBXScriptConnection
+	local func_Jump = function():()
+		local a = InputAction_GetState(JumpInput)
+		if not a then
+			Disconnect(connection_Jumping)
+			return
+		end
+		SetProperty(Humanoid::Humanoid,"Jump",a::true)
+	end
+	
+
+	Connect(GetProperty(JumpInput,"StateChanged"),function(vec:boolean):()
+		if not Humanoid then return end
+		SetProperty(Humanoid,"Jump",vec)
+		if vec then
+			connection_Jumping = BindToSimulation(RunService,func_Jump,Enum.StepFrequency.Hz60)
+			return	
+		elseif connection_Jumping then
+			Disconnect(connection_Jumping)
+			return
+		end
+		return
+	end)
+
+	local char_changed = function():()
+		if connection_Jumping then
+			Disconnect(connection_Jumping)
+		end
+		local char = GetProperty(plr,"Character")::Model?
+		if not char then Humanoid=nil PlayerToHumanoid[plr]=nil return end
+		local connection = PlrCharChildAddedConnection[plr]
+		if connection then
+			Disconnect(connection)
+		end
+		local hum = FindFirstChild(char,"Humanoid")::Humanoid?
+		if hum then
+			SetProperty(hum,"AutoRotate",false)
+			Humanoid=hum
+			PlayerToHumanoid[plr]=hum
+		end
+		local root = FindFirstChild(char,"HumanoidRootPart")::BasePart?
+		if root then
+			PlayerToRootPart[plr]=root
+		end
+		PlrCharChildAddedConnection[plr] = Connect(GetProperty(char,"ChildAdded"),function(child:Humanoid|BasePart):()
+			if IsA(child,"Humanoid") then
+				SetProperty(child,"AutoRotate",false)
+				Humanoid=child::Humanoid
+				PlayerToHumanoid[plr]=child::Humanoid
+				if connection_Jumping then
+					Disconnect(connection_Jumping)
+					return
+				end
+				return
+			end
+			if GetProperty(child,"Name")=="HumanoidRootPart" then
+				PlayerToRootPart[plr]=child::BasePart
+				return
+			end
+		end)
+	end
+	Connect(GetPropertyChangedSignal(plr,"Character"),char_changed)
+	char_changed()
+end
+temp = Connect(Player_Added,PlrAdded_Func)
+Disconnect = temp.Disconnect
+for i,v in Players:GetPlayers() do
+	PlrAdded_Func(v)
+end
+Connect(GetProperty(Players,"PlayerRemoving"),function(plr:Player):()
+	PlayerToHumanoid[plr]=nil
+	PlayerToRootPart[plr]=nil
+	local connection = PlrCharChildAddedConnection[plr]
+	if connection then
+		Disconnect(connection)
+		PlrCharChildAddedConnection[plr]=nil
+	end
+end)
+
+
+local display = Instance.new("Part")
+display.Transparency=0.5
+display.Anchored=true
+local ConeHandleAdornment = Instance.new("ConeHandleAdornment")
+ConeHandleAdornment.Adornee=display
+ConeHandleAdornment.Color3=Color3.new(1,0,0)
+ConeHandleAdornment.Parent=display
+display.CanCollide=false
+display.CanQuery=false
+display.CanTouch=false
+display.Parent=workspace
+
+--Connect(GetProperty(MoveInputEvent,"OnServerEvent"),function(plr:Player,mov:Vector2int16):()
+--	local Humanoid = PlayerToHumanoid[plr]
+--	if not Humanoid then return end
+--	if typeof(mov)~="Vector2int16" then plr:Kick() return end
+--	Humanoid_Move(Humanoid::Humanoid,(vector.create(
+--		GetVector2int16(mov,"X")/32767,
+--		0,
+--		GetVector2int16(mov,"Y")/32767
+--		)::any)::Vector3)
+--end)
+
+
+Connect(GetProperty(CameraRotation,"OnServerEvent"),function(plr:Player,data:Vector2int16|Vector3int16):()
+	local type = typeof(data)
+	if type=="Vector2int16" then--PC/Mobile/Console
+		PlayerCameraData[plr]=data
+		local ax = GetVector2int16(data::Vector2int16,"X") / 32767 * math.pi
+		local ay = GetVector2int16(data::Vector2int16,"Y") / 32767 * (math.pi / 2)
+		local pitch,yaw = CFrame.Angles(0, ax, 0),CFrame.Angles(ay, 0, 0)
+		local rot = CFrame_MUL(pitch,yaw)
+
+		display.CFrame=CFrame.new(0,5,0)*rot
+		local root = PlayerToRootPart[plr]
+		if not root then return end
+
+		PivotTo(root,CFrame_MUL(CFrame.new(GetProperty(root,"Position")),pitch))
+		return
+	elseif type=="Vector3int16" then--VR
+		PlayerCameraData[plr]=data
+		local pitch_i16 = GetVector3int16(data::Vector3int16,"X")
+		local yaw_i16   = GetVector3int16(data::Vector3int16,"Y")
+		local pack      = GetVector3int16(data::Vector3int16,"Z")
+		if pack < 0 then
+			pack += 65536
+		end
+		local x = bit32.rshift(pack, 8)          -- high 8 bits
+		local z = bit32.band(pack,0b11111111)
+
+		local hx = ((x / 255) - 0.5) * 2 * math.pi
+		local hz = ((z / 255) - 0.5) * 2 * math.pi
+
+		local pitch = pitch_i16 / 32767 * math.pi
+		local yaw   = yaw_i16   / 32767 * math.pi
+		local pitch_cf = CFrame.Angles(0,pitch,0)
+		
+		local body_cf = pitch_cf * CFrame.Angles(0,hx, 0) * CFrame.Angles(yaw, 0,0) * CFrame.Angles(0, 0, hz)
+		-- final camera
+		display.CFrame = CFrame.new(0,5,-35) * body_cf
+		local root = PlayerToRootPart[plr]
+		if not root then return end
+
+		PivotTo(root,CFrame_MUL(CFrame.new(GetProperty(root,"Position")),pitch_cf))
+		return
+	else
+		Kick(plr) return
+	end
+end)
+
+--Connect(GetProperty(MoveAndCameraRotation,"OnServerEvent"),function(plr:Player,mov:Vector2int16,data:Vector2int16|Vector3int16):()
+--	local Humanoid = PlayerToHumanoid[plr]
+--	if not Humanoid then return end
+--	if typeof(mov)~="Vector2int16" then plr:Kick() return end
+--	Humanoid_Move(Humanoid::Humanoid,(vector.create(
+--		GetVector2int16(mov,"X")/32767,
+--		0,
+--		GetVector2int16(mov,"Y")/32767
+--		)::any)::Vector3)
+--	local type = typeof(data)
+--	if type=="Vector2int16" then--PC/Mobile/Console
+
+--		local ax = GetVector2int16(data::Vector2int16,"X") / 32767 * math.pi
+--		local ay = GetVector2int16(data::Vector2int16,"Y") / 32767 * (math.pi / 2)
+--		local yaw,pitch = CFrame.Angles(0, ax, 0),CFrame.Angles(ay, 0, 0)
+--		local rot = CFrame_MUL(yaw,pitch)
+
+--		display.CFrame=CFrame.new(0,5,0)*rot
+--		return
+--	elseif type=="Vector3int16" then--VR
+--		local pitch_i16 = GetVector3int16(data::Vector3int16,"X")
+--		local yaw_i16   = GetVector3int16(data::Vector3int16,"Y")
+--		local pack      = GetVector3int16(data::Vector3int16,"Z")
+--		if pack < 0 then
+--			pack += 65536
+--		end
+--		local x = bit32.rshift(pack, 8)          -- high 8 bits
+--		local z = bit32.band(pack,0b11111111)
+
+--		local hx = ((x / 255) - 0.5) * 2 * math.pi
+--		local hz = ((z / 255) - 0.5) * 2 * math.pi
+
+--		local pitch = pitch_i16 / 32767 * math.pi
+--		local yaw   = yaw_i16   / 32767 * math.pi
+
+--		local body_cf = CFrame.Angles(0,pitch,0) * CFrame.Angles(0,hx, 0) * CFrame.Angles(yaw, 0,0) * CFrame.Angles(0, 0, hz)
+--		-- final camera
+--		display.CFrame = CFrame.new(0,5,-35) * body_cf
+
+--		return
+--	else
+--		plr:Kick() return
+--	end
+--end)
+
+
+
+
+
+
+
+]]></ProtectedString>
+			<bool name="Disabled">false</bool>
+			<Content name="LinkedSource"><null></null></Content>
+			<token name="RunContext">1</token>
+			<string name="ScriptGuid">{7DD3A4A7-A8D2-41C5-AD21-C4C31FEE82DC}</string>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<string name="Name">ServerAuthority</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
+	<Item class="ModuleScript" referent="RBXF702FB7A194648BDB806CB85A1F8311C">
+		<Properties>
+			<Content name="LinkedSource"><null></null></Content>
+			<ProtectedString name="Source"><![CDATA[--!strict
+--!optimize 2
+
+--[[
+Copyright 2026 Yarik_superpro
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -197,7 +440,13 @@ local Camera = GetProperty(workspace,"CurrentCamera")::Camera
 local PivotTo=GetProperty(Camera,"PivotTo")::(ins:PVInstance,targetCFrame: CFrame)->()
 SetProperty(Camera,"CameraType",Enum.CameraType.Scriptable)
 
-local PreRender = GetProperty(GetService(game,"RunService")::RunService,"PreRender")::RBXScriptSignal
+local RunService = GetService(game,"RunService")::RunService
+--local SetPredictionMode = GetProperty(RunService,"SetPredictionMode")::(RunService,context: Instance, mode: Enum.PredictionMode)-> ()
+local BindToRenderStep = GetProperty(RunService,"BindToRenderStep")::(RunService,name: string, priority: number, func: (number)->())->()
+local BindToSimulation = GetProperty(RunService,"BindToSimulation")::(RunService,func:(number)->(), frequency: Enum.StepFrequency?, priority: number?)->RBXScriptConnection
+local UnbindFromRenderStep = GetProperty(RunService,"UnbindFromRenderStep")::(RunService,name:string)->()
+local BindToSimulation_Connection:RBXScriptConnection
+
 local LocalPlayer = GetProperty(GetService(game,"Players")::Players,"LocalPlayer")::Player
 local ReplicatedStorage = GetService(game,"ReplicatedStorage")::ReplicatedStorage
 local UserInputService = GetService(game,"UserInputService")::UserInputService
@@ -216,45 +465,48 @@ local ToOrientation = GetCFrame(CFrame.identity,"ToOrientation")::(CFrame)->(num
 local Vr_Head_CFrame = CFrame.identity
 local FuzzyEq = GetCFrame(CFrame.identity,"FuzzyEq")::(CFrame,other: CFrame, epsilon: number?)-> boolean
 local IsA = GetProperty(game,"IsA")::(Instance,string)->boolean
-local CameraDisabled:boolean = false
 
 local CameraRotation = GetProperty(ReplicatedStorage,"CameraRotation")::UnreliableRemoteEvent
-local MoveInputEvent = GetProperty(ReplicatedStorage,"MoveInputEvent")::UnreliableRemoteEvent
-local MoveAndCameraRotation = GetProperty(ReplicatedStorage,"MoveAndCameraRotation")::UnreliableRemoteEvent
-local RequestJump = GetProperty(ReplicatedStorage,"RequestJump")::UnreliableRemoteEvent
-
 local Unreliable_FireServer = GetProperty(CameraRotation,"FireServer")::(UnreliableRemoteEvent,...any)->()
 
-local Jump = Instance.new("InputAction")::InputAction
-local Jump_Pressed = GetProperty(Jump,"Pressed")::RBXScriptSignal
-local Connect = Jump_Pressed.Connect
-local Once = Jump_Pressed.Once
+--local Jump = Instance.new("InputAction")::InputAction
+--local Jump_Pressed = GetProperty(Jump,"Pressed")::RBXScriptSignal
+local SilencerConnection = LocalPlayer:WaitForChild("Inputs")::InputContext
+local Jump = GetProperty(SilencerConnection,"Jump")::InputAction
+local Send_Input_Move = GetProperty(SilencerConnection,"Move")::InputAction
+SilencerConnection = GetProperty(Jump,"Pressed")::RBXScriptSignal
+
+local Connect = SilencerConnection.Connect
+local Once = SilencerConnection.Once
 local Move = Instance.new("InputAction")::InputAction
 SetProperty(Move,"Type",Enum.InputActionType.Direction2D)
 
+local InputAction_GetState = GetProperty(Jump,"GetState")::(InputAction)->any
+local InputAction_Fire = GetProperty(Jump,"Fire")::(InputAction,state:any)->()
+
+
+--No VR: [16]X[16]Y[16]Camera X[16]Camera Y
+--VR: [16]X[16]Y[8]Char X[8]Head X[8]Head Y[8]Head Z
+
+
 local Humanoid:Humanoid
 
---Make player jump
-local Jump_Func = function():()
-	Unreliable_FireServer(RequestJump)
-	SetProperty(Humanoid::Humanoid,"Jump",true)
-end
-local Jump_Func_Connect:RBXScriptConnection = Connect(Jump_Pressed,Jump_Func)
-local Disconnect = Jump_Func_Connect.Disconnect::(self: RBXScriptConnection)->()
-Disconnect(Jump_Func_Connect)
+SilencerConnection = Connect(SilencerConnection,Destroy)--Silencer connection
+local Disconnect = SilencerConnection.Disconnect::(self: RBXScriptConnection)->()
+Disconnect(SilencerConnection)
 
-local Move_Func_Connect:RBXScriptConnection = Jump_Func_Connect
-local char_connection:RBXScriptConnection = Jump_Func_Connect
+local Move_Func_Connect:RBXScriptConnection = SilencerConnection
+local char_connection:RBXScriptConnection = SilencerConnection
 
-local CharHideDescedantConnection:RBXScriptConnection = Jump_Func_Connect
-local Char_UN_HideDescedantConnection:RBXScriptConnection = Jump_Func_Connect
+local CharHideDescedantConnection:RBXScriptConnection = SilencerConnection
+local Char_UN_HideDescedantConnection:RBXScriptConnection = SilencerConnection
 local face:Decal = Instance.new("Decal")
 --Destroy(face)
 Destroy(face)
 local HiddenParts = table.create(25)::{BasePart}
 
-local char_connection:RBXScriptConnection = Jump_Func_Connect
-local char_self_disconnect:RBXScriptConnection = Jump_Func_Connect
+local char_connection:RBXScriptConnection = SilencerConnection
+local char_self_disconnect:RBXScriptConnection = SilencerConnection
 
 local temp = Instance.new("Humanoid")
 task.defer(Destroy,temp)
@@ -265,32 +517,37 @@ local MoveVector_Z:number = 0
 local camAngleX = 0
 local camAngleY = 0
 
+local PreviousPass:Vector2 = Vector2.zero
+local MoveUpdateSimulation = function():()
+	if InputAction_GetState(Jump) then
+		SetProperty(Humanoid,"Jump",true)
+	end
+	local pass:Vector2 = InputAction_GetState(Send_Input_Move)
+	if pass==PreviousPass then return end
+	PreviousPass=pass
+	--snapping movement to i24 interpolation
+	Humanoid_Move(Humanoid::Humanoid,(vector.create(
+		GetVector2(pass,"X")/8388607,
+		0,
+			GetVector2(pass,"Y")/8388607
+		)::any)::Vector3)
+end
+
 --Movement (WASD or gamepad/vr)
 local Move_Func = function(var:Vector2):()
-	local X,Y = GetVector2(var,"X"),GetVector2(var,"Y")
+	local X = GetVector2(var,"X")
 	MoveVector_X = X
-	local negative_Y = -Y
+	local negative_Y = -GetVector2(var,"Y")
 	MoveVector_Z = negative_Y
-
 
 	local ax = camAngleX * 0.017453292519943 -- deg → rad
 	local cosA = math.cos(ax)
 	local sinA = math.sin(ax)
 
-	local _MoveVector_X = math.clamp((
-		((X * cosA) + (negative_Y * sinA))
-			* 32767)//1, -32768, 32767)
-	local _MoveVector_Z = math.clamp((
-		((-X * sinA) + (negative_Y * cosA))
-			* 32767)//1, -32768, 32767)
+	local _MoveVector_X = (((X * cosA) + (negative_Y * sinA)) * 8388607) // 1
+	local _MoveVector_Z = (((-X * sinA) + (negative_Y * cosA)) * 8388607) // 1
 
-	Unreliable_FireServer(MoveInputEvent,Vector2int16.new(_MoveVector_X,_MoveVector_Z))
-	--snapping movement to i16 interpolation
-	Humanoid_Move(Humanoid::Humanoid,(vector.create(
-		_MoveVector_X/32767,
-		0,
-		_MoveVector_Z/32767
-		)::any)::Vector3)
+	InputAction_Fire(Send_Input_Move, Vector2.new(_MoveVector_X,_MoveVector_Z))
 end
 
 local Move_StateChanged = GetProperty(Move,"StateChanged")::RBXScriptSignal
@@ -320,16 +577,15 @@ local LocalPlayer_Character_ChildAdded_Func = function(child:Instance):()
 	if IsA(child,"Humanoid") then
 		Humanoid = child::Humanoid
 		Disconnect(char_self_disconnect)
-		Disconnect(Jump_Func_Connect)
 		Disconnect(Move_Func_Connect)
-		local connection_local = Connect(Jump_Pressed,Jump_Func)
-		Jump_Func_Connect = connection_local
 		local connection_move_local = Connect(Move_StateChanged,Move_Func)
 		Move_Func_Connect = connection_move_local
-
+		local simulationConnection = BindToSimulation(RunService,MoveUpdateSimulation,Enum.StepFrequency.Hz60)
+		BindToSimulation_Connection=simulationConnection
+		
 		char_self_disconnect = Once(GetPropertyChangedSignal(Humanoid,"Parent"),function():()
-			Disconnect(connection_local)
 			Disconnect(connection_move_local)
+			Disconnect(simulationConnection)
 		end)
 		return
 	end
@@ -365,7 +621,7 @@ local LocalPlayer_Character_ChildAdded_Func = function(child:Instance):()
 end
 
 
-local PreRender_connection:RBXScriptConnection?
+local IsPreRenderConnected = false
 local CameraDisabled:boolean = false
 
 
@@ -405,12 +661,13 @@ local PC_CameraDelta_Transform = function():()
 		else
 			local cosA = math.cos(ax)
 			local sinA = math.sin(ax)
-			local _MoveVector_X = math.clamp((
-				((MoveVector_X * cosA) + (MoveVector_Z * sinA))
-					* 32767)//1, -32768, 32767)
-			local _MoveVector_Z = math.clamp((
-				((-MoveVector_X * sinA) + (MoveVector_Z * cosA))
-					* 32767)//1, -32768, 32767)
+			
+			local MoveVector_X = MoveVector_X
+			local MoveVector_Z = MoveVector_Z
+			
+			local _MoveVector_X = (((MoveVector_X * cosA) + (MoveVector_Z * sinA)) * 8388607) // 1
+			local _MoveVector_Z = (((-MoveVector_X * sinA) + (MoveVector_Z * cosA)) * 8388607) // 1
+			
 			local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
 			local pitch = math.floor(
 				math.clamp(normalized / math.pi * 32767, -32768, 32767)
@@ -420,14 +677,9 @@ local PC_CameraDelta_Transform = function():()
 				-32768,
 				32767
 			)
-
-			Unreliable_FireServer(MoveAndCameraRotation,Vector2int16.new(_MoveVector_X,_MoveVector_Z),Vector2int16.new(pitch,yaw))
-
-			Humanoid_Move(Humanoid::Humanoid,(vector.create(
-				_MoveVector_X/32767,
-				0,
-				_MoveVector_Z/32767
-				)::any)::Vector3)
+			
+			InputAction_Fire(Send_Input_Move, Vector2.new(_MoveVector_X,_MoveVector_Z))	
+			Unreliable_FireServer(CameraRotation,Vector2int16.new(pitch,yaw))
 		end
 	elseif dy~=0 then
 		local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
@@ -481,12 +733,12 @@ local Touchpad_Transform = function():()
 		else
 			local cosA = math.cos(ax)
 			local sinA = math.sin(ax)
-			local _MoveVector_X = math.clamp((
-				((MoveVector_X * cosA) + (MoveVector_Z * sinA))
-					* 32767)//1, -32768, 32767)
-			local _MoveVector_Z = math.clamp((
-				((-MoveVector_X * sinA) + (MoveVector_Z * cosA))
-					* 32767)//1, -32768, 32767)
+			local MoveVector_X = MoveVector_X
+			local MoveVector_Z = MoveVector_Z
+
+			local _MoveVector_X = (((MoveVector_X * cosA) + (MoveVector_Z * sinA)) * 8388607) // 1
+			local _MoveVector_Z = (((-MoveVector_X * sinA) + (MoveVector_Z * cosA)) * 8388607) // 1
+
 			local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
 			local pitch = math.floor(
 				math.clamp(normalized / math.pi * 32767, -32768, 32767)
@@ -497,13 +749,8 @@ local Touchpad_Transform = function():()
 				32767
 			)
 
-			Unreliable_FireServer(MoveAndCameraRotation,Vector2int16.new(_MoveVector_X,_MoveVector_Z),Vector2int16.new(pitch,yaw))
-
-			Humanoid_Move(Humanoid::Humanoid,(vector.create(
-				_MoveVector_X/32767,
-				0,
-				_MoveVector_Z/32767
-				)::any)::Vector3)
+			InputAction_Fire(Send_Input_Move, Vector2.new(_MoveVector_X,_MoveVector_Z))	
+			Unreliable_FireServer(CameraRotation,Vector2int16.new(pitch,yaw))
 		end
 	elseif dy~=0 then
 		local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
@@ -564,12 +811,12 @@ local VR_Camera_Transform = function():()
 		else
 			local cosA = math.cos(ax)
 			local sinA = math.sin(ax)
-			local _MoveVector_X = math.clamp((
-				((MoveVector_X * cosA) + (MoveVector_Z * sinA))
-					* 32767)//1, -32768, 32767)
-			local _MoveVector_Z = math.clamp((
-				((-MoveVector_X * sinA) + (MoveVector_Z * cosA))
-					* 32767)//1, -32768, 32767)
+			local MoveVector_X = MoveVector_X
+			local MoveVector_Z = MoveVector_Z
+
+			local _MoveVector_X = (((MoveVector_X * cosA) + (MoveVector_Z * sinA)) * 8388607) // 1
+			local _MoveVector_Z = (((-MoveVector_X * sinA) + (MoveVector_Z * cosA)) * 8388607) // 1
+
 
 			local hx,hy,hz = ToOrientation(head_cf)
 
@@ -581,13 +828,8 @@ local VR_Camera_Transform = function():()
 			local x = math.clamp((hy / math.pi * 0.5 + 0.5) * 255, 0, 255)//1
 			local z = math.clamp((hz / math.pi * 0.5 + 0.5) * 255, 0, 255)//1
 			local pack = bit32.bor(bit32.lshift(x,8),z)
-			Unreliable_FireServer(MoveAndCameraRotation,Vector2int16.new(_MoveVector_X,_MoveVector_Z),Vector3int16.new(pitch,y,pack))
-
-			Humanoid_Move(Humanoid::Humanoid,(vector.create(
-				_MoveVector_X/32767,
-				0,
-				_MoveVector_Z/32767
-				)::any)::Vector3)
+			InputAction_Fire(Send_Input_Move, Vector2.new(_MoveVector_X,_MoveVector_Z))	
+			Unreliable_FireServer(CameraRotation,Vector3int16.new(pitch,y,pack))
 		end
 	elseif not FuzzyEq(head_cf,Vr_Head_CFrame) then
 		--local camera_pos = CFrame_MUL(charcf_Plus_Y_Offset,head_cf)
@@ -639,12 +881,12 @@ local GAMEPAD_Transform = function():()
 		else
 			local cosA = math.cos(ax)
 			local sinA = math.sin(ax)
-			local _MoveVector_X = math.clamp((
-				((MoveVector_X * cosA) + (MoveVector_Z * sinA))
-					* 32767)//1, -32768, 32767)
-			local _MoveVector_Z = math.clamp((
-				((-MoveVector_X * sinA) + (MoveVector_Z * cosA))
-					* 32767)//1, -32768, 32767)
+			local MoveVector_X = MoveVector_X
+			local MoveVector_Z = MoveVector_Z
+
+			local _MoveVector_X = (((MoveVector_X * cosA) + (MoveVector_Z * sinA)) * 8388607) // 1
+			local _MoveVector_Z = (((-MoveVector_X * sinA) + (MoveVector_Z * cosA)) * 8388607) // 1
+
 			local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
 			local pitch = math.floor(
 				math.clamp(normalized / math.pi * 32767, -32768, 32767)
@@ -654,14 +896,8 @@ local GAMEPAD_Transform = function():()
 				-32768,
 				32767
 			)
-
-			Unreliable_FireServer(MoveAndCameraRotation,Vector2int16.new(_MoveVector_X,_MoveVector_Z),Vector2int16.new(pitch,yaw))
-
-			Humanoid_Move(Humanoid::Humanoid,(vector.create(
-				_MoveVector_X/32767,
-				0,
-				_MoveVector_Z/32767
-				)::any)::Vector3)
+			InputAction_Fire(Send_Input_Move, Vector2.new(_MoveVector_X,_MoveVector_Z))	
+			Unreliable_FireServer(CameraRotation,Vector2int16.new(pitch,yaw))
 		end
 	elseif dy~=0 then
 		local normalized = ((ax + math.pi) % (2 * math.pi)) - math.pi -- [-pi, pi)
@@ -793,8 +1029,8 @@ local JumpButton = Instance.new("ImageButton",MobileButtonsFrame) do
 	local began_func = function(input:InputObject):()
 		if InputObject_Get(input,"UserInputState")~=Enum.UserInputState.Begin then return end
 		SetProperty(JumpButton,"ImageRectOffset",release_offset)
-		Unreliable_FireServer(RequestJump)
-		SetProperty(Humanoid::Humanoid,"Jump",true)
+		InputAction_Fire(Jump,true)
+		--SetProperty(Humanoid::Humanoid,"Jump",true)
 		click=input
 	end
 	local JumpButton_InputBegan = GetProperty(JumpButton,"InputBegan")::RBXScriptSignal
@@ -807,10 +1043,10 @@ local JumpButton = Instance.new("ImageButton",MobileButtonsFrame) do
 		Connect(JumpButton_InputBegan,began_func)
 		began_func(input)
 	end)
-
 	Connect(GetProperty(JumpButton,"InputEnded"),function(input:InputObject):()
 		if input~=click then return end
 		SetProperty(JumpButton,"ImageRectOffset",hold_offset)
+		InputAction_Fire(Jump,false)
 	end)
 end
 
@@ -843,11 +1079,9 @@ local JoystickArea_InputEnded_Func = function(inputObject: InputObject):()
 		return
 	end
 	if inputObject~=moveTouchObject then return end
-	Humanoid_Move(Humanoid::Humanoid,(vector.create(0,0,0)::any)::Vector3)
-	--InputAction_Fire(Move,Vector2.zero)
 	MoveVector_X=0
 	MoveVector_Z=0
-	Unreliable_FireServer(MoveInputEvent,Vector2int16.new(0,0))
+	InputAction_Fire(Send_Input_Move,Vector2.zero)
 	SetProperty(Joystick,"Visible",false)
 end
 local Radious_Joystick = 35
@@ -884,21 +1118,10 @@ local MovedFinger = function(inputObject: InputObject):()
 	local ax = camAngleX * 0.017453292519943
 	local cosA = math.cos(ax)
 	local sinA = math.sin(ax)
-	local _MoveVector_X = math.clamp((
-		((x * cosA) + (y * sinA))
-			* 32767)//1, -32768, 32767)
-	local _MoveVector_Z = math.clamp((
-		((-x * sinA) + (y * cosA))
-			* 32767)//1, -32768, 32767)
+	local _MoveVector_X = (((x * cosA) + (y * sinA)) * 8388607) // 1
+	local _MoveVector_Z = (((-x * sinA) + (y * cosA)) * 8388607) // 1
 
-	Unreliable_FireServer(MoveInputEvent,Vector2int16.new(_MoveVector_X,_MoveVector_Z))
-	--print(x,y,Radious_Joystick)
-	Humanoid_Move(Humanoid::Humanoid,(vector.create(
-		_MoveVector_X/32767,
-		0,
-		_MoveVector_Z/32767
-		)::any)::Vector3)
-	--InputAction_Fire(Move,Vector2.new(x,-y))
+	InputAction_Fire(Send_Input_Move,Vector2.new(_MoveVector_X,_MoveVector_Z))
 end
 
 do
@@ -962,28 +1185,28 @@ if Character then
 			Y_Offset = CFrame.new(0,GetProperty(AttachPart,"Size").y*0.5,0)
 		end
 	end
-	local connection_local = Connect(Jump_Pressed,Jump_Func)
-	Jump_Func_Connect = connection_local
 	local connection_move_local = Connect(Move_StateChanged,Move_Func)
 	Move_Func_Connect = connection_move_local
+	local simulationConnection = BindToSimulation(RunService,MoveUpdateSimulation,Enum.StepFrequency.Hz60)
+	BindToSimulation_Connection=simulationConnection
+	
 	char_self_disconnect = Once(GetPropertyChangedSignal(Humanoid,"Parent"),function():()
-		Disconnect(connection_local)
 		Disconnect(connection_move_local)
+		Disconnect(simulationConnection)
 	end)
 	char_connection = Connect(GetProperty(Character,"ChildAdded"),function(child:Instance):()
 		if IsA(child,"Humanoid") then
 			Humanoid = child::Humanoid
 			Disconnect(char_self_disconnect)
-			Disconnect(connection_local)
 			Disconnect(connection_move_local)
-			local connection_local = Connect(Jump_Pressed,Jump_Func)
-			Jump_Func_Connect = connection_local
 			local connection_move_local = Connect(Move_StateChanged,Move_Func)
 			Move_Func_Connect = connection_move_local
-
+			local simulationConnection = BindToSimulation(RunService,MoveUpdateSimulation,Enum.StepFrequency.Hz60)
+			BindToSimulation_Connection=simulationConnection
+			
 			char_self_disconnect = Once(GetPropertyChangedSignal(Humanoid,"Parent"),function():()
-				Disconnect(connection_local)
 				Disconnect(connection_move_local)
+				Disconnect(simulationConnection)
 			end)
 			return
 		end
@@ -1018,13 +1241,14 @@ if Character then
 		end
 	end)
 	if not CameraDisabled then
-		PreRender_connection = Connect(PreRender,if GetProperty(VRService,"VREnabled") then VR_Camera_Transform elseif PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+		BindToRenderStep(RunService,"CameraUpdate",1,if GetProperty(VRService,"VREnabled") then VR_Camera_Transform elseif PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+		IsPreRenderConnected=true	
 	end
 else
 	Character = Instance.new("Model")
 	Destroy(Character)
-	CharHideDescedantConnection = Jump_Func_Connect
-	Char_UN_HideDescedantConnection = Jump_Func_Connect
+	CharHideDescedantConnection = SilencerConnection
+	Char_UN_HideDescedantConnection = SilencerConnection
 	Humanoid=Instance.new("Humanoid")
 	Destroy(Humanoid)
 	AttachPart=Instance.new("Part")
@@ -1038,9 +1262,10 @@ Connect(GetPropertyChangedSignal(VRService,"VREnabled"),function():()
 		if not CameraDisabled then
 			--safety
 			do
-				if PreRender_connection then Disconnect(PreRender_connection) end
+				if IsPreRenderConnected then UnbindFromRenderStep(RunService,"CameraUpdate") end
 			end
-			PreRender_connection = Connect(PreRender,if _PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif _PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+			BindToRenderStep(RunService,"CameraUpdate",1,if _PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif _PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+			IsPreRenderConnected=true	
 		end
 		if _PreferredInput==Enum.PreferredInput.Touch then
 			SetProperty(MobileButtons,"Enabled",true)
@@ -1076,9 +1301,10 @@ Connect(GetPropertyChangedSignal(VRService,"VREnabled"),function():()
 	--enable VR
 	if not CameraDisabled then
 		do--safety
-			if PreRender_connection then Disconnect(PreRender_connection) end
+			if IsPreRenderConnected then UnbindFromRenderStep(RunService,"CameraUpdate") end
 		end
-		PreRender_connection = Connect(PreRender,VR_Camera_Transform)
+		BindToRenderStep(RunService,"CameraUpdate",1,VR_Camera_Transform)
+		IsPreRenderConnected=true
 	end
 end)
 
@@ -1092,9 +1318,10 @@ Connect(GetPropertyChangedSignal(UserInputService,"PreferredInput"),function():(
 	if not CameraDisabled then
 		--safety
 		do
-			if PreRender_connection then Disconnect(PreRender_connection) end
+			if IsPreRenderConnected then UnbindFromRenderStep(RunService,"CameraUpdate") end
 		end
-		PreRender_connection = Connect(PreRender,if _PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif _PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+		BindToRenderStep(RunService,"CameraUpdate",1,if _PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif _PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+		IsPreRenderConnected=true
 	end
 	if _PreferredInput==Enum.PreferredInput.Touch then
 		SetProperty(MobileButtons,"Enabled",true)
@@ -1141,7 +1368,7 @@ local LocalPlayer_Character = function():()
 	end
 	table.clone(HiddenParts)
 	Disconnect(char_connection);Disconnect(Char_UN_HideDescedantConnection::RBXScriptConnection);Disconnect(CharHideDescedantConnection::RBXScriptConnection);
-	Disconnect(Jump_Func_Connect);Disconnect(char_self_disconnect::RBXScriptConnection);Disconnect(Move_Func_Connect::RBXScriptConnection);
+	Disconnect(char_self_disconnect::RBXScriptConnection);Disconnect(Move_Func_Connect::RBXScriptConnection);
 
 	local char = GetProperty(LocalPlayer,"Character")::Model?
 	if char then
@@ -1177,19 +1404,21 @@ local LocalPlayer_Character = function():()
 				Y_Offset = CFrame.new(0,GetProperty(root,"Size").y*0.5,0)
 			end
 		end
-		local connection_local = Connect(Jump_Pressed,Jump_Func)
-		Jump_Func_Connect = connection_local
 		local connection_move_local = Connect(Move_StateChanged,Move_Func)
 		Move_Func_Connect = connection_move_local
+		local simulationConnection = BindToSimulation(RunService,MoveUpdateSimulation,Enum.StepFrequency.Hz60)
+		BindToSimulation_Connection=simulationConnection
+		
 		char_self_disconnect = Once(GetPropertyChangedSignal(hum,"Parent"),function():()
-			Disconnect(connection_local)
 			Disconnect(connection_move_local)
+			Disconnect(simulationConnection)
 		end)
 
 
 		if not CameraDisabled then
-			if PreRender_connection then Disconnect(PreRender_connection) end
-			PreRender_connection = Connect(PreRender,if GetProperty(VRService,"VREnabled") then VR_Camera_Transform elseif PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+			if IsPreRenderConnected then UnbindFromRenderStep(RunService,"CameraUpdate") end
+			IsPreRenderConnected=true
+			BindToRenderStep(RunService,"CameraUpdate",1,if GetProperty(VRService,"VREnabled") then VR_Camera_Transform elseif PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
 		end
 	end
 
@@ -1295,12 +1524,17 @@ local GamepadBinding = Instance.new("InputBinding") do
 end
 local Move_BINDING = Instance.new("InputBinding") do
 	SetProperty(Move_BINDING,"Down",Enum.KeyCode.S)
-	SetProperty(Move_BINDING,"KeyCode",Enum.KeyCode.Thumbstick1)
+	--SetProperty(Move_BINDING,"KeyCode",Enum.KeyCode.Thumbstick1)
 	SetProperty(Move_BINDING,"Left",Enum.KeyCode.A)
 	--SetProperty(MoveBinding,"Name","MoveBinding")
 	SetProperty(Move_BINDING,"Right",Enum.KeyCode.D)
 	SetProperty(Move_BINDING,"Up",Enum.KeyCode.W)
 	SetProperty(Move_BINDING,"Parent",Move)
+end
+
+local Move_Gamepad = Instance.new("InputBinding") do
+	SetProperty(Move_Gamepad,"KeyCode",Enum.KeyCode.Thumbstick1)
+	SetProperty(Move_Gamepad,"Parent",Move)
 end
 local KeyboardJumpBinding = Instance.new("InputBinding") do
 	SetProperty(KeyboardJumpBinding,"KeyCode",Enum.KeyCode.Space)
@@ -1316,10 +1550,9 @@ end
 
 local InputContext = Instance.new("InputContext")
 SetProperty(Move,"Parent",InputContext)
-SetProperty(Jump,"Parent",InputContext)
 SetProperty(CameraRotation_ACTION,"Parent",InputContext)
 
-SetProperty(InputContext,"Parent",LocalPlayer)
+SetProperty(InputContext,"Parent",ReplicatedStorage)
 
 SetProperty(MobileButtons,"Parent",PlayerGui)
 SetProperty(CameraMovementGUI,"Parent",PlayerGui)
@@ -1331,8 +1564,8 @@ return {
 	[2] = UnlockMouse;
 	[3]  = function():()
 		CameraDisabled = true
-		if PreRender_connection then Disconnect(PreRender_connection) end
-		PreRender_connection=nil
+		if IsPreRenderConnected then UnbindFromRenderStep(RunService,"CameraUpdate") end
+		IsPreRenderConnected=false
 		Delta_X=0
 		Delta_Y=0
 	end;
@@ -1341,9 +1574,10 @@ return {
 		CameraDisabled = false
 		--safety
 		do
-			if PreRender_connection then Disconnect(PreRender_connection) end
+			if IsPreRenderConnected then UnbindFromRenderStep(RunService,"CameraUpdate") end
 		end
-		PreRender_connection = Connect(PreRender,if GetProperty(VRService,"VREnabled") then VR_Camera_Transform elseif PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+		BindToRenderStep(RunService,"CameraUpdate",1,if GetProperty(VRService,"VREnabled") then VR_Camera_Transform elseif PreferredInput==Enum.PreferredInput.KeyboardAndMouse then PC_CameraDelta_Transform elseif PreferredInput==Enum.PreferredInput.Touch then Touchpad_Transform else GAMEPAD_Transform)
+		IsPreRenderConnected=true
 	end;
 	--SetCameraRotation
 	[5] = function(x:number,y:number):()
@@ -1353,10 +1587,10 @@ return {
 	--Disable movement controls (walk+jump)
 	[6] = function():()
 		moveTouchObject=nil
-		Humanoid_Move(Humanoid::Humanoid,(vector.create(0,0,0)::any)::Vector3)
+		--Humanoid_Move(Humanoid::Humanoid,(vector.create(0,0,0)::any)::Vector3)
 		MoveVector_X=0
 		MoveVector_Z=0
-		Unreliable_FireServer(MoveInputEvent,Vector2int16.new(0,0))
+		InputAction_Fire(Send_Input_Move,Vector2.zero)	
 		--InputAction_Fire(Move,Vector2.zero)
 		SetProperty(Move,"Enabled",false)
 		SetProperty(Jump,"Enabled",false)
@@ -1393,284 +1627,23 @@ return {
 	end;
 }
 ]]></ProtectedString>
-					<string name="ScriptGuid">{0A001247-3A48-4C5E-80AD-B913B8D7A21E}</string>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-					<bool name="DefinesCapabilities">false</bool>
-					<string name="Name">ControlScript</string>
-					<int64 name="SourceAssetId">-1</int64>
-					<BinaryString name="Tags"></BinaryString>
-				</Properties>
-			</Item>
-		</Item>
-		<Item class="Folder" referent="RBXF1F1DE8604F4450F8AE92A9EA9D2C809">
-			<Properties>
-				<BinaryString name="AttributesSerialize"></BinaryString>
-				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-				<bool name="DefinesCapabilities">false</bool>
-				<string name="Name">ServerScriptService</string>
-				<int64 name="SourceAssetId">-1</int64>
-				<BinaryString name="Tags"></BinaryString>
-			</Properties>
-			<Item class="Script" referent="RBX14D3CB0C02464B00B1B1741ADE4C43C9">
-				<Properties>
-					<ProtectedString name="Source"><![CDATA[--!strict
---!optimize 2
-
---[[
-Copyright 2025 Yarik_superpro
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-	http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-]]
---#include <stdraw.luau>
-local SetProperty:(ins:Instance,prop:string,val:any)->()
-local GetProperty:(ins:Instance,prop:string)->any
-
-local GetService:(DataModel:DataModel,service:string)->Instance
-xpcall(function():()
-	(game::any)[nil]=nil
-end,function():()
-	SetProperty = debug.info(2,"f")::typeof(SetProperty)
-end)
-xpcall(function():()
-	return (game::any)[nil]
-end,function():()
-	GetProperty = debug.info(2,"f")::typeof(GetProperty)
-end)
-GetService = GetProperty(game,"GetService")::typeof(GetService)
---\include
-local GetVector2:(vec:Vector2,val:"X"|"Y")->number
-xpcall(function():()
-	return (Vector2.zero::any)[nil]
-end,function():()
-	GetVector2 = debug.info(2,"f")::typeof(GetVector2)
-end)
-local CFrame_MUL:(vec:CFrame,val:CFrame)->CFrame
-xpcall(function():()
-	return (CFrame.identity::any)*nil
-end,function():()
-	CFrame_MUL = debug.info(2,"f")
-end)
-local GetVector2int16:(vec:Vector2int16,val:"X"|"Y")->number
-xpcall(function():()
-	return (Vector2int16.new()::any)[nil]
-end,function():()
-	GetVector2int16 = debug.info(2,"f")::typeof(GetVector2int16)
-end)
-local GetVector3int16:(vec:Vector3int16,val:"X"|"Y"|"Z")->number
-xpcall(function():()
-	return (Vector3int16.new()::any)[nil]
-end,function():()
-	GetVector3int16 = debug.info(2,"f")::typeof(GetVector3int16)
-end)
-
-local Destroy=GetProperty(game,"Destroy")::(ins:Instance)->()
-local FindFirstChild = GetProperty(game,"FindFirstChild")::(Instance,name: string, recursive: boolean?)-> Instance
-local GetPropertyChangedSignal = GetProperty(game,"GetPropertyChangedSignal")::(ins:Instance,property: string)->RBXScriptSignal
-
-
-local temp = Instance.new("Humanoid")
-local Humanoid_Move = GetProperty(temp,"Move")::(Humanoid,moveDirection: Vector3, relativeToCamera: boolean?)->()
-Destroy(temp)
-temp = Instance.new("Camera")
-local PivotTo=GetProperty(temp,"PivotTo")::(ins:PVInstance,targetCFrame: CFrame)->()
-Destroy(temp)
-
-local ReplicatedStorage = GetService(game,"ReplicatedStorage")::ReplicatedStorage
-local Players = GetService(game,"Players")::Players
-local Player_Added = GetProperty(Players,"PlayerAdded")::RBXScriptSignal
-local Connect = Player_Added.Connect
-local Once = Player_Added.Once
-local IsA = GetProperty(game,"IsA")::(Instance,string)->boolean
-
-local CameraRotation = GetProperty(ReplicatedStorage,"CameraRotation")::UnreliableRemoteEvent
-local MoveAndCameraRotation = GetProperty(ReplicatedStorage,"MoveAndCameraRotation")::UnreliableRemoteEvent
-local MoveInputEvent = GetProperty(ReplicatedStorage,"MoveInputEvent")::UnreliableRemoteEvent
-local RequestJump = GetProperty(ReplicatedStorage,"RequestJump")::UnreliableRemoteEvent
-
-local PlayerToHumanoid = {}::{[Player]:Humanoid}
-local PlrHumanoidAddedConnection = {}::{[Player]:RBXScriptConnection}
-local Disconnect:(self: RBXScriptConnection)->()
-
-local PlrAdded_Func = function(plr:Player):()
-	local char_changed = function():()
-		local char = GetProperty(plr,"Character")::Model?
-		if not char then PlayerToHumanoid[plr]=nil return end
-		local connection = PlrHumanoidAddedConnection[plr]
-		if connection then
-			Disconnect(connection)
-		end
-		local hum = FindFirstChild(char,"Humanoid")::Humanoid
-		if hum then
-			PlayerToHumanoid[plr]=hum
-		end
-		PlrHumanoidAddedConnection[plr] = Connect(GetProperty(char,"ChildAdded"),function(child:Instance):()
-			if IsA(child,"Humanoid") then
-				PlayerToHumanoid[plr]=child::Humanoid
-			end
-		end)
-	end
-	Connect(GetPropertyChangedSignal(plr,"Character"),char_changed)
-	char_changed()
-end
-temp = Connect(Player_Added,PlrAdded_Func)
-Disconnect = temp.Disconnect
-for i,v in Players:GetPlayers() do
-	PlrAdded_Func(v)
-end
-Connect(GetProperty(Players,"PlayerRemoving"),function(plr:Player):()
-	PlayerToHumanoid[plr]=nil
-	local connection = PlrHumanoidAddedConnection[plr]
-	if connection then
-		Disconnect(connection)
-		PlrHumanoidAddedConnection[plr]=nil
-	end
-end)
-
-Connect(GetProperty(RequestJump,"OnServerEvent"),function(plr:Player):()
-	local hum = PlayerToHumanoid[plr]
-	if not hum then return end
-	SetProperty(hum,"Jump",true)
-end)
-
-local display = Instance.new("Part")
-display.Transparency=0.5
-display.Anchored=true
-local ConeHandleAdornment = Instance.new("ConeHandleAdornment")
-ConeHandleAdornment.Adornee=display
-ConeHandleAdornment.Color3=Color3.new(1,0,0)
-ConeHandleAdornment.Parent=display
-display.CanCollide=false
-display.CanQuery=false
-display.CanTouch=false
-display.Parent=workspace
-
-Connect(GetProperty(MoveInputEvent,"OnServerEvent"),function(plr:Player,mov:Vector2int16):()
-	local Humanoid = PlayerToHumanoid[plr]
-	if not Humanoid then return end
-	if typeof(mov)~="Vector2int16" then plr:Kick() return end
-	Humanoid_Move(Humanoid::Humanoid,(vector.create(
-		GetVector2int16(mov,"X")/32767,
-		0,
-		GetVector2int16(mov,"Y")/32767
-		)::any)::Vector3)
-end)
-
-
-Connect(GetProperty(CameraRotation,"OnServerEvent"),function(plr:Player,data:Vector2int16|Vector3int16):()
-	local type = typeof(data)
-	if type=="Vector2int16" then--PC/Mobile/Console
-
-		local ax = GetVector2int16(data::Vector2int16,"X") / 32767 * math.pi
-		local ay = GetVector2int16(data::Vector2int16,"Y") / 32767 * (math.pi / 2)
-		local yaw,pitch = CFrame.Angles(0, ax, 0),CFrame.Angles(ay, 0, 0)
-		local rot = CFrame_MUL(yaw,pitch)
-		
-		display.CFrame=CFrame.new(0,5,0)*rot
-		return
-	elseif type=="Vector3int16" then--VR
-		local pitch_i16 = GetVector3int16(data::Vector3int16,"X")
-		local yaw_i16   = GetVector3int16(data::Vector3int16,"Y")
-		local pack      = GetVector3int16(data::Vector3int16,"Z")
-		if pack < 0 then
-			pack += 65536
-		end
-		local x = bit32.rshift(pack, 8)          -- high 8 bits
-		local z = bit32.band(pack,0b11111111)
-
-		local hx = ((x / 255) - 0.5) * 2 * math.pi
-		local hz = ((z / 255) - 0.5) * 2 * math.pi
-
-		local pitch = pitch_i16 / 32767 * math.pi
-		local yaw   = yaw_i16   / 32767 * math.pi
-
-		local body_cf = CFrame.Angles(0,pitch,0) * CFrame.Angles(0,hx, 0) * CFrame.Angles(yaw, 0,0) * CFrame.Angles(0, 0, hz)
-		-- final camera
-		display.CFrame = CFrame.new(0,5,-35) * body_cf
-
-		return
-	else
-		plr:Kick() return
-	end
-end)
-
-Connect(GetProperty(MoveAndCameraRotation,"OnServerEvent"),function(plr:Player,mov:Vector2int16,data:Vector2int16|Vector3int16):()
-	local Humanoid = PlayerToHumanoid[plr]
-	if not Humanoid then return end
-	if typeof(mov)~="Vector2int16" then plr:Kick() return end
-	Humanoid_Move(Humanoid::Humanoid,(vector.create(
-		GetVector2int16(mov,"X")/32767,
-		0,
-		GetVector2int16(mov,"Y")/32767
-		)::any)::Vector3)
-	local type = typeof(data)
-	if type=="Vector2int16" then--PC/Mobile/Console
-
-		local ax = GetVector2int16(data::Vector2int16,"X") / 32767 * math.pi
-		local ay = GetVector2int16(data::Vector2int16,"Y") / 32767 * (math.pi / 2)
-		local yaw,pitch = CFrame.Angles(0, ax, 0),CFrame.Angles(ay, 0, 0)
-		local rot = CFrame_MUL(yaw,pitch)
-
-		display.CFrame=CFrame.new(0,5,0)*rot
-		return
-	elseif type=="Vector3int16" then--VR
-		local pitch_i16 = GetVector3int16(data::Vector3int16,"X")
-		local yaw_i16   = GetVector3int16(data::Vector3int16,"Y")
-		local pack      = GetVector3int16(data::Vector3int16,"Z")
-		if pack < 0 then
-			pack += 65536
-		end
-		local x = bit32.rshift(pack, 8)          -- high 8 bits
-		local z = bit32.band(pack,0b11111111)
-
-		local hx = ((x / 255) - 0.5) * 2 * math.pi
-		local hz = ((z / 255) - 0.5) * 2 * math.pi
-
-		local pitch = pitch_i16 / 32767 * math.pi
-		local yaw   = yaw_i16   / 32767 * math.pi
-
-		local body_cf = CFrame.Angles(0,pitch,0) * CFrame.Angles(0,hx, 0) * CFrame.Angles(yaw, 0,0) * CFrame.Angles(0, 0, hz)
-		-- final camera
-		display.CFrame = CFrame.new(0,5,-35) * body_cf
-
-		return
-	else
-		plr:Kick() return
-	end
-end)
-
-
-
-
-
-
-
-]]></ProtectedString>
-					<bool name="Disabled">false</bool>
-					<Content name="LinkedSource"><null></null></Content>
-					<token name="RunContext">0</token>
-					<string name="ScriptGuid">{7DD3A4A7-A8D2-41C5-AD21-C4C31FEE82DC}</string>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
-					<bool name="DefinesCapabilities">false</bool>
-					<string name="Name">ServerAuthority</string>
-					<int64 name="SourceAssetId">-1</int64>
-					<BinaryString name="Tags"></BinaryString>
-				</Properties>
-			</Item>
-		</Item>
+			<string name="ScriptGuid">{0A001247-3A48-4C5E-80AD-B913B8D7A21E}</string>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<string name="Name">ControlScript</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
 	</Item>
-	<SharedStrings>
-		<SharedString md5="yuZpQdnvvUBOTYh1jqZ2cA=="></SharedString>
-	</SharedStrings>
+	<Item class="UnreliableRemoteEvent" referent="RBX505D60133A5C465A9AF570F663CC2C6A">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<string name="Name">CameraRotation</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+	</Item>
 </roblox>
